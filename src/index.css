@@ -2,94 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* FOCUS Design System - Vraies couleurs de l'association */
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 234 100% 14%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
+    --card: 234 100% 10%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
+    --popover: 234 100% 10%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 348 83% 47%;
+    --primary: 330 87% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 217 100% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 348 83% 47%;
+    --accent: 25 100% 60%;
     --accent-foreground: 0 0% 100%;
+
+    --muted: 234 50% 20%;
+    --muted-foreground: 0 0% 80%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 348 83% 47%;
+    --border: 234 50% 30%;
+    --input: 234 50% 20%;
+    --ring: 330 87% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 348 83% 47%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 348 83% 47%;
-
-    /* Custom FOCUS colors */
-    --focus-red: 348 83% 47%;
-    --focus-black: 0 0% 0%;
-    --focus-dark: 0 0% 5%;
-    --focus-gray: 0 0% 15%;
+    /* FOCUS Brand Colors */
+    --focus-navy: 234 100% 14%;
+    --focus-magenta: 330 87% 52%;
+    --focus-blue: 217 100% 50%;
+    --focus-orange: 25 100% 60%;
+    --focus-purple: 270 80% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--focus-magenta)), hsl(var(--focus-orange)));
+    --gradient-blue: linear-gradient(135deg, hsl(var(--focus-blue)), hsl(var(--focus-purple)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--focus-navy)), hsl(234 100% 8%));
   }
 
   .dark {
-    --background: 0 0% 0%;
+    --background: 234 100% 14%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 348 83% 47%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 348 83% 47%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 348 83% 47%;
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 348 83% 47%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 348 83% 47%;
   }
 }
 
-/* Glitch and cinematic effects */
+/* Advanced Glitch and Cinematic Effects */
 @layer utilities {
   .glitch {
     position: relative;
-    animation: glitch-skew 2s infinite;
+    animation: glitch-skew 3s infinite;
   }
   
   .glitch::before,
@@ -103,25 +73,25 @@ All colors MUST be HSL.
   }
   
   .glitch::before {
-    left: 2px;
-    text-shadow: -2px 0 hsl(var(--focus-red));
+    left: 3px;
+    text-shadow: -3px 0 hsl(var(--focus-magenta)), 3px 0 hsl(var(--focus-blue));
     clip: rect(44px, 450px, 56px, 0);
-    animation: glitch-anim 5s infinite linear alternate-reverse;
+    animation: glitch-anim 4s infinite linear alternate-reverse;
   }
   
   .glitch::after {
-    left: -2px;
-    text-shadow: -2px 0 hsl(var(--primary)), 2px 2px hsl(var(--primary));
-    animation: glitch-anim2 1s infinite linear alternate-reverse;
+    left: -3px;
+    text-shadow: -3px 0 hsl(var(--focus-orange)), 3px 3px hsl(var(--focus-blue));
+    animation: glitch-anim2 2s infinite linear alternate-reverse;
   }
   
   @keyframes glitch-anim {
-    0% { clip: rect(23px, 9999px, 94px, 0); }
-    20% { clip: rect(54px, 9999px, 63px, 0); }
-    40% { clip: rect(8px, 9999px, 88px, 0); }
-    60% { clip: rect(99px, 9999px, 28px, 0); }
-    80% { clip: rect(35px, 9999px, 11px, 0); }
-    100% { clip: rect(67px, 9999px, 43px, 0); }
+    0% { clip: rect(23px, 9999px, 94px, 0); transform: skew(0.3deg); }
+    20% { clip: rect(54px, 9999px, 63px, 0); transform: skew(-0.2deg); }
+    40% { clip: rect(8px, 9999px, 88px, 0); transform: skew(0.5deg); }
+    60% { clip: rect(99px, 9999px, 28px, 0); transform: skew(-0.3deg); }
+    80% { clip: rect(35px, 9999px, 11px, 0); transform: skew(0.4deg); }
+    100% { clip: rect(67px, 9999px, 43px, 0); transform: skew(0deg); }
   }
   
   @keyframes glitch-anim2 {
@@ -135,18 +105,79 @@ All colors MUST be HSL.
   
   @keyframes glitch-skew {
     0% { transform: skew(0deg); }
-    10% { transform: skew(1deg); }
+    5% { transform: skew(2deg); }
+    10% { transform: skew(0deg); }
+    15% { transform: skew(-1deg); }
     20% { transform: skew(0deg); }
-    30% { transform: skew(-1deg); }
-    40% { transform: skew(0deg); }
-    50% { transform: skew(0.5deg); }
-    60% { transform: skew(0deg); }
-    70% { transform: skew(-0.5deg); }
-    80% { transform: skew(0deg); }
-    90% { transform: skew(1deg); }
     100% { transform: skew(0deg); }
   }
   
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+  }
+  
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Pulse Glow */
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsla(var(--focus-magenta), 0.3),
+                  0 0 40px hsla(var(--focus-blue), 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsla(var(--focus-magenta), 0.6),
+                  0 0 80px hsla(var(--focus-blue), 0.4);
+    }
+  }
+  
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  /* RGB Split */
+  .rgb-split {
+    position: relative;
+  }
+  
+  .rgb-split::before,
+  .rgb-split::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    pointer-events: none;
+  }
+  
+  .rgb-split::before {
+    mix-blend-mode: screen;
+    animation: rgb-split-1 2s infinite;
+  }
+  
+  .rgb-split::after {
+    mix-blend-mode: screen;
+    animation: rgb-split-2 2s infinite reverse;
+  }
+  
+  @keyframes rgb-split-1 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(2px, -2px); }
+    66% { transform: translate(-2px, 2px); }
+  }
+  
+  @keyframes rgb-split-2 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(-2px, 2px); }
+    66% { transform: translate(2px, -2px); }
+  }
+  
+  /* Scanlines */
   .scanlines {
     position: relative;
     overflow: hidden;
@@ -161,15 +192,22 @@ All colors MUST be HSL.
     bottom: 0;
     background: repeating-linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15) 1px,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
       transparent 1px,
-      transparent 2px
+      transparent 3px
     );
     pointer-events: none;
     z-index: 10;
+    animation: scanline-move 8s linear infinite;
   }
   
+  @keyframes scanline-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50px); }
+  }
+  
+  /* Film Grain */
   .film-grain {
     position: relative;
     overflow: hidden;
@@ -182,26 +220,92 @@ All colors MUST be HSL.
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
     pointer-events: none;
     z-index: 10;
+    animation: grain 0.5s steps(4) infinite;
   }
   
+  @keyframes grain {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-2%, 2%); }
+    50% { transform: translate(2%, -2%); }
+    75% { transform: translate(-2%, -2%); }
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--focus-magenta)), hsl(var(--focus-orange)), hsl(var(--focus-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Neon Glow */
+  .neon-glow {
+    text-shadow: 
+      0 0 10px hsl(var(--focus-magenta)),
+      0 0 20px hsl(var(--focus-magenta)),
+      0 0 30px hsl(var(--focus-magenta)),
+      0 0 40px hsl(var(--focus-blue));
+    animation: neon-flicker 4s infinite;
+  }
+  
+  @keyframes neon-flicker {
+    0%, 100% { opacity: 1; }
+    41% { opacity: 1; }
+    42% { opacity: 0.8; }
+    43% { opacity: 1; }
+    45% { opacity: 0.9; }
+    46% { opacity: 1; }
+  }
+  
+  /* Hover Glitch */
   .glitch-hover {
     transition: all 0.3s ease;
   }
   
   .glitch-hover:hover {
-    animation: glitch-skew 0.3s ease;
+    animation: glitch-skew 0.4s ease;
+    text-shadow: 
+      2px 2px 0 hsl(var(--focus-magenta)),
+      -2px -2px 0 hsl(var(--focus-blue));
   }
   
-  .red-glow {
-    box-shadow: 0 0 20px hsla(var(--focus-red), 0.3);
+  /* Color Glow Effects */
+  .magenta-glow {
+    box-shadow: 0 0 30px hsla(var(--focus-magenta), 0.4);
   }
   
-  .red-glow:hover {
-    box-shadow: 0 0 30px hsla(var(--focus-red), 0.5);
+  .magenta-glow:hover {
+    box-shadow: 0 0 50px hsla(var(--focus-magenta), 0.7);
+  }
+  
+  .blue-glow {
+    box-shadow: 0 0 30px hsla(var(--focus-blue), 0.4);
+  }
+  
+  .blue-glow:hover {
+    box-shadow: 0 0 50px hsla(var(--focus-blue), 0.7);
+  }
+  
+  /* Animated Background */
+  .animated-bg {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--focus-navy)),
+      hsl(234 100% 10%),
+      hsl(var(--focus-navy))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 }
 
