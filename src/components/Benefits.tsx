@@ -32,7 +32,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight">
-            Nos <span className="gradient-text glitch italic" data-text="Atouts">Atouts</span>
+            Nos <span className="gradient-text italic">Atouts</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-6">
             L'audiovisuel au service de votre image
