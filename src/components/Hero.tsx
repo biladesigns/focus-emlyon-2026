@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden animated-bg film-grain">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden animated-bg film-grain pb-20">
       {/* Animated gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-magenta/30 rounded-full blur-[120px] animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue/30 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -50,18 +50,18 @@ const Hero = () => {
           Association audiovisuelle d'emlyon business school
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up">
           <Button 
-            size="lg" 
             onClick={scrollToContact}
-            className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground px-10 py-7 text-lg glitch-hover magenta-glow font-bold border-2 border-magenta/50 transition-all duration-300"
+            variant="outline"
+            className="border-2 border-magenta/50 text-foreground hover:bg-magenta/10 hover:border-magenta px-6 py-2 text-sm glitch-hover transition-all duration-300"
           >
             Nous contacter
           </Button>
           <Button 
-            size="lg" 
             onClick={scrollToRealisations}
-            className="bg-gradient-to-r from-blue to-purple hover:from-blue/90 hover:to-purple/90 text-foreground px-10 py-7 text-lg glitch-hover blue-glow font-bold border-2 border-blue/50 transition-all duration-300"
+            variant="outline"
+            className="border-2 border-blue/50 text-foreground hover:bg-blue/10 hover:border-blue px-6 py-2 text-sm glitch-hover transition-all duration-300"
           >
             Voir nos réalisations
           </Button>
