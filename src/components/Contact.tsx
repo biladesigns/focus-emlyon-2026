@@ -13,8 +13,8 @@ const Contact = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="glitch gradient-text" data-text="Contact">Contact</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
+            Contact
           </h2>
           <p className="text-xl text-muted-foreground">
             Donnons vie à vos projets audiovisuels

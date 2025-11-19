@@ -65,7 +65,7 @@ const Stats = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight">
-            Notre École en <span className="gradient-text glitch italic" data-text="Chiffres">Chiffres</span>
+            Notre École en <span className="gradient-text italic">Chiffres</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-magenta via-orange to-blue mx-auto"></div>
         </div>
