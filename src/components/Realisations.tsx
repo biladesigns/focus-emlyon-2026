@@ -51,7 +51,7 @@ const Realisations = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Nos <span className="gradient-text">Réalisations</span>
+            Nos <span className="gradient-text glitch" data-text="Réalisations">Réalisations</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Plus de <span className="text-magenta font-bold neon-glow">687 000 vues</span> sur nos productions
