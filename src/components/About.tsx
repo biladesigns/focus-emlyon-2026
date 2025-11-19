@@ -1,20 +1,24 @@
-import focusLogoWave from "@/assets/focus-logo-wave.png";
-
 const About = () => {
   return (
-    <section className="py-24 bg-secondary relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
-      </div>
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Animated background orbs */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange/20 rounded-full blur-[150px] animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-magenta/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <img 
-              src={focusLogoWave} 
-              alt="FOCUS Wave Logo" 
-              className="w-full max-w-lg mx-auto drop-shadow-2xl"
-            />
+            {/* Zone pour photo de mandat en mode paysage */}
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-card/50 backdrop-blur-sm border-2 border-muted hover:border-primary transition-all duration-500 group">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center space-y-3">
+                  <div className="text-muted-foreground/50 text-sm font-medium">Photo de mandat</div>
+                  <div className="text-muted-foreground/30 text-xs">Format paysage 4:3</div>
+                </div>
+              </div>
+              {/* Gradient overlay for visual effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-magenta/10 via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
           </div>
           
           <div className="space-y-6 animate-fade-in-up">
