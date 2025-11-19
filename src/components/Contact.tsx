@@ -6,11 +6,11 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden scanlines film-grain">
-      {/* Animated background orbs - stronger for contrast */}
-      <div className="absolute top-1/4 left-1/4 w-[700px] h-[700px] bg-magenta/25 rounded-full blur-[150px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[700px] h-[700px] bg-orange/25 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-      <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-blue/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+    <section id="contact" className="py-24 bg-neutral-900 relative overflow-hidden scanlines film-grain">
+      {/* Animated background orbs for visual interest */}
+      <div className="absolute top-1/4 left-1/4 w-[700px] h-[700px] bg-magenta/15 rounded-full blur-[150px] animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[700px] h-[700px] bg-orange/15 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-blue/12 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">

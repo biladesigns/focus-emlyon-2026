@@ -1,9 +1,10 @@
 const About = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
-      {/* Animated background orbs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange/20 rounded-full blur-[150px] animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-magenta/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+    <section className="py-24 bg-neutral-900 relative overflow-hidden">
+      {/* Animated background orbs for visual interest */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange/15 rounded-full blur-[150px] animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-magenta/15 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-blue/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">

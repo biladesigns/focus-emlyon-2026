@@ -43,10 +43,11 @@ const realisations = [
 
 const Realisations = () => {
   return (
-    <section id="realisations" className="py-24 bg-background relative overflow-hidden film-grain">
-      {/* Animated background orbs */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue/20 rounded-full blur-[150px] animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-magenta/20 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+    <section id="realisations" className="py-24 bg-neutral-900 relative overflow-hidden film-grain">
+      {/* Animated background orbs for visual interest */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue/15 rounded-full blur-[150px] animate-pulse"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-magenta/15 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-orange/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '3s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
