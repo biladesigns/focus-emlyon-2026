@@ -37,7 +37,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="bg-card border-2 border-muted hover:border-primary transition-all duration-500 p-8 group glitch-hover animate-fade-in-up relative overflow-hidden"
+              className="bg-card border-border hover:border-primary transition-all duration-300 p-8 group glitch-hover animate-fade-in-up relative overflow-hidden"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Red accent on hover */}

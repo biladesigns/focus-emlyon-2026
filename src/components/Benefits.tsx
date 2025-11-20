@@ -37,7 +37,7 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <Card 
               key={index}
-              className="bg-card border-2 border-muted hover:border-primary transition-all duration-500 p-8 text-center group glitch-hover animate-slide-up"
+              className="bg-card border-border hover:border-primary transition-all duration-300 p-8 text-center group glitch-hover animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="mb-6 flex justify-center">
