@@ -1,0 +1,691 @@
+/* FOCUS Elementor Widgets Styles */
+
+:root {
+    --focus-primary: hsl(349, 100%, 48%);
+    --focus-magenta: hsl(330, 100%, 50%);
+    --focus-orange: hsl(28, 100%, 50%);
+    --focus-blue: hsl(207, 89%, 86%);
+    --focus-background: hsl(222.2, 84%, 4.9%);
+    --focus-foreground: hsl(210, 40%, 98%);
+    --focus-muted: hsl(217.2, 32.6%, 17.5%);
+    --focus-muted-foreground: hsl(215, 20.2%, 65.1%);
+    --focus-card: hsl(222.2, 84%, 4.9%);
+    --focus-border: hsl(217.2, 32.6%, 17.5%);
+}
+
+/* Common Styles */
+.focus-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.focus-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.focus-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--focus-foreground);
+}
+
+.focus-text-primary {
+    color: var(--focus-primary);
+}
+
+.focus-section-subtitle {
+    font-size: 1.25rem;
+    color: var(--focus-muted-foreground);
+    margin-top: 0.5rem;
+}
+
+.focus-title-underline {
+    height: 4px;
+    width: 6rem;
+    background: var(--focus-primary);
+    margin: 1rem auto 0;
+}
+
+/* Orbs and Background Effects */
+.focus-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+}
+
+.focus-orb-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--focus-magenta);
+    top: -250px;
+    left: -250px;
+    animation-delay: 0s;
+}
+
+.focus-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--focus-orange);
+    bottom: -200px;
+    right: -200px;
+    animation-delay: 7s;
+}
+
+.focus-orb-3 {
+    width: 350px;
+    height: 350px;
+    background: var(--focus-blue);
+    top: 50%;
+    right: -175px;
+    animation-delay: 14s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+.focus-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--focus-background);
+    overflow: hidden;
+}
+
+.focus-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.focus-scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.03) 2px,
+        rgba(255, 255, 255, 0.03) 4px
+    );
+    pointer-events: none;
+}
+
+.focus-gradient-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, var(--focus-primary) 0%, transparent 100%);
+    opacity: 0.1;
+}
+
+.focus-hero-content {
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 1s ease-out;
+}
+
+.focus-hero-logo {
+    width: clamp(200px, 40vw, 400px);
+    height: auto;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out 0.2s backwards;
+}
+
+.focus-hero-title {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--focus-magenta), var(--focus-orange), var(--focus-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeIn 1s ease-out 0.4s backwards;
+}
+
+.focus-hero-subtitle {
+    display: block;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 0.5rem;
+}
+
+.focus-hero-description {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--focus-muted-foreground);
+    margin: 2rem 0;
+    animation: fadeIn 1s ease-out 0.6s backwards;
+}
+
+.focus-hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out 0.8s backwards;
+}
+
+/* Buttons */
+.focus-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.focus-btn-primary {
+    background: var(--focus-primary);
+    color: white;
+}
+
+.focus-btn-primary:hover {
+    background: hsl(349, 100%, 58%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px var(--focus-primary);
+}
+
+.focus-btn-outline {
+    border-color: var(--focus-border);
+    color: var(--focus-foreground);
+    background: transparent;
+}
+
+.focus-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--focus-primary);
+}
+
+/* About Section */
+.focus-about {
+    padding: 6rem 0;
+    background: hsl(0, 0%, 9%);
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-about-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.focus-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.focus-about-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 2px solid var(--focus-border);
+}
+
+.focus-about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.focus-about-image:hover img {
+    transform: scale(1.05);
+}
+
+.focus-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--focus-primary) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.focus-about-image:hover .focus-image-overlay {
+    opacity: 0.2;
+}
+
+.focus-about-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.focus-about-text {
+    color: var(--focus-muted-foreground);
+    line-height: 1.8;
+    font-size: 1.125rem;
+}
+
+.focus-about-text p {
+    margin-bottom: 1rem;
+}
+
+/* Services Section */
+.focus-services {
+    padding: 6rem 0;
+    background: var(--focus-background);
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-services-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.focus-orb-left {
+    width: 400px;
+    height: 400px;
+    background: var(--focus-primary);
+    opacity: 0.05;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.focus-orb-right {
+    width: 400px;
+    height: 400px;
+    background: var(--focus-primary);
+    opacity: 0.05;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.focus-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.focus-service-card {
+    background: var(--focus-card);
+    border: 2px solid var(--focus-border);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.focus-service-card:hover {
+    border-color: var(--focus-primary);
+    transform: translateY(-5px);
+}
+
+.focus-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--focus-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.focus-service-card:hover .focus-card-accent {
+    transform: scaleX(1);
+}
+
+.focus-service-icon {
+    width: 4rem;
+    height: 4rem;
+    background: rgba(220, 20, 60, 0.1);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.focus-service-icon .dashicons {
+    font-size: 2rem;
+    color: var(--focus-primary);
+}
+
+.focus-service-card:hover .focus-service-icon {
+    background: rgba(220, 20, 60, 0.2);
+    transform: scale(1.1);
+}
+
+.focus-service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--focus-foreground);
+    transition: color 0.3s ease;
+}
+
+.focus-service-card:hover .focus-service-title {
+    color: var(--focus-primary);
+}
+
+.focus-service-description {
+    color: var(--focus-muted-foreground);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.focus-service-details {
+    color: var(--focus-primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Réalisations Section */
+.focus-realisations {
+    padding: 6rem 0;
+    background: hsl(0, 0%, 9%);
+}
+
+.focus-realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.focus-realisation-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.focus-realisation-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: 2px solid var(--focus-border);
+    margin-bottom: 1rem;
+}
+
+.focus-realisation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.focus-realisation-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.focus-realisation-card:hover .focus-realisation-overlay {
+    opacity: 1;
+}
+
+.focus-realisation-card:hover .focus-realisation-image img {
+    transform: scale(1.05);
+}
+
+.focus-play-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--focus-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.focus-realisation-card:hover .focus-play-icon {
+    transform: scale(1);
+}
+
+.focus-realisation-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--focus-foreground);
+}
+
+/* Benefits Section */
+.focus-benefits {
+    padding: 6rem 0;
+    background: var(--focus-background);
+}
+
+.focus-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.focus-benefit-card {
+    background: var(--focus-card);
+    border: 2px solid var(--focus-border);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.focus-benefit-card:hover {
+    border-color: var(--focus-primary);
+}
+
+.focus-benefit-icon {
+    width: 5rem;
+    height: 5rem;
+    background: rgba(220, 20, 60, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.focus-benefit-icon .dashicons {
+    font-size: 2.5rem;
+    color: var(--focus-primary);
+}
+
+.focus-benefit-card:hover .focus-benefit-icon {
+    background: rgba(220, 20, 60, 0.2);
+    transform: scale(1.1);
+}
+
+.focus-benefit-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--focus-foreground);
+    transition: color 0.3s ease;
+}
+
+.focus-benefit-card:hover .focus-benefit-title {
+    color: var(--focus-primary);
+}
+
+.focus-benefit-description {
+    color: var(--focus-muted-foreground);
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.focus-contact {
+    padding: 6rem 0;
+    background: hsl(0, 0%, 9%);
+    position: relative;
+    overflow: hidden;
+}
+
+.focus-contact-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.focus-contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    position: relative;
+    z-index: 10;
+}
+
+.focus-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.focus-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+}
+
+.focus-contact-item .dashicons {
+    color: var(--focus-primary);
+    font-size: 1.5rem;
+}
+
+.focus-contact-item a {
+    color: var(--focus-foreground);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.focus-contact-item a:hover {
+    color: var(--focus-primary);
+}
+
+.focus-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.focus-social-link {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid var(--focus-border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.focus-social-link .dashicons {
+    color: var(--focus-foreground);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.focus-social-link:hover {
+    border-color: var(--focus-primary);
+    background: rgba(220, 20, 60, 0.1);
+}
+
+.focus-social-link:hover .dashicons {
+    color: var(--focus-primary);
+}
+
+.focus-contact-form {
+    background: var(--focus-card);
+    border: 2px solid var(--focus-border);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+/* Glitch Effect */
+.focus-glitch {
+    position: relative;
+}
+
+.focus-glitch-hover:hover {
+    animation: glitch 0.3s ease-in-out;
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .focus-about-grid,
+    .focus-contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .focus-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .focus-services-grid,
+    .focus-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
