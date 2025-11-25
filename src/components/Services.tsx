@@ -28,7 +28,7 @@ const Services = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Nos <span className="text-primary glitch" data-text="Prestations">Prestations</span>
+            Nos <span className="text-primary">Prestations</span>
           </h2>
           <div className="h-1 w-24 bg-primary mx-auto"></div>
         </div>
@@ -37,7 +37,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="bg-card border-border hover:border-primary transition-all duration-300 p-8 group glitch-hover animate-fade-in-up relative overflow-hidden"
+              className="bg-card border-border hover:border-primary transition-all duration-300 p-8 group animate-fade-in-up relative overflow-hidden"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Red accent on hover */}
