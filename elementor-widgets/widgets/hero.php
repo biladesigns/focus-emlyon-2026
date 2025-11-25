@@ -116,35 +116,88 @@ class FOCUS_Hero_Widget extends \Elementor\Widget_Base {
         <section class="focus-hero">
             <canvas id="focus-particle-canvas" class="focus-particle-canvas"></canvas>
             
+            <!-- Cinematic Frame Lines -->
+            <div class="focus-frame-lines">
+                <div class="focus-frame-top"></div>
+                <div class="focus-frame-bottom"></div>
+                <div class="focus-frame-left"></div>
+                <div class="focus-frame-right"></div>
+            </div>
+            
+            <!-- Corner Accents -->
+            <div class="focus-corner focus-corner-tl"></div>
+            <div class="focus-corner focus-corner-tr"></div>
+            <div class="focus-corner focus-corner-bl"></div>
+            <div class="focus-corner focus-corner-br"></div>
+            
             <div class="focus-hero-gradient-overlay"></div>
-            <div class="focus-scanlines"></div>
             
             <div class="focus-container">
-                <div class="focus-hero-content">
-                    <?php if ($settings['logo']['url']) : ?>
-                        <div class="focus-hero-logo-wrapper">
-                            <img src="<?php echo esc_url($settings['logo']['url']); ?>" alt="FOCUS Logo" class="focus-hero-logo" />
+                <div class="focus-hero-cinematic-grid">
+                    <!-- Left Side - Logo -->
+                    <div class="focus-hero-logo-side">
+                        <div class="focus-logo-glow"></div>
+                        <div class="focus-logo-frame">
+                            <?php if ($settings['logo']['url']) : ?>
+                                <img src="<?php echo esc_url($settings['logo']['url']); ?>" alt="FOCUS Logo" class="focus-hero-logo-large" />
+                            <?php endif; ?>
+                            
+                            <!-- Decorative corners -->
+                            <div class="focus-logo-corner focus-logo-corner-tl"></div>
+                            <div class="focus-logo-corner focus-logo-corner-tr"></div>
+                            <div class="focus-logo-corner focus-logo-corner-bl"></div>
+                            <div class="focus-logo-corner focus-logo-corner-br"></div>
                         </div>
-                    <?php endif; ?>
-                    
-                    <div class="focus-hero-text-center">
-                        <h1 class="focus-hero-title focus-glitch" data-text="FOCUS">
-                            FOCUS
-                        </h1>
-                        
-                        <p class="focus-hero-subtitle"><?php echo esc_html($settings['title']); ?></p>
-                        <p class="focus-hero-school"><?php echo esc_html($settings['subtitle']); ?></p>
                     </div>
                     
-                    <p class="focus-hero-tagline"><?php echo esc_html($settings['description']); ?></p>
-                    
-                    <div class="focus-hero-buttons">
-                        <a href="<?php echo esc_url($settings['button_primary_link']); ?>" class="focus-btn focus-btn-primary">
-                            <?php echo esc_html($settings['button_primary_text']); ?>
-                        </a>
-                        <a href="<?php echo esc_url($settings['button_secondary_link']); ?>" class="focus-btn focus-btn-outline">
-                            <?php echo esc_html($settings['button_secondary_text']); ?>
-                        </a>
+                    <!-- Right Side - Text Content -->
+                    <div class="focus-hero-text-side">
+                        <div class="focus-hero-text-content">
+                            <!-- Subtitle line -->
+                            <div class="focus-hero-subline">
+                                <div class="focus-subline-bar"></div>
+                                <span class="focus-subline-text"><?php echo esc_html($settings['subtitle']); ?></span>
+                            </div>
+                            
+                            <!-- Main Title -->
+                            <h1 class="focus-hero-title-cinematic">
+                                <span class="focus-gradient-text">FOCUS</span>
+                            </h1>
+                            
+                            <p class="focus-hero-subtitle-cinematic"><?php echo esc_html($settings['title']); ?></p>
+                            
+                            <!-- Divider -->
+                            <div class="focus-hero-divider"></div>
+                            
+                            <!-- Description -->
+                            <p class="focus-hero-description-cinematic"><?php echo esc_html($settings['description']); ?></p>
+                            
+                            <!-- Buttons -->
+                            <div class="focus-hero-buttons">
+                                <a href="<?php echo esc_url($settings['button_secondary_link']); ?>" class="focus-btn focus-btn-primary">
+                                    <?php echo esc_html($settings['button_secondary_text']); ?>
+                                </a>
+                                <a href="<?php echo esc_url($settings['button_primary_link']); ?>" class="focus-btn focus-btn-outline">
+                                    <?php echo esc_html($settings['button_primary_text']); ?>
+                                </a>
+                            </div>
+                            
+                            <!-- Stats -->
+                            <div class="focus-hero-stats">
+                                <div class="focus-stat">
+                                    <div class="focus-stat-number focus-gradient-text">687K+</div>
+                                    <div class="focus-stat-label">Vues</div>
+                                </div>
+                                <div class="focus-stat">
+                                    <div class="focus-stat-number focus-gradient-text">50+</div>
+                                    <div class="focus-stat-label">Projets</div>
+                                </div>
+                                <div class="focus-stat">
+                                    <div class="focus-stat-number focus-gradient-text">4K</div>
+                                    <div class="focus-stat-label">Qualité</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

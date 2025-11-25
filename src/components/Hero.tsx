@@ -14,66 +14,123 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Particle Network */}
+  return (
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+      {/* Particle Network Background */}
       <ParticleNetwork />
       
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" style={{
-      zIndex: 2
-    }}></div>
+      {/* Cinematic Frame Lines */}
+      <div className="absolute inset-0 pointer-events-none z-[2]">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-primary/50 to-transparent"></div>
+        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-primary/50 to-transparent"></div>
+      </div>
       
-      {/* Scanlines effect */}
-      <div className="scanlines absolute inset-0" style={{
-      zIndex: 3
-    }}></div>
+      {/* Corner Accents */}
+      <div className="absolute top-8 left-8 w-20 h-20 border-t-2 border-l-2 border-primary/30 z-[2]"></div>
+      <div className="absolute top-8 right-8 w-20 h-20 border-t-2 border-r-2 border-blue/30 z-[2]"></div>
+      <div className="absolute bottom-8 left-8 w-20 h-20 border-b-2 border-l-2 border-orange/30 z-[2]"></div>
+      <div className="absolute bottom-8 right-8 w-20 h-20 border-b-2 border-r-2 border-purple/30 z-[2]"></div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50 z-[3] pointer-events-none"></div>
       
       {/* Content */}
-      <div className="relative container mx-auto px-4" style={{
-      zIndex: 10
-    }}>
-        <div className="max-w-5xl mx-auto">
-          {/* Logo compact en haut */}
-          <div className="mb-16 animate-fade-in text-center">
-            <img src={focusLogoWave} alt="FOCUS" className="w-32 md:w-40 mx-auto drop-shadow-2xl" />
+      <div className="container mx-auto px-8 lg:px-16 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          {/* Left Side - Logo */}
+          <div className="flex justify-center lg:justify-end animate-fade-in">
+            <div className="relative">
+              {/* Glow Effect Behind Logo */}
+              <div className="absolute inset-0 bg-gradient-to-r from-magenta/20 via-orange/20 to-blue/20 blur-3xl"></div>
+              
+              {/* Logo with cinematic frame */}
+              <div className="relative p-8 border-2 border-primary/20 rounded-2xl backdrop-blur-sm bg-background/10">
+                <img 
+                  src={focusLogoWave} 
+                  alt="FOCUS Logo" 
+                  className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
+                />
+                
+                {/* Decorative corners on logo frame */}
+                <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-magenta"></div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 border-t-4 border-r-4 border-blue"></div>
+                <div className="absolute -bottom-2 -left-2 w-8 h-8 border-b-4 border-l-4 border-orange"></div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-purple"></div>
+              </div>
+            </div>
           </div>
           
-          {/* Titre principal avec effet glitch */}
-          <div className="text-center mb-8">
+          {/* Right Side - Text Content */}
+          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            {/* Title with cinematic typography */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
+                <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">Emlyon Business School</span>
+              </div>
+              
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none">
+                <span className="gradient-text">FOCUS</span>
+              </h1>
+              
+              <p className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground/90 tracking-wide">
+                Association Audiovisuelle
+              </p>
+            </div>
             
+            {/* Divider */}
+            <div className="h-px w-full bg-gradient-to-r from-magenta via-orange to-blue"></div>
             
-            <p className="text-xl md:text-3xl lg:text-4xl font-light text-foreground/90 mb-4 animate-fade-in-up">
-              Association Audiovisuelle
+            {/* Tagline */}
+            <p className="text-lg md:text-xl lg:text-2xl text-foreground/70 leading-relaxed max-w-xl">
+              Nous donnons vie à vos projets audiovisuels avec{' '}
+              <span className="text-primary font-semibold">créativité</span> et{' '}
+              <span className="text-blue font-semibold">professionnalisme</span>
             </p>
             
-            <p className="text-base md:text-xl lg:text-2xl gradient-text font-semibold mb-12 animate-fade-in-up">
-              emlyon business school
-            </p>
-          </div>
-          
-          {/* Tagline */}
-          <div className="text-center mb-16 animate-fade-in-up">
-            <p className="text-lg md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              Créativité • Innovation • Professionnalisme
-            </p>
-          </div>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up">
-            <Button onClick={scrollToContact} size="lg" className="bg-magenta hover:bg-magenta/90 text-white px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-magenta/50">
-              Nous contacter
-            </Button>
-            <Button onClick={scrollToRealisations} size="lg" variant="outline" className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 px-8 py-6 text-lg transition-all duration-300 hover:scale-105">
-              Nos réalisations
-            </Button>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 pt-4">
+              <Button 
+                size="lg"
+                onClick={scrollToRealisations}
+                className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground px-10 py-7 text-lg font-bold magenta-glow transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              >
+                Nos Réalisations
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={scrollToContact}
+                className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 px-10 py-7 text-lg font-bold transition-all duration-300 hover:scale-105"
+              >
+                Nous Contacter
+              </Button>
+            </div>
+            
+            {/* Stats or accent */}
+            <div className="flex gap-8 pt-8 text-sm">
+              <div className="space-y-1">
+                <div className="text-3xl font-bold gradient-text">687K+</div>
+                <div className="text-muted-foreground uppercase tracking-wider">Vues</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold gradient-text">50+</div>
+                <div className="text-muted-foreground uppercase tracking-wider">Projets</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-3xl font-bold gradient-text">4K</div>
+                <div className="text-muted-foreground uppercase tracking-wider">Qualité</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" style={{
-      zIndex: 5
-    }}></div>
-    </section>;
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[5] pointer-events-none"></div>
+    </section>
+  );
 };
 export default Hero;
