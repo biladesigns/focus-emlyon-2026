@@ -114,6 +114,79 @@
     overflow: hidden;
 }
 
+/* Cinematic Frame Lines */
+.focus-frame-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.focus-frame-top,
+.focus-frame-bottom,
+.focus-frame-left,
+.focus-frame-right {
+    position: absolute;
+}
+
+.focus-frame-top,
+.focus-frame-bottom {
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsla(var(--focus-magenta), 0.5), transparent);
+}
+
+.focus-frame-top { top: 0; }
+.focus-frame-bottom { bottom: 0; }
+
+.focus-frame-left,
+.focus-frame-right {
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, hsla(var(--focus-magenta), 0.5), transparent);
+}
+
+.focus-frame-left { left: 0; }
+.focus-frame-right { right: 0; }
+
+/* Corner Accents */
+.focus-corner {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+.focus-corner-tl {
+    top: 2rem;
+    left: 2rem;
+    border-top: 2px solid hsla(var(--focus-magenta), 0.3);
+    border-left: 2px solid hsla(var(--focus-magenta), 0.3);
+}
+
+.focus-corner-tr {
+    top: 2rem;
+    right: 2rem;
+    border-top: 2px solid hsla(var(--focus-blue), 0.3);
+    border-right: 2px solid hsla(var(--focus-blue), 0.3);
+}
+
+.focus-corner-bl {
+    bottom: 2rem;
+    left: 2rem;
+    border-bottom: 2px solid hsla(var(--focus-orange), 0.3);
+    border-left: 2px solid hsla(var(--focus-orange), 0.3);
+}
+
+.focus-corner-br {
+    bottom: 2rem;
+    right: 2rem;
+    border-bottom: 2px solid hsla(var(--focus-purple), 0.3);
+    border-right: 2px solid hsla(var(--focus-purple), 0.3);
+}
+
 /* Particle Canvas */
 .focus-particle-canvas {
     position: absolute;
@@ -128,94 +201,169 @@
 .focus-hero-gradient-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, var(--focus-background), transparent, var(--focus-background));
-    z-index: 2;
-    pointer-events: none;
-}
-
-.focus-scanlines {
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(255, 255, 255, 0.03) 2px,
-        rgba(255, 255, 255, 0.03) 4px
-    );
-    pointer-events: none;
+    background: linear-gradient(to bottom, 
+        hsla(var(--focus-background), 0.5), 
+        transparent, 
+        hsla(var(--focus-background), 0.5));
     z-index: 3;
+    pointer-events: none;
 }
 
-.focus-hero-content {
-    text-align: center;
-    z-index: 10;
+/* Cinematic Grid Layout */
+.focus-hero-cinematic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
     position: relative;
-    max-width: 1200px;
+    z-index: 10;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Left Side - Logo */
+.focus-hero-logo-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: fadeIn 1s ease-out;
 }
 
-.focus-hero-logo-wrapper {
-    margin-bottom: 4rem;
-    animation: fadeIn 1s ease-out 0.2s backwards;
+.focus-logo-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, 
+        hsla(var(--focus-magenta), 0.2),
+        hsla(var(--focus-orange), 0.2),
+        hsla(var(--focus-blue), 0.2));
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
 }
 
-.focus-hero-logo {
-    width: clamp(120px, 20vw, 160px);
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-.focus-hero-text-center {
-    margin-bottom: 3rem;
-}
-
-.focus-hero-title {
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--focus-foreground);
+.focus-logo-frame {
     position: relative;
-    display: inline-block;
-    animation: fadeIn 1s ease-out 0.4s backwards;
+    padding: 2rem;
+    border: 2px solid hsla(var(--focus-magenta), 0.2);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    background: hsla(var(--focus-background), 0.1);
 }
 
-.focus-hero-subtitle {
-    font-size: clamp(1.25rem, 4vw, 2.5rem);
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.5rem;
-    animation: fadeIn 1s ease-out 0.5s backwards;
+.focus-hero-logo-large {
+    width: 320px;
+    height: 320px;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
 }
 
-.focus-hero-school {
-    font-size: clamp(1rem, 3vw, 2rem);
-    font-weight: 600;
-    background: linear-gradient(135deg, var(--focus-magenta), var(--focus-orange), var(--focus-blue));
+/* Logo Corner Decorations */
+.focus-logo-corner {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+.focus-logo-corner-tl {
+    top: -8px;
+    left: -8px;
+    border-top: 4px solid hsl(var(--focus-magenta));
+    border-left: 4px solid hsl(var(--focus-magenta));
+}
+
+.focus-logo-corner-tr {
+    top: -8px;
+    right: -8px;
+    border-top: 4px solid hsl(var(--focus-blue));
+    border-right: 4px solid hsl(var(--focus-blue));
+}
+
+.focus-logo-corner-bl {
+    bottom: -8px;
+    left: -8px;
+    border-bottom: 4px solid hsl(var(--focus-orange));
+    border-left: 4px solid hsl(var(--focus-orange));
+}
+
+.focus-logo-corner-br {
+    bottom: -8px;
+    right: -8px;
+    border-bottom: 4px solid hsl(var(--focus-purple));
+    border-right: 4px solid hsl(var(--focus-purple));
+}
+
+/* Right Side - Text Content */
+.focus-hero-text-side {
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.focus-hero-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.focus-hero-subline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.focus-subline-bar {
+    width: 4rem;
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsl(var(--focus-magenta)));
+}
+
+.focus-subline-text {
+    font-size: 0.875rem;
+    letter-spacing: 0.3em;
+    color: hsl(var(--focus-magenta));
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.focus-hero-title-cinematic {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+
+.focus-gradient-text {
+    background: linear-gradient(135deg, 
+        hsl(var(--focus-magenta)), 
+        hsl(var(--focus-orange)), 
+        hsl(var(--focus-blue)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-top: 0.5rem;
-    animation: fadeIn 1s ease-out 0.6s backwards;
 }
 
-.focus-hero-tagline {
-    font-size: clamp(1rem, 2.5vw, 1.75rem);
+.focus-hero-subtitle-cinematic {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.02em;
+}
+
+.focus-hero-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, 
+        hsl(var(--focus-magenta)),
+        hsl(var(--focus-orange)),
+        hsl(var(--focus-blue)));
+}
+
+.focus-hero-description-cinematic {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
     color: rgba(255, 255, 255, 0.7);
-    margin: 3rem 0;
-    animation: fadeIn 1s ease-out 0.7s backwards;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.focus-hero-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    animation: fadeIn 1s ease-out 0.8s backwards;
+    line-height: 1.6;
+    max-width: 600px;
 }
 
 .focus-hero-bottom-fade {
@@ -231,10 +379,64 @@
 
 .focus-hero-buttons {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    gap: 1.5rem;
     flex-wrap: wrap;
-    animation: fadeIn 1s ease-out 0.8s backwards;
+    padding-top: 1rem;
+}
+
+/* Hero Stats */
+.focus-hero-stats {
+    display: flex;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.focus-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.focus-stat-number {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.focus-stat-label {
+    font-size: 0.75rem;
+    color: var(--focus-muted-foreground);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .focus-hero-cinematic-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .focus-hero-logo-side {
+        justify-content: center;
+    }
+    
+    .focus-hero-logo-large {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .focus-hero-text-content {
+        align-items: center;
+    }
+    
+    .focus-hero-description-cinematic {
+        max-width: 100%;
+    }
+    
+    .focus-hero-stats {
+        justify-content: center;
+    }
 }
 
 /* Buttons */
