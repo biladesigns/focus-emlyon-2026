@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Upload, Play, Eye, X } from "lucide-react";
+import { Upload, Play, Eye, X, Home } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface Video {
@@ -136,6 +137,15 @@ const Gallery = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
+            <Link to="/">
+              <Button
+                variant="outline"
+                className="mb-6 border-2 border-muted hover:border-primary text-foreground"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Retour à l'accueil
+              </Button>
+            </Link>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Galerie Vidéo</span>
             </h1>
