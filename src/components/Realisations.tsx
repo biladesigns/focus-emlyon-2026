@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Play, X } from "lucide-react";
 
 const realisations = [
   {
@@ -8,40 +10,54 @@ const realisations = [
     category: "Prestations Pro",
     thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
     views: "15K vues",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     title: "Inside - Vie Associative",
     category: "Inside",
     thumbnail: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=500&fit=crop",
     views: "8K vues",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     title: "Court-métrage CLAC 2024",
     category: "Créations Originales",
     thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&h=500&fit=crop",
     views: "12K vues",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     title: "Interview Alumni",
     category: "Prestations Pro",
     thumbnail: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=500&fit=crop",
     views: "6K vues",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     title: "48H Film Challenge",
     category: "Créations Originales",
     thumbnail: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=500&fit=crop",
     views: "20K vues",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
   {
     title: "Promo emlyon 2024",
     category: "Prestations Pro",
     thumbnail: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=500&fit=crop",
     views: "25K vues",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 ];
 
 const Realisations = () => {
+  const [playerOpen, setPlayerOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState<typeof realisations[0] | null>(null);
+
+  const handlePlayVideo = (realisation: typeof realisations[0]) => {
+    setCurrentVideo(realisation);
+    setPlayerOpen(true);
+  };
+
   return (
     <section id="realisations" className="py-24 bg-neutral-900 relative overflow-hidden film-grain">
       <div className="container mx-auto px-4 relative z-10">
@@ -61,6 +77,7 @@ const Realisations = () => {
               key={index}
               className="bg-card border-2 border-muted hover:border-magenta transition-all duration-500 overflow-hidden group cursor-pointer animate-fade-in-up relative"
               style={{ animationDelay: `${index * 0.15}s` }}
+              onClick={() => handlePlayVideo(realisation)}
             >
               {/* Thumbnail */}
               <div className="relative overflow-hidden aspect-video">
@@ -129,6 +146,46 @@ const Realisations = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Player Dialog */}
+      <Dialog open={playerOpen} onOpenChange={setPlayerOpen}>
+        <DialogContent className="bg-card border-2 border-border max-w-4xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold gradient-text flex justify-between items-center">
+              {currentVideo?.title}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setPlayerOpen(false)}
+                className="hover:bg-muted"
+              >
+                <X className="w-5 h-5" />
+              </Button>
+            </DialogTitle>
+          </DialogHeader>
+          {currentVideo && (
+            <div className="space-y-4">
+              <div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={currentVideo.videoUrl}
+                  title={currentVideo.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="flex items-center gap-4 text-sm">
+                <span className="px-3 py-1 bg-gradient-to-r from-blue to-purple rounded-full text-xs font-bold">
+                  {currentVideo.category}
+                </span>
+                <span className="text-muted-foreground">{currentVideo.views}</span>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
