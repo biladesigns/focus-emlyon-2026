@@ -114,9 +114,22 @@
     overflow: hidden;
 }
 
-.focus-hero-bg {
+/* Particle Canvas */
+.focus-particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.focus-hero-gradient-overlay {
     position: absolute;
     inset: 0;
+    background: linear-gradient(to bottom, var(--focus-background), transparent, var(--focus-background));
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -131,53 +144,89 @@
         rgba(255, 255, 255, 0.03) 4px
     );
     pointer-events: none;
-}
-
-.focus-gradient-accent {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(to top, var(--focus-primary) 0%, transparent 100%);
-    opacity: 0.1;
+    z-index: 3;
 }
 
 .focus-hero-content {
     text-align: center;
     z-index: 10;
+    position: relative;
+    max-width: 1200px;
     animation: fadeIn 1s ease-out;
 }
 
-.focus-hero-logo {
-    width: clamp(200px, 40vw, 400px);
-    height: auto;
-    margin-bottom: 2rem;
+.focus-hero-logo-wrapper {
+    margin-bottom: 4rem;
     animation: fadeIn 1s ease-out 0.2s backwards;
 }
 
+.focus-hero-logo {
+    width: clamp(120px, 20vw, 160px);
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.focus-hero-text-center {
+    margin-bottom: 3rem;
+}
+
 .focus-hero-title {
-    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-size: clamp(3rem, 10vw, 6rem);
     font-weight: 700;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--focus-magenta), var(--focus-orange), var(--focus-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin-bottom: 1.5rem;
+    color: var(--focus-foreground);
+    position: relative;
+    display: inline-block;
     animation: fadeIn 1s ease-out 0.4s backwards;
 }
 
 .focus-hero-subtitle {
-    display: block;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    margin-top: 0.5rem;
+    font-size: clamp(1.25rem, 4vw, 2.5rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1s ease-out 0.5s backwards;
 }
 
-.focus-hero-description {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: var(--focus-muted-foreground);
-    margin: 2rem 0;
+.focus-hero-school {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--focus-magenta), var(--focus-orange), var(--focus-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 0.5rem;
     animation: fadeIn 1s ease-out 0.6s backwards;
+}
+
+.focus-hero-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    color: rgba(255, 255, 255, 0.7);
+    margin: 3rem 0;
+    animation: fadeIn 1s ease-out 0.7s backwards;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.focus-hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out 0.8s backwards;
+}
+
+.focus-hero-bottom-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+    background: linear-gradient(to top, var(--focus-background), transparent);
+    z-index: 5;
+    pointer-events: none;
 }
 
 .focus-hero-buttons {
@@ -193,8 +242,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.125rem;
     font-weight: 600;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
@@ -204,25 +253,27 @@
 }
 
 .focus-btn-primary {
-    background: var(--focus-primary);
+    background: var(--focus-magenta);
     color: white;
+    box-shadow: 0 10px 30px -10px var(--focus-magenta);
 }
 
 .focus-btn-primary:hover {
-    background: hsl(349, 100%, 58%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px -10px var(--focus-primary);
+    background: hsl(330, 87%, 62%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 15px 40px -10px var(--focus-magenta);
 }
 
 .focus-btn-outline {
-    border-color: var(--focus-border);
+    border-color: rgba(255, 255, 255, 0.3);
     color: var(--focus-foreground);
     background: transparent;
 }
 
 .focus-btn-outline:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--focus-primary);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
 }
 
 /* About Section */
