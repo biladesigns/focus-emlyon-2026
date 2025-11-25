@@ -39,9 +39,7 @@ const Hero = () => {
           {/* Titre principal avec effet glitch */}
           <div className="text-center mb-8">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up">
-              <span className="glitch inline-block neon-glow" data-text="FOCUS">
-                FOCUS
-              </span>
+              FOCUS
             </h1>
             
             <p className="text-xl md:text-3xl lg:text-4xl font-light text-foreground/90 mb-4 animate-fade-in-up">
