@@ -246,7 +246,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    box-sizing: border-box;
   }
 
   body {
