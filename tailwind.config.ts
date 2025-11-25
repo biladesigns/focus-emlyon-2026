@@ -13,10 +13,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        'orbitron': ['Orbitron', 'sans-serif'],
-        'tech': ['Share Tech Mono', 'monospace'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

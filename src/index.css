@@ -250,10 +250,6 @@
   }
 
   body {
-    @apply bg-background text-foreground font-orbitron;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-orbitron;
+    @apply bg-background text-foreground;
   }
 }
