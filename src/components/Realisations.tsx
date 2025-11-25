@@ -105,18 +105,24 @@ const Realisations = () => {
         {/* CTA */}
         <div className="text-center mt-16 animate-fade-in">
           <p className="text-muted-foreground mb-6">
-            Découvrez toutes nos créations sur nos réseaux sociaux
+            Découvrez toutes nos créations dans notre galerie vidéo
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Button 
+              onClick={() => window.location.href = '/galerie'}
+              className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold px-8 py-6"
+            >
+              Voir la Galerie Complète
+            </Button>
             <Button 
               variant="outline" 
-              className="border-2 border-magenta text-foreground hover:bg-magenta hover:text-foreground glitch-hover magenta-glow"
+              className="border-2 border-magenta text-foreground hover:bg-magenta hover:text-foreground magenta-glow"
             >
               Instagram
             </Button>
             <Button 
               variant="outline" 
-              className="border-2 border-blue text-foreground hover:bg-blue hover:text-foreground glitch-hover blue-glow"
+              className="border-2 border-blue text-foreground hover:bg-blue hover:text-foreground blue-glow"
             >
               YouTube
             </Button>
