@@ -71,7 +71,7 @@ const Hero = () => {
                 <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">Emlyon Business School</span>
               </div>
               
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none">
+              <h1 className="text-7xl md:text-8xl lg:text-9xl font-display leading-none tracking-wider">
                 <span className="gradient-text">FOCUS</span>
               </h1>
               
