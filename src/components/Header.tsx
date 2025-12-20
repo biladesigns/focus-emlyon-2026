@@ -8,7 +8,6 @@ const navItems = [
   { label: "Accueil", path: "/" },
   { label: "Prestations", path: "/prestations" },
   { label: "Portfolio", path: "/portfolio" },
-  { label: "Articles", path: "/articles" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -38,15 +37,12 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center group ml-4">
             <img
               src={focusLogoWave}
               alt="FOCUS Logo"
               className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="font-display text-2xl tracking-wider gradient-text">
-              FOCUS
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,16 +61,6 @@ const Header = () => {
               </Link>
             ))}
           </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button
-              asChild
-              className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold magenta-glow"
-            >
-              <Link to="/contact">Nous contacter</Link>
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -104,14 +90,6 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
-            <Button
-              asChild
-              className="mt-4 bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold"
-            >
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                Nous contacter
-              </Link>
-            </Button>
           </nav>
         </div>
       )}
