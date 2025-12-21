@@ -3,18 +3,18 @@ import { Film, Clapperboard, Briefcase } from "lucide-react";
 const services = [{
   icon: Film,
   title: "Montage",
-  description: "On peut s'occuper du montage de votre projet.",
-  details: "Post-production professionnelle."
+  description: "Confiez-nous vos rushes et nous transformerons vos images en une vidéo percutante et professionnelle. Colorimétrie, sound design, effets visuels : nous maîtrisons chaque étape de la post-production.",
+  details: "Formats adaptés à tous vos supports."
 }, {
   icon: Clapperboard,
   title: "Captation",
-  description: "On vient filmer votre évènement pour réaliser une vidéo professionnelle : courte ou longue selon votre envie.",
-  details: "Équipement professionnel et équipe dédiée."
+  description: "Notre équipe se déplace pour capturer vos moments clés avec un équipement professionnel. Conférences, événements d'entreprise, spectacles : nous réalisons des vidéos sur-mesure, courtes ou longues, selon vos besoins.",
+  details: "Multi-caméras et qualité cinématographique."
 }, {
   icon: Briefcase,
   title: "Aftermovie",
-  description: "On filme un évènement : mariage... et on en fait un film mémorable qui vous fera vous souvenir de nous.",
-  details: "Souvenirs inoubliables garantis."
+  description: "Mariages, galas, soirées de prestige : nous immortalisons vos événements les plus précieux. Un film soigné qui capture l'émotion et l'atmosphère pour revivre ces instants à l'infini.",
+  details: "Des souvenirs qui traversent le temps."
 }];
 const Services = () => {
   return <section className="py-24 bg-background relative overflow-hidden film-grain">
