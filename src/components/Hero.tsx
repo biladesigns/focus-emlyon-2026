@@ -42,7 +42,7 @@ const Hero = () => {
               
               {/* Logo with cinematic frame */}
               <div className="relative p-8 border-2 border-primary/20 rounded-2xl backdrop-blur-sm bg-background/10">
-                <img src={focusLogoWave} alt="FOCUS Logo" className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl" />
+                <img src={focusLogoWave} alt="FOCUS Logo" className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl animate-heartbeat" />
                 
                 {/* Decorative corners on logo frame */}
                 <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-magenta"></div>
