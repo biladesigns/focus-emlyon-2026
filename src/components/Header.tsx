@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import focusLogoWave from "@/assets/focus-logo-wave.png";
+import focusLogoFull from "@/assets/focus-logo-full.png";
 
 const navItems = [
   { label: "Accueil", path: "/" },
@@ -38,9 +38,9 @@ const Header = () => {
           {/* Logo (shifted right to avoid hero frame) */}
           <Link to="/" className="flex items-center group ml-10 md:ml-16">
             <img
-              src={focusLogoWave}
+              src={focusLogoFull}
               alt="FOCUS Logo"
-              className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+              className="h-10 object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
