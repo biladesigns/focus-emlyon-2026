@@ -4,7 +4,7 @@ const FocusContactButton = () => {
   return (
     <div className="relative py-2">
       {/* Aura pulsante */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[180%] rounded-[40px] bg-[radial-gradient(circle,rgba(255,20,147,0.2)_0%,rgba(0,102,255,0.15)_50%,transparent_70%)] animate-auraPulse blur-[10px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[180%] rounded-[40px] bg-[radial-gradient(circle,rgba(255,20,147,0.25)_0%,rgba(138,43,226,0.15)_50%,transparent_70%)] animate-auraPulse blur-[10px]" />
       
       <Link
         to="/contact"
@@ -14,7 +14,7 @@ const FocusContactButton = () => {
         <div 
           className="relative px-6 py-2.5 rounded-full border-2 border-white/30 overflow-hidden animate-gradientShift"
           style={{
-            background: "linear-gradient(135deg, #FF1493 0%, #0066FF 50%, #FF1493 100%)",
+            background: "linear-gradient(135deg, hsl(330, 87%, 52%) 0%, hsl(270, 80%, 45%) 50%, hsl(330, 87%, 52%) 100%)",
             backgroundSize: "200% 200%",
             boxShadow: "0 0 0 2px rgba(255, 20, 147, 0.2), inset 0 1px 6px rgba(255, 255, 255, 0.2), inset 0 -1px 6px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(0, 0, 0, 0.3)"
           }}
