@@ -2,86 +2,68 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Play, Eye, ExternalLink } from "lucide-react";
-
 const categories = ["Tous", "Inside", "Aftermovies", "Courts-métrages", "Clips"];
-
-const projects = [
-  {
-    id: 1,
-    title: "Aftermovie WEI 2024",
-    category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
-    views: "125K",
-    videoUrl: "https://www.youtube.com/watch?v=example1",
-  },
-  {
-    id: 2,
-    title: "Inside MUSIC'ALL",
-    category: "Inside",
-    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-    views: "45K",
-    videoUrl: "https://www.youtube.com/watch?v=example2",
-  },
-  {
-    id: 3,
-    title: "Court-métrage 'Décalage'",
-    category: "Courts-métrages",
-    thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
-    views: "32K",
-    videoUrl: "https://www.youtube.com/watch?v=example3",
-  },
-  {
-    id: 4,
-    title: "Inside NOISE",
-    category: "Inside",
-    thumbnail: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
-    views: "28K",
-    videoUrl: "https://www.youtube.com/watch?v=example4",
-  },
-  {
-    id: 5,
-    title: "Aftermovie Gala 2024",
-    category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop",
-    views: "89K",
-    videoUrl: "https://www.youtube.com/watch?v=example5",
-  },
-  {
-    id: 6,
-    title: "Clip 'Nuit Blanche'",
-    category: "Clips",
-    thumbnail: "https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?w=600&h=400&fit=crop",
-    views: "156K",
-    videoUrl: "https://www.youtube.com/watch?v=example6",
-  },
-  {
-    id: 7,
-    title: "Inside RAID AVENTURE",
-    category: "Inside",
-    thumbnail: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=600&h=400&fit=crop",
-    views: "67K",
-    videoUrl: "https://www.youtube.com/watch?v=example7",
-  },
-  {
-    id: 8,
-    title: "Court-métrage 'Éclipse'",
-    category: "Courts-métrages",
-    thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop",
-    views: "41K",
-    videoUrl: "https://www.youtube.com/watch?v=example8",
-  },
-];
-
+const projects = [{
+  id: 1,
+  title: "Aftermovie WEI 2024",
+  category: "Aftermovies",
+  thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+  views: "125K",
+  videoUrl: "https://www.youtube.com/watch?v=example1"
+}, {
+  id: 2,
+  title: "Inside MUSIC'ALL",
+  category: "Inside",
+  thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
+  views: "45K",
+  videoUrl: "https://www.youtube.com/watch?v=example2"
+}, {
+  id: 3,
+  title: "Court-métrage 'Décalage'",
+  category: "Courts-métrages",
+  thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
+  views: "32K",
+  videoUrl: "https://www.youtube.com/watch?v=example3"
+}, {
+  id: 4,
+  title: "Inside NOISE",
+  category: "Inside",
+  thumbnail: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
+  views: "28K",
+  videoUrl: "https://www.youtube.com/watch?v=example4"
+}, {
+  id: 5,
+  title: "Aftermovie Gala 2024",
+  category: "Aftermovies",
+  thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop",
+  views: "89K",
+  videoUrl: "https://www.youtube.com/watch?v=example5"
+}, {
+  id: 6,
+  title: "Clip 'Nuit Blanche'",
+  category: "Clips",
+  thumbnail: "https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?w=600&h=400&fit=crop",
+  views: "156K",
+  videoUrl: "https://www.youtube.com/watch?v=example6"
+}, {
+  id: 7,
+  title: "Inside RAID AVENTURE",
+  category: "Inside",
+  thumbnail: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=600&h=400&fit=crop",
+  views: "67K",
+  videoUrl: "https://www.youtube.com/watch?v=example7"
+}, {
+  id: 8,
+  title: "Court-métrage 'Éclipse'",
+  category: "Courts-métrages",
+  thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop",
+  views: "41K",
+  videoUrl: "https://www.youtube.com/watch?v=example8"
+}];
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
-
-  const filteredProjects =
-    activeCategory === "Tous"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
-
-  return (
-    <Layout>
+  const filteredProjects = activeCategory === "Tous" ? projects : projects.filter(p => p.category === activeCategory);
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue/5 via-transparent to-transparent pointer-events-none"></div>
@@ -113,20 +95,9 @@ const Portfolio = () => {
       <section className="pb-8">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={activeCategory === category ? "default" : "outline"}
-                onClick={() => setActiveCategory(category)}
-                className={
-                  activeCategory === category
-                    ? "bg-gradient-to-r from-magenta to-orange text-foreground font-bold"
-                    : "border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/50"
-                }
-              >
+            {categories.map(category => <Button key={category} variant={activeCategory === category ? "default" : "outline"} onClick={() => setActiveCategory(category)} className={activeCategory === category ? "bg-gradient-to-r from-magenta to-orange text-foreground font-bold" : "border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/50"}>
                 {category}
-              </Button>
-            ))}
+              </Button>)}
           </div>
         </div>
       </section>
@@ -135,18 +106,10 @@ const Portfolio = () => {
       <section className="py-12 pb-24">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500"
-              >
+            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500">
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                  <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60"></div>
@@ -176,8 +139,7 @@ const Portfolio = () => {
                     <span>{project.views} vues</span>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -191,27 +153,16 @@ const Portfolio = () => {
             <span className="gradient-text">VOIR PLUS DE VIDÉOS</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-            Retrouvez toutes nos productions sur notre chaîne YouTube officielle.
+            Retrouvez toutes nos productions sur notre compte instagram 
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold magenta-glow px-10 py-7 text-lg"
-          >
-            <a
-              href="https://www.youtube.com/@focusemlyon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
+          <Button asChild size="lg" className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold magenta-glow px-10 py-7 text-lg">
+            <a href="https://www.youtube.com/@focusemlyon" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <ExternalLink className="w-5 h-5" />
-              Notre Chaîne YouTube
+              Notre Compte Instagram   
             </a>
           </Button>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Portfolio;
