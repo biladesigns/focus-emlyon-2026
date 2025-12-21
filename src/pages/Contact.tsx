@@ -93,33 +93,6 @@ const ContactPage = () => {
       {/* Contact Form Section */}
       <Contact />
 
-      {/* Map Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-4">
-              <span className="gradient-text">NOUS TROUVER</span>
-            </h2>
-            <p className="text-muted-foreground">
-              emlyon business school - Campus d'Écully
-            </p>
-          </div>
-          
-          <div className="relative rounded-2xl overflow-hidden border border-border/50 aspect-[21/9]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6772080837397!2d4.760895076749612!3d45.78363061095066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ec9a0f6d38b1%3A0x8c8fe4c8a9f7ef5c!2semlyon%20business%20school!5e0!3m2!1sfr!2sfr!4v1703099999999!5m2!1sfr!2sfr"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="emlyon business school location"
-              className="absolute inset-0"
-            />
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };
