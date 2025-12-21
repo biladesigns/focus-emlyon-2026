@@ -272,11 +272,6 @@ const Footer = () => {
                       hover:-translate-y-[3px] hover:scale-[1.02]
                       active:translate-y-0.5 active:scale-[0.98]"
                   >
-                    {/* Quote on hover */}
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-baskerville text-[10px] italic text-white/40 whitespace-nowrap opacity-0 group-hover/gf:opacity-100 transition-opacity duration-500 pointer-events-none">
-                      "Je vais lui faire une offre qu'il ne pourra pas refuser"
-                    </span>
-
                     <span 
                       className={`font-cinzel text-lg font-black text-gray-100 tracking-[2px] uppercase block px-9 py-4 relative
                         bg-[rgba(20,20,20,0.8)] rounded-[30px] border-2 border-white/10
@@ -305,13 +300,6 @@ const Footer = () => {
                       active:translate-y-[1px] active:scale-[0.98]"
                     style={{ filter: "drop-shadow(0 0 20px rgba(255, 215, 0, 0.3))" }}
                   >
-                    {/* Quote on hover */}
-                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 font-staatliches text-xs text-yellow-400 tracking-widest uppercase whitespace-nowrap opacity-0 group-hover/pf:opacity-100 transition-all duration-500 pointer-events-none"
-                      style={{ textShadow: "0 0 10px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.8)" }}
-                    >
-                      "Say 'what' again!"
-                    </span>
-
                     <span 
                       className={`font-anton text-xl tracking-[3px] uppercase block px-11 py-4 relative overflow-hidden
                         bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-400
