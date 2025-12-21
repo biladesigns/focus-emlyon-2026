@@ -5,60 +5,44 @@ import focusLogoWave from "@/assets/focus-logo-wave.png";
 import focusLogoHP from "@/assets/focus-logo-hp.png";
 import fondHP from "@/assets/fond-hp.jpg";
 import { Button } from "./ui/button";
-
 type FooterStyle = "magenta" | "harrypotter" | "blue";
-
 const Footer = () => {
   const [activeStyle, setActiveStyle] = useState<FooterStyle>("magenta");
-
   const isHarryPotter = activeStyle === "harrypotter";
-
   const styleConfig = {
     magenta: {
       gradient: "from-magenta via-orange to-blue",
       accent: "bg-magenta",
       buttonActive: "bg-magenta text-white border-magenta",
-      buttonInactive: "border-magenta text-magenta hover:bg-magenta hover:text-white",
+      buttonInactive: "border-magenta text-magenta hover:bg-magenta hover:text-white"
     },
     harrypotter: {
       gradient: "from-amber-600 via-yellow-500 to-amber-800",
       accent: "bg-amber-500",
       buttonActive: "bg-amber-600 text-white border-amber-600",
-      buttonInactive: "border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white",
+      buttonInactive: "border-amber-600 text-amber-500 hover:bg-amber-600 hover:text-white"
     },
     blue: {
       gradient: "from-blue via-magenta to-orange",
       accent: "bg-blue",
       buttonActive: "bg-blue text-white border-blue",
-      buttonInactive: "border-blue text-blue hover:bg-blue hover:text-white",
-    },
+      buttonInactive: "border-blue text-blue hover:bg-blue hover:text-white"
+    }
   };
-
   const currentStyle = styleConfig[activeStyle];
 
   // Harry Potter metallic gold text style - matching the logo colors
   const hpMetallic = "text-transparent bg-clip-text bg-gradient-to-b from-amber-200 via-yellow-100 to-amber-400 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]";
-
-  return (
-    <footer className="relative z-10 px-4 md:px-8 pb-4 md:pb-8">
-      <div 
-        className={`group backdrop-blur-md rounded-3xl border overflow-hidden transition-all duration-700 relative ${
-          isHarryPotter 
-            ? "border-amber-700/50 shadow-[0_0_30px_rgba(217,119,6,0.3)]" 
-            : "bg-card/95 border-border/30"
-        }`}
-      >
+  return <footer className="relative z-10 px-4 md:px-8 pb-4 md:pb-8">
+      <div className={`group backdrop-blur-md rounded-3xl border overflow-hidden transition-all duration-700 relative ${isHarryPotter ? "border-amber-700/50 shadow-[0_0_30px_rgba(217,119,6,0.3)]" : "bg-card/95 border-border/30"}`}>
         {/* Harry Potter background */}
-        {isHarryPotter && (
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${fondHP})` }}
-          >
+        {isHarryPotter && <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${fondHP})`
+      }}>
             <div className="absolute inset-0 bg-black/60"></div>
             {/* Lightning effect on hover */}
             <div className="absolute inset-0 bg-gradient-to-b from-yellow-200/0 via-yellow-100/0 to-amber-200/0 opacity-0 group-hover:animate-[lightning_0.15s_ease-out] pointer-events-none"></div>
-          </div>
-        )}
+          </div>}
 
         {/* Gradient accent top */}
         <div className={`h-1 w-full bg-gradient-to-r ${currentStyle.gradient} transition-all duration-500 relative z-10`}></div>
@@ -69,24 +53,12 @@ const Footer = () => {
             {/* Brand */}
             <div className="md:col-span-1">
               <Link to="/" className="flex items-center gap-3 mb-4">
-                {isHarryPotter ? (
-                  <img
-                    src={focusLogoHP}
-                    alt="FOCUS Logo"
-                    className="w-64 h-24 object-contain transition-all duration-500"
-                  />
-                ) : (
-                  <>
-                    <img
-                      src={focusLogoWave}
-                      alt="FOCUS Logo"
-                      className="w-10 h-10 object-contain transition-all duration-500"
-                    />
+                {isHarryPotter ? <img src={focusLogoHP} alt="FOCUS Logo" className="w-64 h-24 object-contain transition-all duration-500" /> : <>
+                    <img src={focusLogoWave} alt="FOCUS Logo" className="w-10 h-10 object-contain transition-all duration-500" />
                     <span className="font-display text-xl tracking-wider gradient-text">
                       FOCUS
                     </span>
-                  </>
-                )}
+                  </>}
               </Link>
               <p className={`text-sm leading-relaxed font-medium ${isHarryPotter ? hpMetallic : "text-muted-foreground"}`}>
                 L'association audiovisuelle d'emlyon business school.
@@ -120,40 +92,13 @@ const Footer = () => {
                 Suivez-nous
               </h4>
               <div className="flex gap-3">
-                <a
-                  href="https://www.instagram.com/focus_music_club/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                    isHarryPotter 
-                      ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" 
-                      : "bg-foreground/10 hover:bg-magenta/20 hover:text-magenta"
-                  }`}
-                >
+                <a href="https://www.instagram.com/focus_music_club/" target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${isHarryPotter ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" : "bg-foreground/10 hover:bg-magenta/20 hover:text-magenta"}`}>
                   <Instagram size={18} />
                 </a>
-                <a
-                  href="https://www.youtube.com/@focusemlyon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                    isHarryPotter 
-                      ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" 
-                      : "bg-foreground/10 hover:bg-orange/20 hover:text-orange"
-                  }`}
-                >
+                <a href="https://www.youtube.com/@focusemlyon" target="_blank" rel="noopener noreferrer" className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${isHarryPotter ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" : "bg-foreground/10 hover:bg-orange/20 hover:text-orange"}`}>
                   <Youtube size={18} />
                 </a>
-                <a
-                  href="mailto:focus@em-lyon.com"
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
-                    isHarryPotter 
-                      ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" 
-                      : "bg-foreground/10 hover:bg-blue/20 hover:text-blue"
-                  }`}
-                >
-                  <Mail size={18} />
-                </a>
+                
               </div>
             </div>
 
@@ -163,28 +108,13 @@ const Footer = () => {
                 Amusez-vous avec notre créativité
               </h4>
               <div className="flex flex-col gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setActiveStyle("magenta")}
-                  className={`${activeStyle === "magenta" ? styleConfig.magenta.buttonActive : styleConfig.magenta.buttonInactive} transition-all duration-300`}
-                >
+                <Button variant="outline" size="sm" onClick={() => setActiveStyle("magenta")} className={`${activeStyle === "magenta" ? styleConfig.magenta.buttonActive : styleConfig.magenta.buttonInactive} transition-all duration-300`}>
                   Style Focus
                 </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setActiveStyle("harrypotter")}
-                  className={`${activeStyle === "harrypotter" ? styleConfig.harrypotter.buttonActive : styleConfig.harrypotter.buttonInactive} transition-all duration-300`}
-                >
+                <Button variant="outline" size="sm" onClick={() => setActiveStyle("harrypotter")} className={`${activeStyle === "harrypotter" ? styleConfig.harrypotter.buttonActive : styleConfig.harrypotter.buttonInactive} transition-all duration-300`}>
                   ⚡ Harry Potter
                 </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setActiveStyle("blue")}
-                  className={`${activeStyle === "blue" ? styleConfig.blue.buttonActive : styleConfig.blue.buttonInactive} transition-all duration-300`}
-                >
+                <Button variant="outline" size="sm" onClick={() => setActiveStyle("blue")} className={`${activeStyle === "blue" ? styleConfig.blue.buttonActive : styleConfig.blue.buttonInactive} transition-all duration-300`}>
                   Style 3
                 </Button>
               </div>
@@ -203,8 +133,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
