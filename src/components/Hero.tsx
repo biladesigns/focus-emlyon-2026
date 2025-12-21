@@ -62,12 +62,10 @@ const Hero = () => {
             <div className="space-y-4">
               
               <h1 className="text-7xl md:text-8xl lg:text-9xl font-display leading-none tracking-wider">
-                <span className="gradient-text">FOCUS</span>
+                <span className="gradient-text">association audiovisuelle</span>
               </h1>
               
-              <p className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground/90 tracking-wide">
-                Association Audiovisuelle
-              </p>
+              
             </div>
             
             {/* Divider */}
