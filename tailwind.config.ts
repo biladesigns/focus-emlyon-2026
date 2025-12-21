@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         'display': ['Bebas Neue', 'sans-serif'],
         'cinzel': ['Cinzel', 'serif'],
+        'baskerville': ['Libre Baskerville', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -130,6 +131,28 @@ export default {
           "0%, 100%": { transform: "translate(0, 0) rotate(0deg)" },
           "50%": { transform: "translate(-5px, 5px) rotate(10deg)" },
         },
+        "gentleSwing": {
+          "0%, 100%": { transform: "rotate(-0.3deg)" },
+          "50%": { transform: "rotate(0.3deg)" },
+        },
+        "stringSwing1": {
+          "0%, 100%": { transform: "rotate(-1deg)" },
+          "50%": { transform: "rotate(1deg)" },
+        },
+        "stringSwing2": {
+          "0%, 100%": { transform: "rotate(0.5deg)" },
+          "50%": { transform: "rotate(-0.8deg)" },
+        },
+        "stringSwing3": {
+          "0%, 100%": { transform: "rotate(-0.5deg)" },
+          "50%": { transform: "rotate(0.5deg)" },
+        },
+        "dustFloat": {
+          "0%": { transform: "translateY(0) translateX(0)", opacity: "0" },
+          "10%": { opacity: "0.6" },
+          "90%": { opacity: "0.3" },
+          "100%": { transform: "translateY(-100px) translateX(30px)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -143,6 +166,11 @@ export default {
         "runeGlow": "runeGlow 3s ease-in-out infinite",
         "magicGlow": "magicGlow 3s ease-in-out infinite",
         "inkFloat": "inkFloat 4s ease-in-out infinite",
+        "gentleSwing": "gentleSwing 3s ease-in-out infinite",
+        "stringSwing1": "stringSwing1 3s ease-in-out infinite",
+        "stringSwing2": "stringSwing2 3.5s ease-in-out infinite",
+        "stringSwing3": "stringSwing3 3.2s ease-in-out infinite",
+        "dustFloat": "dustFloat 8s linear infinite",
       },
     },
   },
