@@ -14,7 +14,7 @@ const benefits = [
   },
   {
     icon: Award,
-    title: "Qualité premium",
+    title: "La Créativité",
     description: "Issus de l'écosystème emlyon, nous apportons un regard neuf et dynamique à votre communication. Nous concevons des contenus innovants qui captent l'attention et valorisent durablement votre image de marque.",
   },
 ];
