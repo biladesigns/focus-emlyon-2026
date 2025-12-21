@@ -29,26 +29,20 @@ const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-all duration-300 group">
+          {services.map((service, index) => <Card key={index} className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-all duration-300 group">
               <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground mb-2">{service.description}</p>
               <p className="text-sm text-primary/70">{service.details}</p>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold px-8 py-6"
-          >
-            <Link to="/prestations">En savoir plus</Link>
+          <Button asChild size="lg" className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold px-8 py-6">
+            
           </Button>
         </div>
       </div>
