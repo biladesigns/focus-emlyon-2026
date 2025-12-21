@@ -94,13 +94,9 @@ const Hero = () => {
             <div className="flex items-center gap-6 pt-8">
               <div className="flex items-center gap-4">
                 <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
-                <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">Une association de</span>
+                <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">UNE ASSOCIATION D'</span>
               </div>
-              <img 
-                src={logoEmlyon} 
-                alt="emlyon business school" 
-                className="h-16 w-auto object-contain"
-              />
+              <img src={logoEmlyon} alt="emlyon business school" className="h-16 w-auto object-contain" />
             </div>
           </div>
         </div>
