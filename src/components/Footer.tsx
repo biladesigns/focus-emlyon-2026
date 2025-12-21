@@ -36,6 +36,11 @@ const Footer = () => {
 
   const currentStyle = styleConfig[activeStyle];
 
+  // Harry Potter text style classes
+  const hpTextPrimary = "text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400";
+  const hpTextSecondary = "text-amber-200/90";
+  const hpTextMuted = "text-amber-300/70";
+
   return (
     <footer className="relative z-10 px-4 md:px-8 pb-4 md:pb-8">
       <div 
@@ -82,7 +87,7 @@ const Footer = () => {
                   <img
                     src={focusLogoHP}
                     alt="FOCUS Logo"
-                    className="w-48 h-16 object-contain transition-all duration-500"
+                    className="w-48 h-16 object-contain transition-all duration-500 mix-blend-screen"
                   />
                 ) : (
                   <>
@@ -97,27 +102,27 @@ const Footer = () => {
                   </>
                 )}
               </Link>
-              <p className={`text-sm leading-relaxed ${isHarryPotter ? "text-amber-200/80" : "text-muted-foreground"}`}>
+              <p className={`text-sm leading-relaxed ${isHarryPotter ? hpTextMuted : "text-muted-foreground"}`}>
                 L'association audiovisuelle d'emlyon business school.
               </p>
             </div>
 
             {/* Navigation */}
             <div>
-              <h4 className={`font-semibold mb-4 text-sm uppercase tracking-wider ${isHarryPotter ? "text-amber-400" : "text-foreground"}`}>
+              <h4 className={`font-semibold mb-4 text-sm uppercase tracking-wider ${isHarryPotter ? hpTextPrimary : "text-foreground"}`}>
                 Navigation
               </h4>
               <nav className="flex flex-col gap-2">
-                <Link to="/" className={`text-sm transition-colors ${isHarryPotter ? "text-amber-200/70 hover:text-amber-300" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/" className={`text-sm transition-colors ${isHarryPotter ? `${hpTextSecondary} hover:text-yellow-200` : "text-muted-foreground hover:text-primary"}`}>
                   Accueil
                 </Link>
-                <Link to="/prestations" className={`text-sm transition-colors ${isHarryPotter ? "text-amber-200/70 hover:text-amber-300" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/prestations" className={`text-sm transition-colors ${isHarryPotter ? `${hpTextSecondary} hover:text-yellow-200` : "text-muted-foreground hover:text-primary"}`}>
                   Prestations
                 </Link>
-                <Link to="/portfolio" className={`text-sm transition-colors ${isHarryPotter ? "text-amber-200/70 hover:text-amber-300" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/portfolio" className={`text-sm transition-colors ${isHarryPotter ? `${hpTextSecondary} hover:text-yellow-200` : "text-muted-foreground hover:text-primary"}`}>
                   Portfolio
                 </Link>
-                <Link to="/contact" className={`text-sm transition-colors ${isHarryPotter ? "text-amber-200/70 hover:text-amber-300" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/contact" className={`text-sm transition-colors ${isHarryPotter ? `${hpTextSecondary} hover:text-yellow-200` : "text-muted-foreground hover:text-primary"}`}>
                   Contact
                 </Link>
               </nav>
@@ -125,7 +130,7 @@ const Footer = () => {
 
             {/* Social */}
             <div>
-              <h4 className={`font-semibold mb-4 text-sm uppercase tracking-wider ${isHarryPotter ? "text-amber-400" : "text-foreground"}`}>
+              <h4 className={`font-semibold mb-4 text-sm uppercase tracking-wider ${isHarryPotter ? hpTextPrimary : "text-foreground"}`}>
                 Suivez-nous
               </h4>
               <div className="flex gap-3">
@@ -135,7 +140,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
                     isHarryPotter 
-                      ? "bg-amber-900/50 text-amber-400 hover:bg-amber-700/50 hover:text-amber-300 border border-amber-700/30" 
+                      ? "bg-amber-900/50 text-amber-300 hover:bg-amber-700/50 hover:text-yellow-200 border border-amber-600/40" 
                       : "bg-foreground/10 hover:bg-magenta/20 hover:text-magenta"
                   }`}
                 >
@@ -147,7 +152,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
                     isHarryPotter 
-                      ? "bg-amber-900/50 text-amber-400 hover:bg-amber-700/50 hover:text-amber-300 border border-amber-700/30" 
+                      ? "bg-amber-900/50 text-amber-300 hover:bg-amber-700/50 hover:text-yellow-200 border border-amber-600/40" 
                       : "bg-foreground/10 hover:bg-orange/20 hover:text-orange"
                   }`}
                 >
@@ -157,7 +162,7 @@ const Footer = () => {
                   href="mailto:focus@em-lyon.com"
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
                     isHarryPotter 
-                      ? "bg-amber-900/50 text-amber-400 hover:bg-amber-700/50 hover:text-amber-300 border border-amber-700/30" 
+                      ? "bg-amber-900/50 text-amber-300 hover:bg-amber-700/50 hover:text-yellow-200 border border-amber-600/40" 
                       : "bg-foreground/10 hover:bg-blue/20 hover:text-blue"
                   }`}
                 >
@@ -168,7 +173,7 @@ const Footer = () => {
 
             {/* Style Switcher */}
             <div>
-              <h4 className={`font-semibold mb-4 text-sm uppercase tracking-wider ${isHarryPotter ? "text-amber-400" : "text-foreground"}`}>
+              <h4 className={`font-semibold mb-4 text-sm uppercase tracking-wider ${isHarryPotter ? hpTextPrimary : "text-foreground"}`}>
                 Amusez-vous avec notre créativité
               </h4>
               <div className="flex flex-col gap-2">
@@ -201,11 +206,11 @@ const Footer = () => {
           </div>
 
           {/* Bottom */}
-          <div className={`mt-10 pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-4 ${isHarryPotter ? "border-amber-700/30" : "border-border/30"}`}>
-            <p className={`text-xs ${isHarryPotter ? "text-amber-200/60" : "text-muted-foreground"}`}>
+          <div className={`mt-10 pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-4 ${isHarryPotter ? "border-amber-600/30" : "border-border/30"}`}>
+            <p className={`text-xs ${isHarryPotter ? hpTextMuted : "text-muted-foreground"}`}>
               © 2025 FOCUS - Association audiovisuelle d'emlyon business school
             </p>
-            <div className={`flex items-center gap-2 text-xs ${isHarryPotter ? "text-amber-400/70" : "text-muted-foreground"}`}>
+            <div className={`flex items-center gap-2 text-xs ${isHarryPotter ? hpTextSecondary : "text-muted-foreground"}`}>
               <span className={`w-2 h-2 rounded-full ${currentStyle.accent} animate-pulse transition-all duration-500`}></span>
               Lyon, France
             </div>
