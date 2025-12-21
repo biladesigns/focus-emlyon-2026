@@ -1,4 +1,6 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Film, Clapperboard, Briefcase } from "lucide-react";
 const services = [{
   icon: Film,
@@ -37,6 +39,17 @@ const Services = () => {
               <p className="text-sm text-primary/70">{service.details}</p>
             </Card>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-12">
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold px-8 py-6"
+          >
+            <Link to="/prestations">En savoir plus</Link>
+          </Button>
         </div>
       </div>
       
