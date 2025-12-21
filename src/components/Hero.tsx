@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
+import logoEmlyon from "@/assets/logo-emlyon.png";
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -93,20 +94,16 @@ const Hero = () => {
               </Button>
             </div>
             
-            {/* Stats or accent */}
-            <div className="flex gap-8 pt-8 text-sm">
-              <div className="space-y-1">
-                <div className="text-3xl font-bold gradient-text">687K+</div>
-                <div className="text-muted-foreground uppercase tracking-wider">Vues</div>
-              </div>
-              <div className="space-y-1">
-                <div className="text-3xl font-bold gradient-text">50+</div>
-                <div className="text-muted-foreground uppercase tracking-wider">Projets</div>
-              </div>
-              <div className="space-y-1">
-                <div className="text-3xl font-bold gradient-text">30</div>
-                <div className="text-muted-foreground uppercase tracking-wider">MEMBRES</div>
-              </div>
+            {/* emlyon branding */}
+            <div className="flex items-center gap-6 pt-8">
+              <p className="text-lg text-muted-foreground font-medium">
+                Une association de
+              </p>
+              <img 
+                src={logoEmlyon} 
+                alt="emlyon business school" 
+                className="h-16 w-auto object-contain"
+              />
             </div>
           </div>
         </div>
