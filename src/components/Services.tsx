@@ -2,19 +2,19 @@ import { Card } from "@/components/ui/card";
 import { Film, Clapperboard, Briefcase } from "lucide-react";
 const services = [{
   icon: Film,
-  title: "Inside",
-  description: "Courtes vidéos immersives mettant en lumière la vie associative, les initiatives et les moments forts de l'école.",
-  details: "Plans d'ambiance + narration dynamique."
+  title: "Montage",
+  description: "On peut s'occuper du montage de votre projet.",
+  details: "Post-production professionnelle."
 }, {
   icon: Clapperboard,
-  title: "Créations originales",
-  description: "Courts-métrages, fictions, production complète : écriture, tournage, réalisation, post-production.",
-  details: "Participation à des concours : CLAC, 48H, Festival Jeunesse en Court."
+  title: "Captation",
+  description: "On vient filmer votre évènement pour réaliser une vidéo professionnelle : courte ou longue selon votre envie.",
+  details: "Équipement professionnel et équipe dédiée."
 }, {
   icon: Briefcase,
-  title: "Prestations professionnelles",
-  description: "Vidéos promotionnelles, aftermovies, interviews pour associations, entreprises et administration.",
-  details: "Qualité premium et service sur-mesure."
+  title: "Aftermovie",
+  description: "On filme un évènement : mariage... et on en fait un film mémorable qui vous fera vous souvenir de nous.",
+  details: "Souvenirs inoubliables garantis."
 }];
 const Services = () => {
   return <section className="py-24 bg-background relative overflow-hidden film-grain">
@@ -27,7 +27,16 @@ const Services = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => {})}
+          {services.map((service, index) => (
+            <Card key={index} className="p-6 bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-all duration-300 group">
+              <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit group-hover:bg-primary/20 transition-colors">
+                <service.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-foreground">{service.title}</h3>
+              <p className="text-muted-foreground mb-2">{service.description}</p>
+              <p className="text-sm text-primary/70">{service.details}</p>
+            </Card>
+          ))}
         </div>
       </div>
       
