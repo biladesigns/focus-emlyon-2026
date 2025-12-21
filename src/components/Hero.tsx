@@ -80,12 +80,9 @@ const Hero = () => {
               <span className="text-blue font-semibold">professionnalisme</span>
             </p>
             
-            {/* CTA Buttons */}
+            {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-6 pt-4 items-start">
               <AnimatedRealisationsButton onClick={scrollToRealisations} />
-              <Button size="lg" variant="outline" onClick={scrollToContact} className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 px-[52px] py-5 text-[17px] font-semibold rounded-[56px] transition-all duration-300 hover:scale-105">
-                Nous Contacter
-              </Button>
             </div>
             
             {/* emlyon branding */}
