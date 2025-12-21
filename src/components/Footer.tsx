@@ -61,20 +61,6 @@ const Footer = () => {
         {/* Gradient accent top */}
         <div className={`h-1 w-full bg-gradient-to-r ${currentStyle.gradient} transition-all duration-500 relative z-10`}></div>
         
-        {/* Harry Potter decorative elements */}
-        {isHarryPotter && (
-          <>
-            <div className="absolute top-4 left-8 opacity-30 z-10">
-              <Sparkles className="w-6 h-6 text-amber-400 animate-pulse" />
-            </div>
-            <div className="absolute top-6 right-12 opacity-40 z-10">
-              <Sparkles className="w-4 h-4 text-yellow-300 animate-pulse" style={{ animationDelay: "0.5s" }} />
-            </div>
-            <div className="absolute bottom-16 left-16 opacity-30 z-10">
-              <Sparkles className="w-5 h-5 text-amber-500 animate-pulse" style={{ animationDelay: "1s" }} />
-            </div>
-          </>
-        )}
         
         <div className="container mx-auto px-6 lg:px-12 py-12 relative z-10">
           <div className="grid md:grid-cols-4 gap-10">
