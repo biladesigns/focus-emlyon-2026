@@ -14,8 +14,7 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       {/* Particle Network Background */}
       <ParticleNetwork />
       
@@ -47,11 +46,7 @@ const Hero = () => {
               
               {/* Logo with cinematic frame */}
               <div className="relative p-8 border-2 border-primary/20 rounded-2xl backdrop-blur-sm bg-background/10">
-                <img 
-                  src={focusLogoWave} 
-                  alt="FOCUS Logo" 
-                  className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl"
-                />
+                <img src={focusLogoWave} alt="FOCUS Logo" className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl" />
                 
                 {/* Decorative corners on logo frame */}
                 <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-magenta"></div>
@@ -63,7 +58,9 @@ const Hero = () => {
           </div>
           
           {/* Right Side - Text Content */}
-          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="space-y-8 animate-fade-in" style={{
+          animationDelay: '0.3s'
+        }}>
             {/* Title with cinematic typography */}
             <div className="space-y-4">
               <div className="flex items-center gap-4 mb-6">
@@ -92,19 +89,10 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <Button 
-                size="lg"
-                onClick={scrollToRealisations}
-                className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground px-10 py-7 text-lg font-bold magenta-glow transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-              >
+              <Button size="lg" onClick={scrollToRealisations} className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground px-10 py-7 text-lg font-bold magenta-glow transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 Nos Réalisations
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                onClick={scrollToContact}
-                className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 px-10 py-7 text-lg font-bold transition-all duration-300 hover:scale-105"
-              >
+              <Button size="lg" variant="outline" onClick={scrollToContact} className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 px-10 py-7 text-lg font-bold transition-all duration-300 hover:scale-105">
                 Nous Contacter
               </Button>
             </div>
@@ -120,8 +108,8 @@ const Hero = () => {
                 <div className="text-muted-foreground uppercase tracking-wider">Projets</div>
               </div>
               <div className="space-y-1">
-                <div className="text-3xl font-bold gradient-text">4K</div>
-                <div className="text-muted-foreground uppercase tracking-wider">Qualité</div>
+                <div className="text-3xl font-bold gradient-text">30</div>
+                <div className="text-muted-foreground uppercase tracking-wider">MEMBRES</div>
               </div>
             </div>
           </div>
@@ -130,7 +118,6 @@ const Hero = () => {
       
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-[5] pointer-events-none"></div>
-    </section>
-  );
+    </section>;
 };
 export default Hero;
