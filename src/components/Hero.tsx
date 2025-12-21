@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
 import logoEmlyon from "@/assets/logo-emlyon.png";
+import AnimatedRealisationsButton from "@/components/AnimatedRealisationsButton";
+
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -79,11 +81,11 @@ const Hero = () => {
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <Button size="lg" onClick={scrollToRealisations} className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground px-10 py-7 text-lg font-bold magenta-glow transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                Nos Réalisations
+            <div className="flex flex-col sm:flex-row gap-6 pt-4 items-start">
+              <AnimatedRealisationsButton onClick={scrollToRealisations} />
+              <Button size="lg" variant="outline" onClick={scrollToContact} className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 px-[52px] py-5 text-[17px] font-semibold rounded-[56px] transition-all duration-300 hover:scale-105">
+                Nous Contacter
               </Button>
-              
             </div>
             
             {/* emlyon branding */}
