@@ -231,46 +231,43 @@ const Footer = () => {
                 </button>
 
                 {/* Le Parrain / Godfather Button */}
-                <div className="relative pt-16">
+                <div className="relative pt-28">
                   {/* Puppet strings */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-16 pointer-events-none">
-                    <div className="absolute left-[20%] h-14 w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing1"></div>
-                    <div className="absolute left-[35%] h-12 w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing2"></div>
-                    <div className="absolute left-1/2 -translate-x-1/2 h-16 w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing3"></div>
-                    <div className="absolute right-[35%] h-13 w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing2"></div>
-                    <div className="absolute right-[20%] h-14 w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing1"></div>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-28 pointer-events-none">
+                    <div className="absolute left-[20%] h-[110px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing1"></div>
+                    <div className="absolute left-[35%] h-[100px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing2"></div>
+                    <div className="absolute left-1/2 -translate-x-1/2 h-[120px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing3"></div>
+                    <div className="absolute right-[35%] h-[105px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing2"></div>
+                    <div className="absolute right-[20%] h-[115px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing1"></div>
                   </div>
 
                   <button 
                     onClick={() => setActiveStyle("godfather")} 
                     className={`group/gf relative bg-transparent border-none cursor-pointer transition-all duration-400 animate-gentleSwing
                       hover:animate-none hover:-translate-y-2 hover:scale-105
-                      active:translate-y-0.5 active:scale-[0.98]
-                      ${activeStyle === "godfather" ? "ring-2 ring-red-900/50 ring-offset-4 ring-offset-black rounded-lg" : ""}`}
+                      active:translate-y-0.5 active:scale-[0.98]`}
                   >
                     {/* Quote on hover */}
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-baskerville text-[10px] italic text-white/40 whitespace-nowrap opacity-0 group-hover/gf:opacity-100 transition-opacity duration-500 pointer-events-none">
-                      "Une offre qu'il ne pourra pas refuser"
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 font-baskerville text-xs italic text-white/40 whitespace-nowrap opacity-0 group-hover/gf:opacity-100 transition-opacity duration-500 pointer-events-none">
+                      "Je vais lui faire une offre qu'il ne pourra pas refuser"
                     </span>
 
                     <span 
-                      className="font-cinzel text-2xl md:text-3xl font-black text-gray-100 tracking-[4px] uppercase block px-6 py-4 relative"
+                      className={`font-cinzel text-lg font-black text-gray-100 tracking-[2px] uppercase block px-9 py-4 relative
+                        bg-[rgba(20,20,20,0.8)] rounded-[30px] border-2 border-white/10
+                        transition-all duration-300
+                        group-hover/gf:bg-[rgba(30,30,30,0.9)] group-hover/gf:border-white/20
+                        ${activeStyle === "godfather" ? "ring-2 ring-red-900/50 ring-offset-2 ring-offset-transparent" : ""}`}
                       style={{
-                        textShadow: "0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 8px 3px rgba(0,0,0,.3), 0 12px 8px rgba(0,0,0,.3), 0 16px 16px rgba(0,0,0,.3)"
+                        textShadow: "0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 1px rgba(0,0,0,.2), 0 0 5px rgba(0,0,0,.3), 0 6px 6px rgba(0,0,0,.4)",
+                        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1)"
                       }}
                     >
                       Le Parrain
                     </span>
 
-                    {/* Red glow on hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover/gf:opacity-100 transition-opacity duration-300 pointer-events-none"
-                      style={{
-                        boxShadow: "0 0 20px rgba(139, 0, 0, 0.3), 0 0 40px rgba(139, 0, 0, 0.2)"
-                      }}
-                    ></div>
-
                     {/* Shadow beneath */}
-                    <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-3 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.5)_0%,transparent_70%)] blur-sm group-hover/gf:w-[95%] group-hover/gf:opacity-80 group-hover/gf:-bottom-8 transition-all duration-400"></div>
+                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[90%] h-5 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.5)_0%,transparent_70%)] blur-[10px] group-hover/gf:w-[95%] group-hover/gf:opacity-80 group-hover/gf:-bottom-12 transition-all duration-400"></div>
                   </button>
                 </div>
               </div>
