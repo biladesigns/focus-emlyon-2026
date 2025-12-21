@@ -109,6 +109,14 @@ export default {
           "42%": { transform: "scale(1.05)" },
           "70%": { transform: "scale(1)" },
         },
+        "lightning": {
+          "0%": { opacity: "0" },
+          "10%": { opacity: "0.9", background: "linear-gradient(180deg, rgba(255,255,200,0.8) 0%, rgba(255,220,100,0.4) 50%, rgba(217,119,6,0.2) 100%)" },
+          "20%": { opacity: "0.3" },
+          "30%": { opacity: "0.8", background: "linear-gradient(180deg, rgba(255,255,220,0.9) 0%, rgba(255,200,50,0.5) 50%, rgba(217,119,6,0.3) 100%)" },
+          "50%": { opacity: "0.2" },
+          "100%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

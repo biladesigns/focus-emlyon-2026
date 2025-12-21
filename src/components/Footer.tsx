@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Mail, Sparkles } from "lucide-react";
+import { Instagram, Youtube, Mail } from "lucide-react";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
 import focusLogoHP from "@/assets/focus-logo-hp.png";
 import fondHP from "@/assets/fond-hp.jpg";
@@ -42,7 +42,7 @@ const Footer = () => {
   return (
     <footer className="relative z-10 px-4 md:px-8 pb-4 md:pb-8">
       <div 
-        className={`backdrop-blur-md rounded-3xl border overflow-hidden transition-all duration-700 relative ${
+        className={`group backdrop-blur-md rounded-3xl border overflow-hidden transition-all duration-700 relative ${
           isHarryPotter 
             ? "border-amber-700/50 shadow-[0_0_30px_rgba(217,119,6,0.3)]" 
             : "bg-card/95 border-border/30"
@@ -55,6 +55,8 @@ const Footer = () => {
             style={{ backgroundImage: `url(${fondHP})` }}
           >
             <div className="absolute inset-0 bg-black/60"></div>
+            {/* Lightning effect on hover */}
+            <div className="absolute inset-0 bg-gradient-to-b from-yellow-200/0 via-yellow-100/0 to-amber-200/0 opacity-0 group-hover:animate-[lightning_0.15s_ease-out] pointer-events-none"></div>
           </div>
         )}
 
