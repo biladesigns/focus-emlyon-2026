@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { Instagram, Youtube } from "lucide-react";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
 import focusLogoHP from "@/assets/focus-logo-hp.png";
+import focusLogoPulp from "@/assets/logo-focus-pulp.png";
 import fondHP from "@/assets/fond-hp.jpg";
 import fondParrain from "@/assets/fond-parrain.avif";
+import fondPulpFiction from "@/assets/fond-pulp-fiction.jpg";
 import { Button } from "./ui/button";
 
 type FooterStyle = "magenta" | "harrypotter" | "godfather" | "pulpfiction";
@@ -102,7 +104,8 @@ const Footer = () => {
 
         {/* Pulp Fiction background */}
         {isPulpFiction && (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#330000] to-[#1a0000]">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${fondPulpFiction})` }}>
+            <div className="absolute inset-0 bg-black/50"></div>
             {/* Film grain overlay */}
             <div className="absolute inset-0 opacity-40 pointer-events-none" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E")`
@@ -128,14 +131,7 @@ const Footer = () => {
                     FOCUS
                   </span>
                 ) : isPulpFiction ? (
-                  <span 
-                    className="font-anton text-4xl text-yellow-400 tracking-[4px] uppercase"
-                    style={{
-                      textShadow: "2px 2px 0 #000, -1px -1px 0 rgba(255,165,0,0.5)"
-                    }}
-                  >
-                    FOCUS
-                  </span>
+                  <img src={focusLogoPulp} alt="FOCUS Logo" className="w-48 h-16 object-contain transition-all duration-500" />
                 ) : (
                   <>
                     <img src={focusLogoWave} alt="FOCUS Logo" className="w-10 h-10 object-contain transition-all duration-500" />
