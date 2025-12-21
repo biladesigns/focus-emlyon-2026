@@ -1,10 +1,13 @@
 const About = () => {
-  return (
-    <section className="py-24 bg-neutral-900 relative overflow-hidden">
+  return <section className="py-24 bg-neutral-900 relative overflow-hidden">
       {/* Animated background orbs for visual interest */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange/15 rounded-full blur-[150px] animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-magenta/15 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-blue/10 rounded-full blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-magenta/15 rounded-full blur-[150px] animate-pulse" style={{
+      animationDelay: '1s'
+    }}></div>
+      <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-blue/10 rounded-full blur-[150px] animate-pulse" style={{
+      animationDelay: '2s'
+    }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -31,20 +34,18 @@ const About = () => {
               <strong className="text-foreground">FOCUS</strong> est une initiative étudiante portée par des passionnés d'audiovisuel.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Nous réalisons des contenus créatifs et professionnels pour refléter l'énergie, la diversité et les projets de notre école — étudiants, associations, administration et entreprises.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">Nous réalisons des contenus créatifs et professionnels pour refléter l'énergie, la diversité et les projets de notre école — étudiants, associations, administration et entreprises.
+
+
+De la stratégie de contenu au tournage, nous mettons notre expertise au service de vos projets partout en France. Nous assurons notamment la couverture audiovisuelle complète du Raid EY, l’un des événements sportifs majeurs du pays.</p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">FOCUS</strong> combine <span className="text-primary font-semibold">professionnalisme</span>, <span className="text-primary font-semibold">innovation</span> et <span className="text-primary font-semibold">créativité</span> au cœur d'emlyon.
+            <p className="text-lg text-muted-foreground leading-relaxed">FOCUS combine professionnalisme, innovation et créativité.<strong className="text-foreground">FOCUS</strong> combine <span className="text-primary font-semibold">professionnalisme</span>, <span className="text-primary font-semibold">innovation</span> et <span className="text-primary font-semibold">créativité</span> au cœur d'emlyon.
             </p>
             
             <div className="h-1 w-24 bg-primary mt-8"></div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
