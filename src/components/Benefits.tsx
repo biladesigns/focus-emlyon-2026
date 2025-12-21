@@ -4,7 +4,7 @@ import { Lightbulb, Users, Award } from "lucide-react";
 const benefits = [
   {
     icon: Lightbulb,
-    title: "Créer, innover, communiquer",
+    title: "L'Expertise",
     description: "Plus qu'une association, nous agissons comme une agence de production. De la captation 4K au montage professionnel, nous maîtrisons l'intégralité de la chaîne de création pour garantir un rendu haut de gamme.",
   },
   {
