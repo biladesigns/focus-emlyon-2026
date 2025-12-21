@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
+import ServiceProcess from "@/components/ServiceProcess";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Film, Video, Sparkles } from "lucide-react";
@@ -74,6 +75,9 @@ const Prestations = () => {
           </div>
         </div>
       </section>
+
+      {/* Service Process */}
+      <ServiceProcess />
 
       {/* Services Component */}
       <Services />
