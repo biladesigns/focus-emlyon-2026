@@ -17,6 +17,8 @@ export default {
         'display': ['Bebas Neue', 'sans-serif'],
         'cinzel': ['Cinzel', 'serif'],
         'baskerville': ['Libre Baskerville', 'serif'],
+        'anton': ['Anton', 'sans-serif'],
+        'staatliches': ['Staatliches', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -153,6 +155,15 @@ export default {
           "90%": { opacity: "0.3" },
           "100%": { transform: "translateY(-100px) translateX(30px)", opacity: "0" },
         },
+        "pulpShine": {
+          "0%": { left: "-100%" },
+          "20%": { left: "150%" },
+          "100%": { left: "150%" },
+        },
+        "neonBlink": {
+          "0%, 45%, 55%, 100%": { opacity: "0" },
+          "50%": { opacity: "0.8" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -171,6 +182,8 @@ export default {
         "stringSwing2": "stringSwing2 3.5s ease-in-out infinite",
         "stringSwing3": "stringSwing3 3.2s ease-in-out infinite",
         "dustFloat": "dustFloat 8s linear infinite",
+        "pulpShine": "pulpShine 3s ease-in-out infinite",
+        "neonBlink": "neonBlink 2s ease-in-out infinite",
       },
     },
   },
