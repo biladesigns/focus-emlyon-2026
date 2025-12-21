@@ -111,19 +111,50 @@ const Footer = () => {
                 <Button variant="outline" size="sm" onClick={() => setActiveStyle("magenta")} className={`${activeStyle === "magenta" ? styleConfig.magenta.buttonActive : styleConfig.magenta.buttonInactive} transition-all duration-300`}>
                   Style Focus
                 </Button>
+                {/* Harry Potter Magic Button */}
                 <button 
                   onClick={() => setActiveStyle("harrypotter")} 
-                  className={`relative px-6 py-2.5 rounded-full font-display text-sm tracking-wider transition-all duration-300 overflow-hidden
-                    ${activeStyle === "harrypotter" 
-                      ? "bg-gradient-to-b from-gray-200 via-gray-100 to-gray-300 text-gray-700 shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),inset_0_-2px_4px_rgba(0,0,0,0.2),0_4px_12px_rgba(0,0,0,0.3)] border-2 border-gray-400" 
-                      : "bg-gradient-to-b from-gray-300 via-gray-200 to-gray-400 text-gray-600 shadow-[inset_0_1px_2px_rgba(255,255,255,0.6),0_2px_6px_rgba(0,0,0,0.2)] border border-gray-400 hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),inset_0_-2px_4px_rgba(0,0,0,0.2),0_4px_12px_rgba(0,0,0,0.3)]"
-                    }`}
+                  className={`group/hp relative px-8 py-4 rounded-full font-cinzel text-base font-bold tracking-[3px] uppercase transition-all duration-300 cursor-pointer animate-magicGlow
+                    bg-gradient-to-br from-[#d4d4d4] to-[#a8a8a8]
+                    text-[#2c2c2c]
+                    shadow-[0_8px_20px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-2px_5px_rgba(0,0,0,0.2)]
+                    hover:translate-y-[-2px] hover:shadow-[0_12px_30px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.8),inset_0_-2px_5px_rgba(0,0,0,0.3),0_0_20px_rgba(255,215,0,0.3)]
+                    active:translate-y-[1px] active:shadow-[0_4px_10px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_2px_8px_rgba(0,0,0,0.4)]
+                    ${activeStyle === "harrypotter" ? "ring-2 ring-amber-400 ring-offset-2 ring-offset-transparent" : ""}`}
+                  style={{
+                    textShadow: "1px 1px 0px rgba(255,255,255,0.5), 2px 2px 3px rgba(0,0,0,0.3)"
+                  }}
                 >
-                  {/* Metallic shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700"></div>
-                  {/* Inner bevel effect */}
-                  <div className="absolute inset-[3px] rounded-full bg-gradient-to-b from-gray-100/50 via-transparent to-gray-400/30 pointer-events-none"></div>
-                  <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">⚡ Harry Potter</span>
+                  {/* Outer border glow on hover */}
+                  <div className="absolute -inset-[2px] rounded-full bg-gradient-to-br from-[#5a5a5a] via-[#8a8a8a] to-[#5a5a5a] opacity-0 group-hover/hp:opacity-100 transition-opacity duration-300 -z-10"></div>
+                  
+                  {/* Ink splatter effect */}
+                  <div className="absolute -top-2 -right-2 w-16 h-16 pointer-events-none animate-inkFloat">
+                    <div className="absolute w-2 h-2 bg-[rgba(30,30,30,0.6)] rounded-full top-2 right-3 blur-[1px]"></div>
+                    <div className="absolute w-1.5 h-1.5 bg-[rgba(30,30,30,0.5)] rounded-full top-4 right-1 blur-[1px]"></div>
+                    <div className="absolute w-1.5 h-1.5 bg-[rgba(30,30,30,0.5)] rounded-full top-1 right-5 blur-[1px]"></div>
+                  </div>
+                  
+                  {/* Runes container */}
+                  <div className="absolute inset-0 pointer-events-none overflow-visible">
+                    {/* Top runes */}
+                    <span className="absolute -top-1 left-[15%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80">ᚺ</span>
+                    <span className="absolute -top-1 left-[28%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "0.2s"}}>ᛁ</span>
+                    <span className="absolute -top-1 left-[41%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "0.4s"}}>ᛉ</span>
+                    <span className="absolute -top-1 right-[41%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "0.6s"}}>ᚱ</span>
+                    <span className="absolute -top-1 right-[28%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "0.8s"}}>ᚦ</span>
+                    <span className="absolute -top-1 right-[15%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "1s"}}>ᚲ</span>
+                    
+                    {/* Bottom runes */}
+                    <span className="absolute -bottom-1 left-[15%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "1.2s"}}>ᚦ</span>
+                    <span className="absolute -bottom-1 left-[28%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "1.4s"}}>ᚾ</span>
+                    <span className="absolute -bottom-1 left-[41%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "1.6s"}}>ᛊ</span>
+                    <span className="absolute -bottom-1 right-[41%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "1.8s"}}>ᛉ</span>
+                    <span className="absolute -bottom-1 right-[28%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "2s"}}>ᚱ</span>
+                    <span className="absolute -bottom-1 right-[15%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "2.2s"}}>ᛖ</span>
+                  </div>
+                  
+                  <span className="relative z-10">⚡ Magie</span>
                 </button>
                 <Button variant="outline" size="sm" onClick={() => setActiveStyle("blue")} className={`${activeStyle === "blue" ? styleConfig.blue.buttonActive : styleConfig.blue.buttonInactive} transition-all duration-300`}>
                   Style 3
