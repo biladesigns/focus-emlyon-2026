@@ -85,7 +85,7 @@ const Footer = () => {
                   <img
                     src={focusLogoHP}
                     alt="FOCUS Logo"
-                    className="w-80 h-32 object-contain transition-all duration-500"
+                    className="w-64 h-24 object-contain transition-all duration-500"
                   />
                 ) : (
                   <>
