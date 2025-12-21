@@ -9,7 +9,7 @@ const benefits = [
   },
   {
     icon: Users,
-    title: "Une visibilité unique",
+    title: "L'Agilité",
     description: "Habitués aux terrains exigeants comme le Raid EY, nous sommes capables de nous déployer partout en France. Notre structure nous permet d'être réactifs et de nous adapter à toutes les contraintes logistiques.",
   },
   {
