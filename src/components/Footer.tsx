@@ -56,7 +56,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative z-10 px-4 md:px-8 pb-4 md:pb-8">
+    <footer className="relative z-10 px-4 md:px-8 pb-2 md:pb-4">
       <div className={`group backdrop-blur-md rounded-3xl border overflow-hidden transition-all duration-700 relative ${
         isHarryPotter 
           ? "border-amber-700/50 shadow-[0_0_30px_rgba(217,119,6,0.3)]" 
@@ -89,8 +89,8 @@ const Footer = () => {
         {/* Gradient accent top */}
         <div className={`h-1 w-full bg-gradient-to-r ${currentStyle.gradient} transition-all duration-500 relative z-10`}></div>
         
-        <div className="container mx-auto px-6 lg:px-12 py-8 relative z-10">
-          <div className="grid md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-6 lg:px-12 py-6 relative z-10">
+          <div className="grid md:grid-cols-4 gap-6">
             {/* Brand */}
             <div className="md:col-span-1">
               <Link to="/" className="flex items-center gap-3 mb-4">
