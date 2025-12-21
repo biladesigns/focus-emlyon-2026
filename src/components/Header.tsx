@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import focusLogoFull from "@/assets/focus-logo-full.png";
+import FocusContactButton from "@/components/FocusContactButton";
 
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "Prestations", path: "/prestations" },
   { label: "Portfolio", path: "/portfolio" },
-  { label: "Contact", path: "/contact" },
 ];
 
 const Header = () => {
@@ -61,8 +61,13 @@ const Header = () => {
             ))}
           </nav>
 
+          {/* Contact button (desktop) */}
+          <div className="hidden md:block ml-auto">
+            <FocusContactButton />
+          </div>
+
           {/* Mobile menu button */}
-          <div className="ml-auto flex items-center">
+          <div className="ml-auto md:ml-4 flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 text-foreground"
