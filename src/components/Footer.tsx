@@ -7,12 +7,13 @@ import fondHP from "@/assets/fond-hp.jpg";
 import fondParrain from "@/assets/fond-parrain.avif";
 import { Button } from "./ui/button";
 
-type FooterStyle = "magenta" | "harrypotter" | "godfather";
+type FooterStyle = "magenta" | "harrypotter" | "godfather" | "pulpfiction";
 
 const Footer = () => {
   const [activeStyle, setActiveStyle] = useState<FooterStyle>("magenta");
   const isHarryPotter = activeStyle === "harrypotter";
   const isGodfather = activeStyle === "godfather";
+  const isPulpFiction = activeStyle === "pulpfiction";
 
   const styleConfig = {
     magenta: {
@@ -32,6 +33,12 @@ const Footer = () => {
       accent: "bg-red-900",
       buttonActive: "bg-red-900 text-white border-red-900",
       buttonInactive: "border-red-900 text-red-900 hover:bg-red-900 hover:text-white"
+    },
+    pulpfiction: {
+      gradient: "from-yellow-500 via-orange-500 to-red-600",
+      accent: "bg-yellow-500",
+      buttonActive: "bg-yellow-500 text-black border-yellow-500",
+      buttonInactive: "border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black"
     }
   };
 
@@ -43,15 +50,20 @@ const Footer = () => {
   // Godfather elegant text style
   const gfElegant = "text-gray-200 font-baskerville";
 
+  // Pulp Fiction retro text style
+  const pfRetro = "text-yellow-400 font-anton tracking-wider";
+
   const getTextStyle = () => {
     if (isHarryPotter) return hpMetallic;
     if (isGodfather) return gfElegant;
+    if (isPulpFiction) return pfRetro;
     return "text-muted-foreground";
   };
 
   const getTitleStyle = () => {
     if (isHarryPotter) return hpMetallic;
     if (isGodfather) return "text-gray-100 font-baskerville";
+    if (isPulpFiction) return "text-yellow-400 font-staatliches tracking-widest";
     return "text-foreground";
   };
 
@@ -62,7 +74,9 @@ const Footer = () => {
           ? "border-amber-700/50 shadow-[0_0_30px_rgba(217,119,6,0.3)]" 
           : isGodfather 
             ? "border-red-900/30 bg-black" 
-            : "bg-card/95 border-border/30"
+            : isPulpFiction
+              ? "border-yellow-500/50 bg-gradient-to-br from-[#1a0000] via-[#330000] to-[#1a0000] shadow-[0_0_30px_rgba(255,215,0,0.2)]"
+              : "bg-card/95 border-border/30"
       }`}>
         
         {/* Harry Potter background */}
@@ -86,7 +100,15 @@ const Footer = () => {
           </div>
         )}
 
-        {/* Gradient accent top */}
+        {/* Pulp Fiction background */}
+        {isPulpFiction && (
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#330000] to-[#1a0000]">
+            {/* Film grain overlay */}
+            <div className="absolute inset-0 opacity-40 pointer-events-none" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E")`
+            }}></div>
+          </div>
+        )}
         <div className={`h-1 w-full bg-gradient-to-r ${currentStyle.gradient} transition-all duration-500 relative z-10`}></div>
         
         <div className="container mx-auto px-6 lg:px-12 py-6 relative z-10 min-h-[200px] flex flex-col justify-center">
@@ -105,6 +127,15 @@ const Footer = () => {
                   >
                     FOCUS
                   </span>
+                ) : isPulpFiction ? (
+                  <span 
+                    className="font-anton text-4xl text-yellow-400 tracking-[4px] uppercase"
+                    style={{
+                      textShadow: "2px 2px 0 #000, -1px -1px 0 rgba(255,165,0,0.5)"
+                    }}
+                  >
+                    FOCUS
+                  </span>
                 ) : (
                   <>
                     <img src={focusLogoWave} alt="FOCUS Logo" className="w-10 h-10 object-contain transition-all duration-500" />
@@ -115,7 +146,9 @@ const Footer = () => {
               <p className={`text-sm leading-relaxed font-medium ${getTextStyle()}`}>
                 {isGodfather 
                   ? "\"Je vais lui faire une offre qu'il ne pourra pas refuser.\""
-                  : "L'association audiovisuelle d'emlyon business school."}
+                  : isPulpFiction
+                    ? "\"Say 'what' again!\""
+                    : "L'association audiovisuelle d'emlyon business school."}
               </p>
             </div>
 
@@ -125,16 +158,16 @@ const Footer = () => {
                 Navigation
               </h4>
               <nav className="flex flex-col gap-2">
-                <Link to="/" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : isPulpFiction ? "text-yellow-600 hover:text-yellow-400" : "text-muted-foreground hover:text-primary"}`}>
                   Accueil
                 </Link>
-                <Link to="/prestations" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/prestations" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : isPulpFiction ? "text-yellow-600 hover:text-yellow-400" : "text-muted-foreground hover:text-primary"}`}>
                   Prestations
                 </Link>
-                <Link to="/portfolio" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/portfolio" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : isPulpFiction ? "text-yellow-600 hover:text-yellow-400" : "text-muted-foreground hover:text-primary"}`}>
                   Portfolio
                 </Link>
-                <Link to="/contact" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : "text-muted-foreground hover:text-primary"}`}>
+                <Link to="/contact" className={`text-sm font-medium transition-all ${isHarryPotter ? `${hpMetallic} hover:brightness-125` : isGodfather ? "text-gray-400 hover:text-gray-100" : isPulpFiction ? "text-yellow-600 hover:text-yellow-400" : "text-muted-foreground hover:text-primary"}`}>
                   Contact
                 </Link>
               </nav>
@@ -155,7 +188,9 @@ const Footer = () => {
                       ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" 
                       : isGodfather
                         ? "bg-gray-900 text-gray-400 hover:text-gray-100 border border-gray-700 hover:border-red-900/50"
-                        : "bg-foreground/10 hover:bg-magenta/20 hover:text-magenta"
+                        : isPulpFiction
+                          ? "bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/40 border border-yellow-500/50"
+                          : "bg-foreground/10 hover:bg-magenta/20 hover:text-magenta"
                   }`}
                 >
                   <Instagram size={18} />
@@ -169,7 +204,9 @@ const Footer = () => {
                       ? "bg-gradient-to-b from-amber-200/20 to-amber-600/20 text-amber-200 hover:from-amber-200/30 hover:to-amber-600/30 border border-amber-400/40" 
                       : isGodfather
                         ? "bg-gray-900 text-gray-400 hover:text-gray-100 border border-gray-700 hover:border-red-900/50"
-                        : "bg-foreground/10 hover:bg-orange/20 hover:text-orange"
+                        : isPulpFiction
+                          ? "bg-yellow-500/20 text-yellow-400 hover:bg-yellow-500/40 border border-yellow-500/50"
+                          : "bg-foreground/10 hover:bg-orange/20 hover:text-orange"
                   }`}
                 >
                   <Youtube size={18} />
@@ -258,6 +295,52 @@ const Footer = () => {
                     <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[90%] h-5 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.5)_0%,transparent_70%)] blur-[10px] group-hover/gf:w-[95%] group-hover/gf:opacity-80 group-hover/gf:-bottom-12 transition-all duration-400"></div>
                   </button>
                 </div>
+
+                {/* Pulp Fiction Button */}
+                <div className="relative">
+                  <button 
+                    onClick={() => setActiveStyle("pulpfiction")} 
+                    className="group/pf relative bg-transparent border-none cursor-pointer transition-all duration-300
+                      hover:-translate-y-[3px] hover:scale-[1.03]
+                      active:translate-y-[1px] active:scale-[0.98]"
+                    style={{ filter: "drop-shadow(0 0 20px rgba(255, 215, 0, 0.3))" }}
+                  >
+                    {/* Quote on hover */}
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 font-staatliches text-xs text-yellow-400 tracking-widest uppercase whitespace-nowrap opacity-0 group-hover/pf:opacity-100 transition-all duration-500 pointer-events-none"
+                      style={{ textShadow: "0 0 10px rgba(255, 215, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.8)" }}
+                    >
+                      "Say 'what' again!"
+                    </span>
+
+                    <span 
+                      className={`font-anton text-xl tracking-[3px] uppercase block px-11 py-4 relative overflow-hidden
+                        bg-gradient-to-br from-yellow-400 via-orange-400 to-yellow-400
+                        rounded-[35px] border-4 border-black text-black
+                        transition-all duration-300
+                        group-hover/pf:from-orange-400 group-hover/pf:via-yellow-400 group-hover/pf:to-orange-400
+                        ${activeStyle === "pulpfiction" ? "ring-2 ring-yellow-400 ring-offset-2 ring-offset-transparent" : ""}`}
+                      style={{
+                        textShadow: "1px 1px 0 rgba(255, 255, 255, 0.5), -1px -1px 0 rgba(0, 0, 0, 0.2)",
+                        boxShadow: "0 0 0 2px #FFD700, 0 6px 0 0 #000, 0 6px 0 2px #FFD700, 0 10px 20px rgba(0, 0, 0, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.3)"
+                      }}
+                    >
+                      {/* Shine effect */}
+                      <span className="absolute top-[-50%] left-[-100%] w-1/2 h-[200%] bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-[25deg] animate-pulpShine pointer-events-none"></span>
+                      
+                      {/* Neon border blink */}
+                      <span className="absolute -inset-[6px] rounded-[40px] border-2 border-red-500 opacity-0 animate-neonBlink pointer-events-none"
+                        style={{ boxShadow: "0 0 10px #FF0000, inset 0 0 10px #FF0000" }}
+                      ></span>
+                      
+                      Pulp Fiction
+                    </span>
+
+                    {/* Tarantino badge */}
+                    <span className="absolute -top-3 -right-3 bg-red-600 text-white font-display text-[10px] px-2 py-1 rounded-full border-2 border-black shadow-lg rotate-[15deg] opacity-0 group-hover/pf:opacity-100 transition-all duration-300 tracking-wider">
+                      TARANTINO
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -268,12 +351,14 @@ const Footer = () => {
               ? "border-amber-400/30" 
               : isGodfather 
                 ? "border-gray-700/50" 
-                : "border-border/30"
+                : isPulpFiction
+                  ? "border-yellow-500/30"
+                  : "border-border/30"
           }`}>
-            <p className={`text-xs font-medium ${isHarryPotter ? hpMetallic : isGodfather ? "text-gray-500 font-baskerville" : "text-muted-foreground"}`}>
+            <p className={`text-xs font-medium ${isHarryPotter ? hpMetallic : isGodfather ? "text-gray-500 font-baskerville" : isPulpFiction ? "text-yellow-600 font-display" : "text-muted-foreground"}`}>
               © 2025 FOCUS - Association audiovisuelle d'emlyon business school
             </p>
-            <div className={`flex items-center gap-2 text-xs font-medium ${isHarryPotter ? hpMetallic : isGodfather ? "text-gray-500 font-baskerville" : "text-muted-foreground"}`}>
+            <div className={`flex items-center gap-2 text-xs font-medium ${isHarryPotter ? hpMetallic : isGodfather ? "text-gray-500 font-baskerville" : isPulpFiction ? "text-yellow-600 font-display" : "text-muted-foreground"}`}>
               <span className={`w-2 h-2 rounded-full ${currentStyle.accent} animate-pulse transition-all duration-500`}></span>
               Lyon, France
             </div>
