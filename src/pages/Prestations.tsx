@@ -4,28 +4,6 @@ import Benefits from "@/components/Benefits";
 import ServiceProcess from "@/components/ServiceProcess";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Film, Video, Sparkles } from "lucide-react";
-
-const prestationsDetails = [
-  {
-    icon: Film,
-    title: "Aftermovies",
-    description: "Capturer l'essence de vos événements en vidéos mémorables. Du montage dynamique aux effets visuels soignés.",
-    color: "orange",
-  },
-  {
-    icon: Video,
-    title: "Courts-métrages",
-    description: "Productions créatives originales, de l'écriture à la post-production. Narration visuelle unique et artistique.",
-    color: "blue",
-  },
-  {
-    icon: Sparkles,
-    title: "Projets sur-mesure",
-    description: "Réalisation de vos idées audiovisuelles. Clips, publicités, contenus pour réseaux sociaux.",
-    color: "orange",
-  },
-];
 
 const Prestations = () => {
   return (
@@ -53,34 +31,11 @@ const Prestations = () => {
         </div>
       </section>
 
-      {/* Detailed Services Grid */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-wrap justify-center gap-8">
-            {prestationsDetails.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm"
-              >
-                <div
-                  className={`w-16 h-16 rounded-xl bg-${service.color}/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <service.icon className={`w-8 h-8 text-${service.color}`} />
-                </div>
-                
-                <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Process */}
-      <ServiceProcess />
-
-      {/* Services Component */}
+      {/* Services Component - Nos Prestations */}
       <Services />
+
+      {/* Service Process - Notre Processus */}
+      <ServiceProcess />
       
       {/* Benefits */}
       <Benefits />
