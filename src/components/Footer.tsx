@@ -231,24 +231,15 @@ const Footer = () => {
                 </button>
 
                 {/* Le Parrain / Godfather Button */}
-                <div className="relative pt-28">
-                  {/* Puppet strings */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-28 pointer-events-none">
-                    <div className="absolute left-[20%] h-[110px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing1"></div>
-                    <div className="absolute left-[35%] h-[100px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing2"></div>
-                    <div className="absolute left-1/2 -translate-x-1/2 h-[120px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing3"></div>
-                    <div className="absolute right-[35%] h-[105px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing2"></div>
-                    <div className="absolute right-[20%] h-[115px] w-0.5 bg-gradient-to-b from-transparent via-gray-400/30 to-gray-400/60 origin-top animate-stringSwing1"></div>
-                  </div>
-
+                <div className="relative">
                   <button 
                     onClick={() => setActiveStyle("godfather")} 
-                    className={`group/gf relative bg-transparent border-none cursor-pointer transition-all duration-400 animate-gentleSwing
-                      hover:animate-none hover:-translate-y-2 hover:scale-105
-                      active:translate-y-0.5 active:scale-[0.98]`}
+                    className="group/gf relative bg-transparent border-none cursor-pointer transition-all duration-400
+                      hover:-translate-y-[3px] hover:scale-[1.02]
+                      active:translate-y-0.5 active:scale-[0.98]"
                   >
                     {/* Quote on hover */}
-                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 font-baskerville text-xs italic text-white/40 whitespace-nowrap opacity-0 group-hover/gf:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-baskerville text-[10px] italic text-white/40 whitespace-nowrap opacity-0 group-hover/gf:opacity-100 transition-opacity duration-500 pointer-events-none">
                       "Je vais lui faire une offre qu'il ne pourra pas refuser"
                     </span>
 
