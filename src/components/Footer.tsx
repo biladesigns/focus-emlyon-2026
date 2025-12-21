@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube } from "lucide-react";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
+import FocusContactButton from "./FocusContactButton";
 
 const Footer = () => {
   return (
@@ -66,17 +67,9 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Contact */}
-            <div>
-              <h4 className="font-bold mb-4 text-sm uppercase tracking-wider text-foreground">
-                Contact
-              </h4>
-              <Link 
-                to="/contact" 
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-magenta/10 text-magenta hover:bg-magenta hover:text-white transition-all text-sm font-medium"
-              >
-                Nous contacter
-              </Link>
+            {/* Contact Button */}
+            <div className="flex items-center justify-center md:justify-start">
+              <FocusContactButton />
             </div>
           </div>
 

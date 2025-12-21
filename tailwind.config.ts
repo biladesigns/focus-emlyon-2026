@@ -19,6 +19,7 @@ export default {
         'baskerville': ['Libre Baskerville', 'serif'],
         'anton': ['Anton', 'sans-serif'],
         'staatliches': ['Staatliches', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -164,6 +165,27 @@ export default {
           "0%, 45%, 55%, 100%": { opacity: "0" },
           "50%": { opacity: "0.8" },
         },
+        "gradientShift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "auraPulse": {
+          "0%, 100%": { transform: "translate(-50%, -50%) scale(1)", opacity: "0.6" },
+          "50%": { transform: "translate(-50%, -50%) scale(1.15)", opacity: "0.9" },
+        },
+        "targetPulse": {
+          "0%, 100%": { opacity: "1", transform: "translate(-50%, -50%) scale(1)" },
+          "50%": { opacity: "0.5", transform: "translate(-50%, -50%) scale(1.1)" },
+        },
+        "innerFlowMove": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)", opacity: "0.4" },
+          "50%": { transform: "translate(15px, -15px) scale(1.2)", opacity: "0.7" },
+        },
+        "shine": {
+          "0%": { left: "-100%" },
+          "20%": { left: "150%" },
+          "100%": { left: "150%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -184,6 +206,11 @@ export default {
         "dustFloat": "dustFloat 8s linear infinite",
         "pulpShine": "pulpShine 3s ease-in-out infinite",
         "neonBlink": "neonBlink 2s ease-in-out infinite",
+        "gradientShift": "gradientShift 4s ease infinite",
+        "auraPulse": "auraPulse 2s ease-in-out infinite",
+        "targetPulse": "targetPulse 1.5s ease-in-out infinite",
+        "innerFlowMove": "innerFlowMove 6s ease-in-out infinite",
+        "shine": "shine 3s ease-in-out infinite",
       },
     },
   },
