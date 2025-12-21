@@ -1,69 +1,88 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Play, Eye, ExternalLink } from "lucide-react";
-const categories = ["Tous", "Inside", "Aftermovies", "Courts-métrages", "Clips"];
-const projects = [{
-  id: 1,
-  title: "Aftermovie WEI 2024",
-  category: "Aftermovies",
-  thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
-  views: "125K",
-  videoUrl: "https://www.youtube.com/watch?v=example1"
-}, {
-  id: 2,
-  title: "Inside MUSIC'ALL",
-  category: "Inside",
-  thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-  views: "45K",
-  videoUrl: "https://www.youtube.com/watch?v=example2"
-}, {
-  id: 3,
-  title: "Court-métrage 'Décalage'",
-  category: "Courts-métrages",
-  thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
-  views: "32K",
-  videoUrl: "https://www.youtube.com/watch?v=example3"
-}, {
-  id: 4,
-  title: "Inside NOISE",
-  category: "Inside",
-  thumbnail: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
-  views: "28K",
-  videoUrl: "https://www.youtube.com/watch?v=example4"
-}, {
-  id: 5,
-  title: "Aftermovie Gala 2024",
-  category: "Aftermovies",
-  thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop",
-  views: "89K",
-  videoUrl: "https://www.youtube.com/watch?v=example5"
-}, {
-  id: 6,
-  title: "Clip 'Nuit Blanche'",
-  category: "Clips",
-  thumbnail: "https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?w=600&h=400&fit=crop",
-  views: "156K",
-  videoUrl: "https://www.youtube.com/watch?v=example6"
-}, {
-  id: 7,
-  title: "Inside RAID AVENTURE",
-  category: "Inside",
-  thumbnail: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=600&h=400&fit=crop",
-  views: "67K",
-  videoUrl: "https://www.youtube.com/watch?v=example7"
-}, {
-  id: 8,
-  title: "Court-métrage 'Éclipse'",
-  category: "Courts-métrages",
-  thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop",
-  views: "41K",
-  videoUrl: "https://www.youtube.com/watch?v=example8"
-}];
+import { Play, Eye, ExternalLink, ArrowRight } from "lucide-react";
+
+const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
+
+const featuredProjects = [
+  {
+    id: "raid-ey",
+    title: "RAID EY",
+    subtitle: "Aftermovie Officiel",
+    description: "Captation et montage de l'aftermovie officiel du Raid EY, une aventure sportive intense capturée dans toute sa splendeur.",
+    thumbnail: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=600&fit=crop",
+    stats: { views: "125K", duration: "4:32" },
+    gradient: "from-orange via-magenta to-purple",
+  },
+  {
+    id: "coupe-adhemar",
+    title: "COUPE ADHÉMAR",
+    subtitle: "Aftermovie Officiel",
+    description: "L'énergie et la passion du plus grand tournoi inter-écoles capturées en images pour revivre chaque moment fort.",
+    thumbnail: "https://images.unsplash.com/photo-1461896836934- voices?w=800&h=600&fit=crop",
+    stats: { views: "89K", duration: "5:15" },
+    gradient: "from-blue via-purple to-magenta",
+  },
+];
+
+const projects = [
+  {
+    id: 1,
+    title: "Aftermovie WEI 2024",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    views: "125K",
+    videoUrl: "https://www.youtube.com/watch?v=example1"
+  },
+  {
+    id: 3,
+    title: "Court-métrage 'Décalage'",
+    category: "Courts-métrages",
+    thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
+    views: "32K",
+    videoUrl: "https://www.youtube.com/watch?v=example3"
+  },
+  {
+    id: 5,
+    title: "Aftermovie Gala 2024",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop",
+    views: "89K",
+    videoUrl: "https://www.youtube.com/watch?v=example5"
+  },
+  {
+    id: 7,
+    title: "Captation Conférence TEDx",
+    category: "Captation",
+    thumbnail: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop",
+    views: "67K",
+    videoUrl: "https://www.youtube.com/watch?v=example7"
+  },
+  {
+    id: 8,
+    title: "Court-métrage 'Éclipse'",
+    category: "Courts-métrages",
+    thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop",
+    views: "41K",
+    videoUrl: "https://www.youtube.com/watch?v=example8"
+  },
+  {
+    id: 9,
+    title: "Captation Forum Entreprises",
+    category: "Captation",
+    thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
+    views: "23K",
+    videoUrl: "https://www.youtube.com/watch?v=example9"
+  },
+];
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
   const filteredProjects = activeCategory === "Tous" ? projects : projects.filter(p => p.category === activeCategory);
-  return <Layout>
+  
+  return (
+    <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue/5 via-transparent to-transparent pointer-events-none"></div>
@@ -91,13 +110,107 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Featured Projects */}
+      <section className="py-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/20 to-transparent pointer-events-none"></div>
+        
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-4">
+              <span className="gradient-text">PROJETS PHARES</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Nos réalisations les plus emblématiques
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {featuredProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className="group relative rounded-2xl overflow-hidden cursor-pointer"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                {/* Background Gradient Glow */}
+                <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl opacity-0 group-hover:opacity-70 blur-xl transition-all duration-700`}></div>
+                
+                {/* Card */}
+                <div className="relative bg-card border border-border/50 rounded-2xl overflow-hidden group-hover:border-primary/30 transition-all duration-500">
+                  {/* Image Container */}
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+                    
+                    {/* Play Button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-background/20 backdrop-blur-md border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110">
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-magenta to-orange flex items-center justify-center magenta-glow">
+                          <Play className="w-7 h-7 text-foreground ml-1" fill="currentColor" />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Stats Badge */}
+                    <div className="absolute top-4 right-4 flex gap-2">
+                      <span className="px-3 py-1.5 bg-background/80 backdrop-blur-md rounded-full text-xs font-bold text-foreground flex items-center gap-1.5">
+                        <Eye className="w-3.5 h-3.5" />
+                        {project.stats.views}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="p-6 relative">
+                    {/* Accent Line */}
+                    <div className={`absolute top-0 left-6 right-6 h-px bg-gradient-to-r ${project.gradient} opacity-50`}></div>
+                    
+                    <span className="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-2 block">
+                      {project.subtitle}
+                    </span>
+                    
+                    <h3 className="font-display text-2xl md:text-3xl tracking-wider mb-3 text-foreground group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                      <span>Voir le projet</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Filter Tabs */}
-      <section className="pb-8">
+      <section className="pb-8 pt-8">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map(category => <Button key={category} variant={activeCategory === category ? "default" : "outline"} onClick={() => setActiveCategory(category)} className={activeCategory === category ? "bg-gradient-to-r from-magenta to-orange text-foreground font-bold" : "border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/50"}>
+            {categories.map(category => (
+              <Button
+                key={category}
+                variant={activeCategory === category ? "default" : "outline"}
+                onClick={() => setActiveCategory(category)}
+                className={activeCategory === category 
+                  ? "bg-gradient-to-r from-magenta to-orange text-foreground font-bold" 
+                  : "border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/50"
+                }
+              >
                 {category}
-              </Button>)}
+              </Button>
+            ))}
           </div>
         </div>
       </section>
@@ -106,10 +219,18 @@ const Portfolio = () => {
       <section className="py-12 pb-24">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500">
+            {filteredProjects.map(project => (
+              <div
+                key={project.id}
+                className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500"
+              >
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
-                  <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60"></div>
@@ -139,7 +260,8 @@ const Portfolio = () => {
                     <span>{project.views} vues</span>
                   </div>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -153,16 +275,18 @@ const Portfolio = () => {
             <span className="gradient-text">VOIR PLUS DE VIDÉOS</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-            Retrouvez toutes nos productions sur notre compte instagram 
+            Retrouvez toutes nos productions sur notre compte Instagram
           </p>
           <Button asChild size="lg" className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold magenta-glow px-10 py-7 text-lg">
-            <a href="https://www.youtube.com/@focusemlyon" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="https://www.instagram.com/focusemlyon" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               <ExternalLink className="w-5 h-5" />
-              Notre Compte Instagram   
+              Notre Compte Instagram
             </a>
           </Button>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default Portfolio;
