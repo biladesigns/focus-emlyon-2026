@@ -38,7 +38,7 @@ const Realisations = () => {
   };
 
   return (
-    <section id="realisations" className="py-24 bg-neutral-900 relative overflow-hidden film-grain">
+    <section id="realisations" className="py-24 bg-transparent relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">

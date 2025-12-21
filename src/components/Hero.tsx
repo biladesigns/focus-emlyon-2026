@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
-import ParticleNetwork from "./ParticleNetwork";
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -14,10 +13,7 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
-      {/* Particle Network Background */}
-      <ParticleNetwork />
-      
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent">
       {/* Cinematic Frame Lines */}
       <div className="absolute inset-0 pointer-events-none z-[2]">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
