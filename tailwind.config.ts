@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         'display': ['Bebas Neue', 'sans-serif'],
+        'cinzel': ['Cinzel', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -117,6 +118,18 @@ export default {
           "50%": { opacity: "0.2" },
           "100%": { opacity: "0" },
         },
+        "runeGlow": {
+          "0%, 100%": { opacity: "0.4", textShadow: "0 0 5px rgba(255,255,255,0.3)" },
+          "50%": { opacity: "0.8", textShadow: "0 0 10px rgba(255,255,255,0.6)" },
+        },
+        "magicGlow": {
+          "0%, 100%": { filter: "drop-shadow(0 0 5px rgba(255,215,0,0.2))" },
+          "50%": { filter: "drop-shadow(0 0 20px rgba(255,215,0,0.5))" },
+        },
+        "inkFloat": {
+          "0%, 100%": { transform: "translate(0, 0) rotate(0deg)" },
+          "50%": { transform: "translate(-5px, 5px) rotate(10deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -127,6 +140,9 @@ export default {
         "glitch-2": "glitch-2 0.3s ease-in-out",
         "slide-up": "slide-up 0.8s ease-out",
         "heartbeat": "heartbeat 1.5s ease-in-out infinite",
+        "runeGlow": "runeGlow 3s ease-in-out infinite",
+        "magicGlow": "magicGlow 3s ease-in-out infinite",
+        "inkFloat": "inkFloat 4s ease-in-out infinite",
       },
     },
   },
