@@ -39,27 +39,6 @@ const Prestations = () => {
       
       {/* Benefits */}
       <Benefits />
-
-      {/* CTA */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-magenta/10 via-transparent to-transparent pointer-events-none"></div>
-        
-        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl tracking-wider mb-6">
-            <span className="gradient-text">UN PROJET EN TÊTE ?</span>
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-            Discutons ensemble de votre vision et donnons-lui vie.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-gradient-to-r from-magenta to-orange hover:from-magenta/90 hover:to-orange/90 text-foreground font-bold magenta-glow px-10 py-7 text-lg"
-          >
-            <Link to="/contact">Nous Contacter</Link>
-          </Button>
-        </div>
-      </section>
     </Layout>
   );
 };

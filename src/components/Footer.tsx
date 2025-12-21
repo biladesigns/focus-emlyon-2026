@@ -5,16 +5,16 @@ import FocusContactButton from "./FocusContactButton";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 px-4 md:px-8 pb-2 md:pb-4">
+    <footer className="relative z-10 px-4 md:px-8 pb-2 md:pb-4 -mt-8">
       <div className="backdrop-blur-md rounded-3xl border bg-card/95 border-border/30 overflow-hidden">
         <div className="h-1 w-full bg-gradient-to-r from-magenta via-orange to-blue"></div>
         
-        <div className="container mx-auto px-6 lg:px-12 py-8">
+        <div className="container mx-auto px-6 lg:px-12 py-6">
           <div className="grid md:grid-cols-4 gap-8 items-start">
             {/* Brand */}
             <div className="md:col-span-1">
               <Link to="/" className="flex items-center gap-3 mb-4">
-                <img src={focusLogoWave} alt="FOCUS Logo" className="w-12 h-12 object-contain" />
+                <img src={focusLogoWave} alt="FOCUS Logo" className="w-20 h-20 object-contain" />
               </Link>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 L'association audiovisuelle d'emlyon business school.
