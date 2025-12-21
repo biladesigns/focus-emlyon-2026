@@ -4,6 +4,7 @@ import { Instagram, Youtube } from "lucide-react";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
 import focusLogoHP from "@/assets/focus-logo-hp.png";
 import fondHP from "@/assets/fond-hp.jpg";
+import fondParrain from "@/assets/fond-parrain.avif";
 import { Button } from "./ui/button";
 
 type FooterStyle = "magenta" | "harrypotter" | "godfather";
@@ -74,26 +75,22 @@ const Footer = () => {
 
         {/* Godfather background */}
         {isGodfather && (
-          <div className="absolute inset-0 bg-black">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${fondParrain})` }}>
+            <div className="absolute inset-0 bg-black/50"></div>
             {/* Vignette effect */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.7)_100%)]"></div>
             {/* Film grain overlay */}
             <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.1'/%3E%3C/svg%3E")`
             }}></div>
-            {/* Dust particles */}
-            <div className="absolute w-0.5 h-0.5 bg-white/30 rounded-full animate-dustFloat" style={{ left: '20%', top: '80%' }}></div>
-            <div className="absolute w-0.5 h-0.5 bg-white/20 rounded-full animate-dustFloat" style={{ left: '40%', top: '90%', animationDelay: '2s' }}></div>
-            <div className="absolute w-0.5 h-0.5 bg-white/25 rounded-full animate-dustFloat" style={{ left: '70%', top: '85%', animationDelay: '4s' }}></div>
-            <div className="absolute w-0.5 h-0.5 bg-white/30 rounded-full animate-dustFloat" style={{ left: '85%', top: '95%', animationDelay: '6s' }}></div>
           </div>
         )}
 
         {/* Gradient accent top */}
         <div className={`h-1 w-full bg-gradient-to-r ${currentStyle.gradient} transition-all duration-500 relative z-10`}></div>
         
-        <div className="container mx-auto px-6 lg:px-12 py-12 relative z-10">
-          <div className="grid md:grid-cols-4 gap-10">
+        <div className="container mx-auto px-6 lg:px-12 py-8 relative z-10">
+          <div className="grid md:grid-cols-4 gap-8">
             {/* Brand */}
             <div className="md:col-span-1">
               <Link to="/" className="flex items-center gap-3 mb-4">
@@ -266,11 +263,11 @@ const Footer = () => {
           </div>
 
           {/* Bottom */}
-          <div className={`mt-10 pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-4 ${
+          <div className={`mt-6 pt-4 border-t flex flex-col md:flex-row justify-between items-center gap-3 ${
             isHarryPotter 
               ? "border-amber-400/30" 
               : isGodfather 
-                ? "border-gray-800" 
+                ? "border-gray-700/50" 
                 : "border-border/30"
           }`}>
             <p className={`text-xs font-medium ${isHarryPotter ? hpMetallic : isGodfather ? "text-gray-500 font-baskerville" : "text-muted-foreground"}`}>
