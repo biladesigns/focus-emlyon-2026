@@ -5,7 +5,7 @@ const benefits = [
   {
     icon: Lightbulb,
     title: "Créer, innover, communiquer",
-    description: "Nous accompagnons les entreprises, étudiants, associations et l'administration avec des productions audiovisuelles adaptées à leurs besoins.",
+    description: "Plus qu'une association, nous agissons comme une agence de production. De la captation 4K au montage professionnel, nous maîtrisons l'intégralité de la chaîne de création pour garantir un rendu haut de gamme.",
   },
   {
     icon: Users,
