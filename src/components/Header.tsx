@@ -62,7 +62,7 @@ const Header = () => {
           </nav>
 
           {/* Contact button (desktop) */}
-          <div className="hidden md:block ml-auto">
+          <div className="hidden md:block ml-auto mr-8 lg:mr-12">
             <FocusContactButton />
           </div>
 
