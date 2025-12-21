@@ -71,10 +71,12 @@ const Footer = () => {
               <h4 className="font-bold mb-4 text-sm uppercase tracking-wider text-foreground">
                 Contact
               </h4>
-              <p className="text-sm text-muted-foreground">
-                emlyon business school<br />
-                Écully, France
-              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-magenta/10 text-magenta hover:bg-magenta hover:text-white transition-all text-sm font-medium"
+              >
+                Nous contacter
+              </Link>
             </div>
           </div>
 
