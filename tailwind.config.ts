@@ -186,26 +186,18 @@ export default {
           "20%": { left: "150%" },
           "100%": { left: "150%" },
         },
-        "glow-pulse": {
-          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
-          "50%": { opacity: "0.8", transform: "scale(1.05)" },
-        },
-        "rotate-border": {
-          "0%": { "--border-angle": "0deg" },
-          "100%": { "--border-angle": "360deg" },
-        },
-        "shimmer": {
-          "0%, 100%": { backgroundPosition: "100% 0" },
-          "50%": { backgroundPosition: "0% 0" },
+        "glow-move": {
+          "0%, 100%": { backgroundPosition: "0% 50%", opacity: "0.5" },
+          "50%": { backgroundPosition: "100% 50%", opacity: "0.8" },
         },
         "particle-float": {
           "0%, 100%": { transform: "translateY(0) scale(1)", opacity: "0.6" },
           "50%": { transform: "translateY(-10px) scale(1.5)", opacity: "1" },
         },
         "focus-expand": {
-          "0%": { transform: "scale(0.95)", opacity: "0", borderColor: "rgba(230, 73, 128, 0.8)" },
-          "50%": { opacity: "0.5" },
-          "100%": { transform: "scale(1.1)", opacity: "0", borderColor: "rgba(253, 126, 20, 0)" },
+          "0%": { transform: "scale(0.95)", opacity: "0" },
+          "30%": { opacity: "0.6" },
+          "100%": { transform: "scale(1.15)", opacity: "0" },
         },
       },
       animation: {
@@ -232,9 +224,7 @@ export default {
         "targetPulse": "targetPulse 1.5s ease-in-out infinite",
         "innerFlowMove": "innerFlowMove 6s ease-in-out infinite",
         "shine": "shine 3s ease-in-out infinite",
-        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
-        "rotate-border": "rotate-border 4s linear infinite",
-        "shimmer": "shimmer 3s ease-in-out infinite",
+        "glow-move": "glow-move 4s ease-in-out infinite",
         "particle-float": "particle-float 2s ease-in-out infinite",
         "focus-expand": "focus-expand 1.5s ease-out infinite",
       },

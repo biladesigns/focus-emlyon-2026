@@ -244,6 +244,36 @@
   }
 }
 
+/* Animated Button Styles */
+.btn-realisations::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 56px;
+  padding: 2px;
+  background: linear-gradient(90deg, #3b5bdb, #7048e8, #e64980, #fd7e14, #fab005, #3b5bdb);
+  background-size: 200% 100%;
+  animation: border-move 3s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes border-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 /* Animated Button Ripple Effect */
 .ripple-effect {
   position: absolute;
