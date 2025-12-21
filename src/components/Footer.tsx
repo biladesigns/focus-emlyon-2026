@@ -154,7 +154,7 @@ const Footer = () => {
                     <span className="absolute -bottom-1 right-[15%] font-cinzel text-xs text-gray-500/60 animate-runeGlow group-hover/hp:text-amber-400/80" style={{animationDelay: "2.2s"}}>ᛖ</span>
                   </div>
                   
-                  <span className="relative z-10">⚡ Magie</span>
+                  <span className="relative z-10">Harry Potter</span>
                 </button>
                 <Button variant="outline" size="sm" onClick={() => setActiveStyle("blue")} className={`${activeStyle === "blue" ? styleConfig.blue.buttonActive : styleConfig.blue.buttonInactive} transition-all duration-300`}>
                   Style 3
