@@ -111,9 +111,20 @@ const Footer = () => {
                 <Button variant="outline" size="sm" onClick={() => setActiveStyle("magenta")} className={`${activeStyle === "magenta" ? styleConfig.magenta.buttonActive : styleConfig.magenta.buttonInactive} transition-all duration-300`}>
                   Style Focus
                 </Button>
-                <Button variant="outline" size="sm" onClick={() => setActiveStyle("harrypotter")} className={`${activeStyle === "harrypotter" ? styleConfig.harrypotter.buttonActive : styleConfig.harrypotter.buttonInactive} transition-all duration-300`}>
-                  ⚡ Harry Potter
-                </Button>
+                <button 
+                  onClick={() => setActiveStyle("harrypotter")} 
+                  className={`relative px-6 py-2.5 rounded-full font-display text-sm tracking-wider transition-all duration-300 overflow-hidden
+                    ${activeStyle === "harrypotter" 
+                      ? "bg-gradient-to-b from-gray-200 via-gray-100 to-gray-300 text-gray-700 shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),inset_0_-2px_4px_rgba(0,0,0,0.2),0_4px_12px_rgba(0,0,0,0.3)] border-2 border-gray-400" 
+                      : "bg-gradient-to-b from-gray-300 via-gray-200 to-gray-400 text-gray-600 shadow-[inset_0_1px_2px_rgba(255,255,255,0.6),0_2px_6px_rgba(0,0,0,0.2)] border border-gray-400 hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.8),inset_0_-2px_4px_rgba(0,0,0,0.2),0_4px_12px_rgba(0,0,0,0.3)]"
+                    }`}
+                >
+                  {/* Metallic shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700"></div>
+                  {/* Inner bevel effect */}
+                  <div className="absolute inset-[3px] rounded-full bg-gradient-to-b from-gray-100/50 via-transparent to-gray-400/30 pointer-events-none"></div>
+                  <span className="relative z-10 drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">⚡ Harry Potter</span>
+                </button>
                 <Button variant="outline" size="sm" onClick={() => setActiveStyle("blue")} className={`${activeStyle === "blue" ? styleConfig.blue.buttonActive : styleConfig.blue.buttonInactive} transition-all duration-300`}>
                   Style 3
                 </Button>
