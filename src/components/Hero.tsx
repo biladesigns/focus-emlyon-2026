@@ -60,10 +60,6 @@ const Hero = () => {
         }}>
             {/* Title with cinematic typography */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
-                <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">Emlyon Business School</span>
-              </div>
               
               <h1 className="text-7xl md:text-8xl lg:text-9xl font-display leading-none tracking-wider">
                 <span className="gradient-text">FOCUS</span>
@@ -96,9 +92,10 @@ const Hero = () => {
             
             {/* emlyon branding */}
             <div className="flex items-center gap-6 pt-8">
-              <p className="text-lg text-muted-foreground font-medium">
-                Une association de
-              </p>
+              <div className="flex items-center gap-4">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
+                <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">Une association de</span>
+              </div>
               <img 
                 src={logoEmlyon} 
                 alt="emlyon business school" 
