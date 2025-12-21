@@ -131,7 +131,7 @@ const Footer = () => {
                     FOCUS
                   </span>
                 ) : isPulpFiction ? (
-                  <img src={focusLogoPulp} alt="FOCUS Logo" className="w-48 h-16 object-contain transition-all duration-500" />
+                  <img src={focusLogoPulp} alt="FOCUS Logo" className="w-72 h-28 object-contain transition-all duration-500" />
                 ) : (
                   <>
                     <img src={focusLogoWave} alt="FOCUS Logo" className="w-10 h-10 object-contain transition-all duration-500" />
