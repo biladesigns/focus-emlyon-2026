@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const contactInfo = [
   {
@@ -18,14 +18,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresse",
-    value: "23 Avenue Guy de Collongue, 69130 Écully",
-    link: "https://maps.google.com/?q=emlyon+business+school+ecully",
-  },
-  {
-    icon: Clock,
-    title: "Disponibilité",
-    value: "Lun - Ven : 9h - 18h",
-    link: null,
+    value: "144 Avenue Jean Jaurès, 69007 Lyon",
+    link: "https://maps.google.com/?q=144+avenue+jean+jaures+69007+lyon",
   },
 ];
 
