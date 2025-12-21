@@ -39,7 +39,8 @@ const About = () => {
 
 De la stratégie de contenu au tournage, nous mettons notre expertise au service de vos projets partout en France. Nous assurons notamment la couverture audiovisuelle complète du Raid EY, l’un des événements sportifs majeurs du pays.</p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">FOCUS combine professionnalisme, innovation et créativité.<strong className="text-foreground">FOCUS</strong> combine <span className="text-primary font-semibold">professionnalisme</span>, <span className="text-primary font-semibold">innovation</span> et <span className="text-primary font-semibold">créativité</span> au cœur d'emlyon.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">FOCUS</strong> combine <span className="text-primary font-semibold">professionnalisme</span>, <span className="text-primary font-semibold">innovation</span> et <span className="text-primary font-semibold">créativité</span> au cœur d'emlyon.
             </p>
             
             <div className="h-1 w-24 bg-primary mt-8"></div>
