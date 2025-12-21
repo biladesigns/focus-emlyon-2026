@@ -2,8 +2,7 @@ import Layout from "@/components/Layout";
 import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
 import ServiceProcess from "@/components/ServiceProcess";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import TrustSection from "@/components/TrustSection";
 
 const Prestations = () => {
   return (
@@ -39,6 +38,9 @@ const Prestations = () => {
       
       {/* Benefits */}
       <Benefits />
+
+      {/* Trust Section */}
+      <TrustSection />
     </Layout>
   );
 };
