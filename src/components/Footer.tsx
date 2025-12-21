@@ -89,8 +89,8 @@ const Footer = () => {
         {/* Gradient accent top */}
         <div className={`h-1 w-full bg-gradient-to-r ${currentStyle.gradient} transition-all duration-500 relative z-10`}></div>
         
-        <div className="container mx-auto px-6 lg:px-12 py-6 relative z-10">
-          <div className="grid md:grid-cols-4 gap-6">
+        <div className="container mx-auto px-6 lg:px-12 py-6 relative z-10 min-h-[200px] flex flex-col justify-center">
+          <div className="grid md:grid-cols-4 gap-6 items-start">
             {/* Brand */}
             <div className="md:col-span-1">
               <Link to="/" className="flex items-center gap-3 mb-4">
