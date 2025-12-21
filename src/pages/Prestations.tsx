@@ -3,15 +3,9 @@ import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Camera, Film, Tv, Mic, Video, Sparkles } from "lucide-react";
+import { Film, Video, Sparkles } from "lucide-react";
 
 const prestationsDetails = [
-  {
-    icon: Tv,
-    title: "Inside",
-    description: "Format court dynamique mettant en lumière les associations et événements d'emlyon. Interviews captivantes, images immersives.",
-    color: "magenta",
-  },
   {
     icon: Film,
     title: "Aftermovies",
@@ -23,18 +17,6 @@ const prestationsDetails = [
     title: "Courts-métrages",
     description: "Productions créatives originales, de l'écriture à la post-production. Narration visuelle unique et artistique.",
     color: "blue",
-  },
-  {
-    icon: Camera,
-    title: "Couverture photo",
-    description: "Photographie événementielle professionnelle. Portraits, ambiances et moments clés immortalisés.",
-    color: "purple",
-  },
-  {
-    icon: Mic,
-    title: "Podcasts",
-    description: "Production audio de qualité studio. Enregistrement, montage et diffusion de contenus sonores.",
-    color: "magenta",
   },
   {
     icon: Sparkles,
@@ -73,11 +55,11 @@ const Prestations = () => {
       {/* Detailed Services Grid */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {prestationsDetails.map((service, index) => (
               <div
                 key={index}
-                className="group bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2"
+                className="group bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm"
               >
                 <div
                   className={`w-16 h-16 rounded-xl bg-${service.color}/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
