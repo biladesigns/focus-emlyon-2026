@@ -10,7 +10,7 @@ const benefits = [
   {
     icon: Users,
     title: "Une visibilité unique",
-    description: "Plus de 9 000 étudiants sur 4 campus, forte présence digitale, plus de 687 000 vues.",
+    description: "Habitués aux terrains exigeants comme le Raid EY, nous sommes capables de nous déployer partout en France. Notre structure nous permet d'être réactifs et de nous adapter à toutes les contraintes logistiques.",
   },
   {
     icon: Award,
