@@ -16,7 +16,7 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent">
+  return <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-transparent pt-24 md:pt-0">
       {/* Cinematic Frame Lines */}
       <div className="absolute inset-0 pointer-events-none z-[2]">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
@@ -35,8 +35,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50 z-[3] pointer-events-none"></div>
       
       {/* Content */}
-      <div className="container mx-auto px-8 lg:px-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-16 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left Side - Logo */}
           <div className="flex justify-center lg:justify-end animate-fade-in">
             <div className="relative">
@@ -44,8 +44,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-magenta/20 via-orange/20 to-blue/20 blur-3xl"></div>
               
               {/* Logo with cinematic frame */}
-              <div className="relative p-8 border-2 border-primary/20 rounded-2xl backdrop-blur-sm bg-background/10">
-                <img src={focusLogoWave} alt="FOCUS Logo" className="w-64 h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl animate-heartbeat" />
+              <div className="relative p-4 sm:p-8 border-2 border-primary/20 rounded-2xl backdrop-blur-sm bg-background/10">
+                <img src={focusLogoWave} alt="FOCUS Logo" className="w-40 h-40 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-2xl animate-heartbeat" />
                 
                 {/* Decorative corners on logo frame */}
                 <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-magenta"></div>
@@ -63,7 +63,7 @@ const Hero = () => {
             {/* Title with cinematic typography */}
             <div className="space-y-4">
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display leading-none tracking-wider">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-display leading-none tracking-wider">
                 <span className="gradient-text">association audiovisuelle</span>
               </h1>
               
@@ -74,7 +74,7 @@ const Hero = () => {
             <div className="h-px w-full bg-gradient-to-r from-magenta via-orange to-blue"></div>
             
             {/* Tagline */}
-            <p className="text-lg md:text-xl lg:text-2xl text-foreground/70 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 leading-relaxed max-w-xl">
               Nous donnons vie à vos projets audiovisuels avec{' '}
               <span className="text-primary font-semibold">créativité</span> et{' '}
               <span className="text-blue font-semibold">professionnalisme</span>
