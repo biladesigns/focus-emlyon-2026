@@ -20,7 +20,7 @@ const representatives = [
   },
   {
     role: "Responsable Entreprise",
-    name: "Nom à définir",
+    name: "Jude HANDS",
     email: "jude.hands@edu.em-lyon.com",
     phone: "+33 6 42 95 84 45",
     image: "/placeholder.svg",
