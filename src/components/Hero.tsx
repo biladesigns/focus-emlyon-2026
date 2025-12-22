@@ -10,9 +10,9 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  const scrollToRealisations = () => {
-    const realisationsSection = document.getElementById('realisations');
-    realisationsSection?.scrollIntoView({
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    aboutSection?.scrollIntoView({
       behavior: 'smooth'
     });
   };
@@ -82,7 +82,7 @@ const Hero = () => {
             
             {/* CTA Button */}
             <div className="flex flex-col sm:flex-row gap-6 pt-4 items-start">
-              <AnimatedRealisationsButton onClick={scrollToRealisations} />
+              <AnimatedRealisationsButton onClick={scrollToAbout} />
             </div>
             
             {/* emlyon branding */}
