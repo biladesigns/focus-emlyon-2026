@@ -1,5 +1,5 @@
 const About = () => {
-  return <section className="py-24 bg-transparent relative overflow-hidden">
+  return <section id="about" className="py-24 bg-transparent relative overflow-hidden">
       {/* Animated background orbs for visual interest */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange/15 rounded-full blur-[150px] animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-magenta/15 rounded-full blur-[150px] animate-pulse" style={{
