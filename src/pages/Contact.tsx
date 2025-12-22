@@ -13,7 +13,7 @@ const representatives = [
   {
     role: "Président",
     name: "MATHIEU BILA",
-    email: "president@em-lyon.com",
+    email: "mathieu.bila@edu.em-lyon.com",
     phone: "+33 6 00 00 00 00",
     image: "/placeholder.svg",
     featured: true,
