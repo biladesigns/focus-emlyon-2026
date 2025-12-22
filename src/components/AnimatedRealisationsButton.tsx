@@ -58,7 +58,7 @@ const AnimatedRealisationsButton = ({ onClick }: AnimatedRealisationsButtonProps
         
         {/* Button text */}
         <span className="relative z-[2] text-foreground">
-          Nos Réalisations
+          Découvrir
         </span>
       </button>
     </div>
