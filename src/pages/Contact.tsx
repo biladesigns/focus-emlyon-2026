@@ -5,7 +5,7 @@ import { Mail, Phone } from "lucide-react";
 const representatives = [
   {
     role: "Vice-Présidente",
-    name: "Nom à définir",
+    name: "Laura Djaziri",
     email: "laura.djaziri@edu.em-lyon.com",
     phone: "+33 6 00 00 00 00",
     image: "/placeholder.svg",
