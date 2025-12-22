@@ -21,7 +21,7 @@ const representatives = [
   {
     role: "Responsable Entreprise",
     name: "Nom à définir",
-    email: "entreprise@em-lyon.com",
+    email: "jude.hands@edu.em-lyon.com",
     phone: "+33 6 00 00 00 00",
     image: "/placeholder.svg",
   },
