@@ -6,7 +6,7 @@ const representatives = [
   {
     role: "Vice-Présidente",
     name: "Nom à définir",
-    email: "vp@em-lyon.com",
+    email: "laura.djaziri@edu.em-lyon.com",
     phone: "+33 6 00 00 00 00",
     image: "/placeholder.svg",
   },
