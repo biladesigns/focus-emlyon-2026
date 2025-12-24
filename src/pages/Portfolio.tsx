@@ -8,6 +8,7 @@ import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
 import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.jpg";
 import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
 import thumbnailCroizpak from "@/assets/thumbnail-croizpak.png";
+import thumbnailBargain from "@/assets/thumbnail-bargain.png";
 
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 
@@ -39,7 +40,7 @@ const projects = [
     id: 10,
     title: "The Final Bargain",
     category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    thumbnail: thumbnailBargain,
     description: "Une nuit, des débats, des images",
     videoUrl: "https://www.dropbox.com/scl/fi/ue1tpo413wehqkrnrplbv/Final-Bargain-2025.mov?rlkey=mg8v1r72ga9jor7imzf0q2x0o&st=d6e0mmk6&raw=1"
   },
