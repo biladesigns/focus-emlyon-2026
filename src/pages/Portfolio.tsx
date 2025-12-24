@@ -38,7 +38,7 @@ const projects = [
     title: "Aftermovie WEI 2024",
     category: "Aftermovies",
     thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
-    views: "125K",
+    description: "Week-end d'intégration capturé dans toute son intensité",
     videoUrl: "https://www.youtube.com/watch?v=example1"
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     title: "Court-métrage 'Décalage'",
     category: "Courts-métrages",
     thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
-    views: "32K",
+    description: "Fiction courte explorant les décalages du quotidien",
     videoUrl: "https://www.youtube.com/watch?v=example3"
   },
   {
@@ -54,7 +54,7 @@ const projects = [
     title: "Aftermovie Gala 2024",
     category: "Aftermovies",
     thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop",
-    views: "89K",
+    description: "Soirée de gala immortalisée en images",
     videoUrl: "https://www.youtube.com/watch?v=example5"
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     title: "Making Of Séminaire ECHO",
     category: "Captation",
     thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    views: "12K",
+    description: "Coulisses d'un séminaire d'école",
     videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1"
   },
   {
@@ -70,7 +70,7 @@ const projects = [
     title: "Court-métrage 'Éclipse'",
     category: "Courts-métrages",
     thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop",
-    views: "41K",
+    description: "Récit visuel entre ombre et lumière",
     videoUrl: "https://www.youtube.com/watch?v=example8"
   },
   {
@@ -78,7 +78,7 @@ const projects = [
     title: "Expérience en scène",
     category: "Captation",
     thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    views: "—",
+    description: "Bientôt disponible",
     videoUrl: ""
   },
 ];
@@ -269,10 +269,9 @@ const Portfolio = () => {
                   <h3 className="font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                    <Eye className="w-4 h-4" />
-                    <span>{project.views} vues</span>
-                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    {project.description}
+                  </p>
                 </div>
               </div>
             ))}
