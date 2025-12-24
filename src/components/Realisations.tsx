@@ -89,8 +89,8 @@ const Realisations = () => {
             Suivez-nous sur nos réseaux sociaux pour plus de contenu
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button variant="outline" className="border-2 border-magenta text-foreground hover:bg-magenta hover:text-foreground magenta-glow">
-              Instagram
+            <Button variant="outline" className="border-2 border-magenta text-foreground hover:bg-magenta hover:text-foreground magenta-glow" asChild>
+              <a href="https://www.instagram.com/focus_emlyon/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </Button>
             <Button variant="outline" className="border-2 border-blue text-foreground hover:bg-blue hover:text-foreground blue-glow">
               YouTube
