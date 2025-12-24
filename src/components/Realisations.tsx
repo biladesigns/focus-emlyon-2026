@@ -9,7 +9,7 @@ const realisations = [{
   title: "Séminaire ECHO",
   category: "Captation",
   thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
-  views: "12K vues",
+  views: "Réalisation du making-of d'un séminaire de l'école.",
   videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1",
   isDirectVideo: true
 }, {
