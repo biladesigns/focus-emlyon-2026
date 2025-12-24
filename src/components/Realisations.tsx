@@ -16,7 +16,7 @@ const realisations = [{
   title: "Aftermovie Raid 2025",
   category: "Aftermovie",
   thumbnail: thumbnailRaid,
-  views: "18K vues",
+  views: "Captation et réalisation de l'aftermovie d'un des plus grands évènements étudiants de France",
   videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
   isDirectVideo: true
 }, {
