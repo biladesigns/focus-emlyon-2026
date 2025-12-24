@@ -3,6 +3,8 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Play, Eye, ExternalLink, ArrowRight } from "lucide-react";
 import TrustSection from "@/components/TrustSection";
+import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
+
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 
 const featuredProjects = [
@@ -11,7 +13,8 @@ const featuredProjects = [
     title: "RAID EY",
     subtitle: "Aftermovie",
     description: "Captation et montage de l'aftermovie officiel du Raid EY, une aventure sportive intense capturée dans toute sa splendeur.",
-    thumbnail: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=600&fit=crop",
+    thumbnail: thumbnailRaidEy,
+    videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
     stats: { views: "125K", duration: "4:32" },
     gradient: "from-orange via-magenta to-purple",
   },
