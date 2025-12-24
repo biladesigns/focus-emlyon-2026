@@ -9,6 +9,7 @@ import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.jpg"
 import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
 import thumbnailCroizpak from "@/assets/thumbnail-croizpak.png";
 import thumbnailBargain from "@/assets/thumbnail-bargain.png";
+import thumbnailNeptuniade from "@/assets/thumbnail-neptuniade.png";
 
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 
@@ -72,7 +73,7 @@ const projects = [
     id: 14,
     title: "28e édition des Neptuniades - 2025",
     category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    thumbnail: thumbnailNeptuniade,
     description: "Week-end rassemblant plus de 300 étudiants de l'école",
     videoUrl: "https://www.dropbox.com/scl/fi/b90re0lcbh8txdpz83x7i/Aftermovie-Neptuniades-2025.mov?rlkey=30gq5nifng37wwl80bwbwxl21&st=0a8v8e3g&raw=1"
   },
