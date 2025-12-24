@@ -43,19 +43,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Court-métrage 'Décalage'",
+    title: "CENA",
     category: "Courts-métrages",
     thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
-    description: "Fiction courte explorant les décalages du quotidien",
-    videoUrl: "https://www.youtube.com/watch?v=example3"
-  },
-  {
-    id: 5,
-    title: "Aftermovie Gala 2024",
-    category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=600&h=400&fit=crop",
-    description: "Soirée de gala immortalisée en images",
-    videoUrl: "https://www.youtube.com/watch?v=example5"
+    description: "Court-métrage réalisé en 2025",
+    videoUrl: "https://www.dropbox.com/scl/fi/sp4160tlg5v99jc10zzh7/CENA-2025.mp4?rlkey=pehnssapqpemkohy0cfhcsgcs&st=usl74xlh&raw=1"
   },
   {
     id: 7,
@@ -64,14 +56,6 @@ const projects = [
     thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
     description: "Coulisses d'un séminaire d'école",
     videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1"
-  },
-  {
-    id: 8,
-    title: "Court-métrage 'Éclipse'",
-    category: "Courts-métrages",
-    thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop",
-    description: "Récit visuel entre ombre et lumière",
-    videoUrl: "https://www.youtube.com/watch?v=example8"
   },
   {
     id: 9,
