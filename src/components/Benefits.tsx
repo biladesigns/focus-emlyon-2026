@@ -4,7 +4,7 @@ import { Lightbulb, Users, Award } from "lucide-react";
 const benefits = [
   {
     icon: Lightbulb,
-    title: "Le Réseau",
+    title: "Réseau",
     description: "Bien plus qu'une association, nous nous appuyons sur l'écosystème d'emlyon business school.\nCe réseau nous permet de mobiliser des profils complémentaires — créatifs, entrepreneurs, managers — et de connecter chaque projet aux bonnes compétences et aux bons partenaires. Une force collective au service de productions ambitieuses et structurées.",
   },
   {
