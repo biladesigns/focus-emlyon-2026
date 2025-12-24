@@ -47,7 +47,7 @@ const projects = [
     category: "Aftermovies",
     thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
     description: "Plus de 15 auteurs étaient réunis pour célébrer la richesse de la littérature lyonnaise",
-    videoUrl: ""
+    videoUrl: "https://www.dropbox.com/scl/fi/sqxq2mlsjjksj0rhuabtv/Salon-du-livre-2025.mp4?rlkey=byfm9n2pbi20lxek60rikvrpq&st=dy64pny0&raw=1"
   },
   {
     id: 12,
