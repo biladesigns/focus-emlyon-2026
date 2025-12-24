@@ -41,7 +41,7 @@ const Realisations = () => {
             Nos <span className="gradient-text glitch" data-text="Réalisations">Réalisations récentes </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Plus de <span className="text-magenta font-bold neon-glow">687 000 vues</span> sur nos productions
+            Plus de <span className="text-magenta font-bold neon-glow">68700 vues</span> sur nos productions
           </p>
           <div className="h-1 w-32 bg-gradient-to-r from-magenta via-orange to-blue mx-auto mt-6"></div>
         </div>
