@@ -5,7 +5,7 @@ const benefits = [
   {
     icon: Lightbulb,
     title: "Le Réseau",
-    description: "Bien plus qu'une association, nous nous appuyons sur un écosystème puissant issu d'emlyon business school. Ce réseau nous permet de collaborer avec des profils complémentaires — créatifs, entrepreneurs, managers — et de connecter chaque projet aux bonnes compétences, aux bons partenaires et aux bonnes opportunités. Une force collective au service de productions ambitieuses et structurées.",
+    description: "Bien plus qu'une association, nous nous appuyons sur l'écosystème d'emlyon business school.\nCe réseau nous permet de mobiliser des profils complémentaires — créatifs, entrepreneurs, managers — et de connecter chaque projet aux bonnes compétences et aux bons partenaires. Une force collective au service de productions ambitieuses et structurées.",
   },
   {
     icon: Users,
