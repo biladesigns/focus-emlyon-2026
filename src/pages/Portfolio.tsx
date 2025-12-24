@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Play, Eye, ExternalLink, ArrowRight } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Play, Eye, ArrowRight, X } from "lucide-react";
 import TrustSection from "@/components/TrustSection";
 import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
 
@@ -23,7 +24,8 @@ const featuredProjects = [
     title: "COUPE ADHÉMAR",
     subtitle: "Aftermovie",
     description: "L'intensité et l'esprit collectif d'un grand tournoi de ski réunissant plus de 600 étudiants.",
-    thumbnail: "https://images.unsplash.com/photo-1461896836934- voices?w=800&h=600&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1461896836934-voices?w=800&h=600&fit=crop",
+    videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
     stats: { views: "89K", duration: "5:15" },
     gradient: "from-blue via-purple to-magenta",
   },
@@ -82,7 +84,14 @@ const projects = [
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
+  const [playerOpen, setPlayerOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState<typeof featuredProjects[0] | null>(null);
   const filteredProjects = activeCategory === "Tous" ? projects : projects.filter(p => p.category === activeCategory);
+
+  const handlePlayVideo = (project: typeof featuredProjects[0]) => {
+    setCurrentVideo(project);
+    setPlayerOpen(true);
+  };
   
   return (
     <Layout>
@@ -133,6 +142,7 @@ const Portfolio = () => {
                 key={project.id}
                 className="group relative rounded-2xl overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 150}ms` }}
+                onClick={() => handlePlayVideo(project)}
               >
                 {/* Background Gradient Glow */}
                 <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl opacity-0 group-hover:opacity-70 blur-xl transition-all duration-700`}></div>
@@ -271,6 +281,41 @@ const Portfolio = () => {
 
       {/* Ils nous font confiance */}
       <TrustSection />
+
+      {/* Video Player Dialog */}
+      <Dialog open={playerOpen} onOpenChange={setPlayerOpen}>
+        <DialogContent className="bg-card border-2 border-border max-w-4xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold gradient-text flex justify-between items-center">
+              {currentVideo?.title}
+              <Button variant="ghost" size="icon" onClick={() => setPlayerOpen(false)} className="hover:bg-muted">
+                <X className="w-5 h-5" />
+              </Button>
+            </DialogTitle>
+          </DialogHeader>
+          {currentVideo && (
+            <div className="space-y-4">
+              <div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
+                <video
+                  width="100%"
+                  height="100%"
+                  src={currentVideo.videoUrl}
+                  title={currentVideo.title}
+                  controls
+                  autoPlay
+                  className="w-full h-full"
+                />
+              </div>
+              <div className="flex items-center gap-4 text-sm">
+                <span className="px-3 py-1 bg-gradient-to-r from-blue to-purple rounded-full text-xs font-bold">
+                  {currentVideo.subtitle}
+                </span>
+                <span className="text-muted-foreground">{currentVideo.description}</span>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 };
