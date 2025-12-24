@@ -59,11 +59,11 @@ const projects = [
   },
   {
     id: 7,
-    title: "Captation Conférence TEDx",
+    title: "Making Of Séminaire ECHO",
     category: "Captation",
-    thumbnail: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop",
-    views: "67K",
-    videoUrl: "https://www.youtube.com/watch?v=example7"
+    thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
+    views: "12K",
+    videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1"
   },
   {
     id: 8,
@@ -75,11 +75,11 @@ const projects = [
   },
   {
     id: 9,
-    title: "Captation Forum Entreprises",
+    title: "Expérience en scène",
     category: "Captation",
     thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    views: "23K",
-    videoUrl: "https://www.youtube.com/watch?v=example9"
+    views: "—",
+    videoUrl: ""
   },
 ];
 
