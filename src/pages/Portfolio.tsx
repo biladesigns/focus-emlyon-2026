@@ -63,7 +63,7 @@ const projects = [
     category: "Aftermovies",
     thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
     description: "Du 10 au 17 mai derniers, le clubvoile_emlyon nous a embarqués vers l'Isola d'Elba",
-    videoUrl: ""
+    videoUrl: "https://www.dropbox.com/scl/fi/ceugk9hsesqxm0r3e9cos/Aftermovie-CP-2025.mp4?rlkey=vmi66jb6ky3ogee4umtrurfxi&st=4zk6qq3x&raw=1"
   },
   {
     id: 14,
