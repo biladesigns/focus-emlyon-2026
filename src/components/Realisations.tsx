@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, X } from "lucide-react";
+import thumbnailAdhemar from "@/assets/thumbnail-adhemar.jpg";
+
 const realisations = [{
   title: "Séminaire ECHO",
   category: "Captation",
@@ -20,7 +22,7 @@ const realisations = [{
 }, {
   title: "Aftermovie Adhémar 2025",
   category: "Aftermovie",
-  thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
+  thumbnail: thumbnailAdhemar,
   views: "15K vues",
   videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
   isDirectVideo: true
