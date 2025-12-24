@@ -42,6 +42,46 @@ const projects = [
     videoUrl: "https://www.youtube.com/watch?v=example1"
   },
   {
+    id: 10,
+    title: "The Final Bargain",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    description: "Une nuit, des débats, des images",
+    videoUrl: ""
+  },
+  {
+    id: 11,
+    title: "Les Plumes du Lyon",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    description: "Plus de 15 auteurs étaient réunis pour célébrer la richesse de la littérature lyonnaise",
+    videoUrl: ""
+  },
+  {
+    id: 12,
+    title: "Prologue 26ème Raid Hannibal",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    description: "Journée marquant le début de l'aventure tant attendue du Raid Hannibal",
+    videoUrl: ""
+  },
+  {
+    id: 13,
+    title: "33e édition de la Croiz'pak - 2025",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    description: "Du 10 au 17 mai derniers, le clubvoile_emlyon nous a embarqués vers l'Isola d'Elba",
+    videoUrl: ""
+  },
+  {
+    id: 14,
+    title: "28e édition des Neptuniades - 2025",
+    category: "Aftermovies",
+    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    description: "Bientôt disponible",
+    videoUrl: ""
+  },
+  {
     id: 3,
     title: "CENA",
     category: "Courts-métrages",
