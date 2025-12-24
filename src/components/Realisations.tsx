@@ -21,7 +21,8 @@ const realisations = [{
   category: "Aftermovie",
   thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=500&fit=crop",
   views: "15K vues",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
+  isDirectVideo: true
 }];
 const Realisations = () => {
   const [playerOpen, setPlayerOpen] = useState(false);
