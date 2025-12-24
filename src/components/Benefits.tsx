@@ -4,8 +4,8 @@ import { Lightbulb, Users, Award } from "lucide-react";
 const benefits = [
   {
     icon: Lightbulb,
-    title: "L'Expertise",
-    description: "Plus qu'une association, nous agissons comme une agence de production. De la captation 4K au montage professionnel, nous maîtrisons l'intégralité de la chaîne de création pour garantir un rendu haut de gamme.",
+    title: "Le Réseau",
+    description: "Bien plus qu'une association, nous nous appuyons sur un écosystème puissant issu d'emlyon business school. Ce réseau nous permet de collaborer avec des profils complémentaires — créatifs, entrepreneurs, managers — et de connecter chaque projet aux bonnes compétences, aux bons partenaires et aux bonnes opportunités. Une force collective au service de productions ambitieuses et structurées.",
   },
   {
     icon: Users,
