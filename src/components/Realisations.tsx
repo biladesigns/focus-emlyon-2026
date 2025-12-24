@@ -23,7 +23,7 @@ const realisations = [{
   title: "Aftermovie Adhémar 2025",
   category: "Aftermovie",
   thumbnail: thumbnailAdhemar,
-  views: "15K vues",
+  views: "Captation et réalisation de l'aftermovie d'un évènement rassemblant plus de 600 personnes.",
   videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
   isDirectVideo: true
 }];
