@@ -14,8 +14,8 @@ const benefits = [
   },
   {
     icon: Award,
-    title: "Créativité",
-    description: "Issus de l'écosystème emlyon, nous apportons un regard neuf et dynamique à votre communication. Nous concevons des contenus innovants qui captent l'attention et valorisent durablement votre image de marque.",
+    title: "Accessibilité",
+    description: "En tant qu'association, notre modèle nous permet de proposer des tarifs nettement plus accessibles qu'une agence classique, sans compromis sur la qualité. Les projets sont pensés avec une logique de création et d'efficacité, pas de marge excessive. Une approche équilibrée qui rend la production audiovisuelle professionnelle réellement accessible.",
   },
 ];
 
