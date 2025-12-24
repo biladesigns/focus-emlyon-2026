@@ -46,7 +46,7 @@ const Footer = () => {
                 Suivez-nous
               </h4>
               <div className="flex gap-3">
-                <a href="https://www.instagram.com/focus_music_club/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center bg-foreground/10 hover:bg-magenta/20 hover:text-magenta transition-all">
+                <a href="https://www.instagram.com/focus_emlyon/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center bg-foreground/10 hover:bg-magenta/20 hover:text-magenta transition-all">
                   <Instagram size={18} />
                 </a>
                 
