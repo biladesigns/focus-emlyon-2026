@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Play, Eye, ArrowRight, X } from "lucide-react";
 import TrustSection from "@/components/TrustSection";
 import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
+import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.jpg";
 
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 
@@ -24,7 +25,7 @@ const featuredProjects = [
     title: "COUPE ADHÉMAR",
     subtitle: "Aftermovie",
     description: "L'intensité et l'esprit collectif d'un grand tournoi de ski réunissant plus de 600 étudiants.",
-    thumbnail: "https://images.unsplash.com/photo-1461896836934-voices?w=800&h=600&fit=crop",
+    thumbnail: thumbnailAdhemarPortfolio,
     videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
     stats: { views: "89K", duration: "5:15" },
     gradient: "from-blue via-purple to-magenta",
