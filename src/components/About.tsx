@@ -34,10 +34,7 @@ const About = () => {
               <strong className="text-foreground">FOCUS</strong> est une initiative étudiante portée par des passionnés d'audiovisuel.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">Nous réalisons des contenus créatifs et professionnels pour refléter l'énergie, la diversité et les projets de notre école — étudiants, associations, administration et entreprises.
-
-
-De la stratégie de contenu au tournage, nous mettons notre expertise au service de vos projets partout en France. Nous assurons notamment la couverture audiovisuelle complète du Raid EY, l’un des événements sportifs majeurs du pays.</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">Nous accompagnons des projets variés pour des associations, des entreprises, des institutions et des événements, en proposant des contenus créatifs et exigeants, pensés pour répondre à des enjeux réels de communication. De la stratégie de contenu au tournage et au montage, nous intervenons sur l’ensemble de la chaîne de production, partout en France. Nous assurons notamment la couverture audiovisuelle complète du Raid EY, l’un des événements sportifs majeurs du pays.</p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
               <strong className="text-foreground">FOCUS</strong> combine <span className="text-primary font-semibold">professionnalisme</span>, <span className="text-primary font-semibold">innovation</span> et <span className="text-primary font-semibold">créativité</span> au cœur d'emlyon.
