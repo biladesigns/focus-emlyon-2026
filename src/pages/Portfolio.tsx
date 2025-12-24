@@ -9,7 +9,7 @@ const featuredProjects = [
   {
     id: "raid-ey",
     title: "RAID EY",
-    subtitle: "Aftermovie Officiel",
+    subtitle: "Aftermovie",
     description: "Captation et montage de l'aftermovie officiel du Raid EY, une aventure sportive intense capturée dans toute sa splendeur.",
     thumbnail: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&h=600&fit=crop",
     stats: { views: "125K", duration: "4:32" },
