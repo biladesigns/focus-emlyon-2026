@@ -10,6 +10,7 @@ import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
 import thumbnailCroizpak from "@/assets/thumbnail-croizpak.png";
 import thumbnailBargain from "@/assets/thumbnail-bargain.png";
 import thumbnailNeptuniade from "@/assets/thumbnail-neptuniade.png";
+import thumbnailPlumesLyon from "@/assets/thumbnail-plumes-lyon.png";
 
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 
@@ -49,7 +50,7 @@ const projects = [
     id: 11,
     title: "Les Plumes du Lyon",
     category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    thumbnail: thumbnailPlumesLyon,
     description: "Plus de 15 auteurs étaient réunis pour célébrer la richesse de la littérature lyonnaise",
     videoUrl: "https://www.dropbox.com/scl/fi/sqxq2mlsjjksj0rhuabtv/Salon-du-livre-2025.mp4?rlkey=byfm9n2pbi20lxek60rikvrpq&st=dy64pny0&raw=1"
   },
