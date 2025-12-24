@@ -8,7 +8,8 @@ const realisations = [{
   category: "Captation",
   thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
   views: "12K vues",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1",
+  isDirectVideo: true
 }, {
   title: "Aftermovie Raid 2025",
   category: "Aftermovie",
@@ -109,7 +110,19 @@ const Realisations = () => {
           </DialogHeader>
           {currentVideo && <div className="space-y-4">
               <div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
-                <iframe width="100%" height="100%" src={currentVideo.videoUrl} title={currentVideo.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
+                {currentVideo.isDirectVideo ? (
+                  <video 
+                    width="100%" 
+                    height="100%" 
+                    src={currentVideo.videoUrl} 
+                    title={currentVideo.title} 
+                    controls 
+                    autoPlay
+                    className="w-full h-full"
+                  />
+                ) : (
+                  <iframe width="100%" height="100%" src={currentVideo.videoUrl} title={currentVideo.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
+                )}
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-3 py-1 bg-gradient-to-r from-blue to-purple rounded-full text-xs font-bold">
