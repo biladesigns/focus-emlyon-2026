@@ -9,8 +9,8 @@ const benefits = [
   },
   {
     icon: Users,
-    title: "L'Agilité",
-    description: "Habitués aux terrains exigeants comme le Raid EY, nous sommes capables de nous déployer partout en France. Notre structure nous permet d'être réactifs et de nous adapter à toutes les contraintes logistiques.",
+    title: "Professionnalisme",
+    description: "En tant qu'association soutenue par des subventions institutionnelles, nous avons accès à un matériel de production haut de gamme et à des outils professionnels. Cette capacité d'investissement nous permet de travailler dans des conditions comparables à celles d'une agence, d'assurer une exécution rigoureuse et de livrer des productions aux standards élevés, adaptées à des projets ambitieux et exigeants.",
   },
   {
     icon: Award,
