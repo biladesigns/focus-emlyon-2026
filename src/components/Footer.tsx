@@ -62,7 +62,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="mt-8 pt-6 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} FOCUS. Tous droits réservés.
+              © {new Date().getFullYear()} FOCUS. Tous droits réservés. Designed by <a href="https://biladesigns.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline">Bila designs</a>
             </p>
           </div>
         </div>
