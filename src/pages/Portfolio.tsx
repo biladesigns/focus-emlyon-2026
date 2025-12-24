@@ -19,7 +19,7 @@ const featuredProjects = [
     id: "coupe-adhemar",
     title: "COUPE ADHÉMAR",
     subtitle: "Aftermovie Officiel",
-    description: "L'énergie et la passion du plus grand tournoi inter-écoles capturées en images pour revivre chaque moment fort.",
+    description: "L'intensité et l'esprit collectif d'un grand tournoi de ski réunissant plus de 600 étudiants.",
     thumbnail: "https://images.unsplash.com/photo-1461896836934- voices?w=800&h=600&fit=crop",
     stats: { views: "89K", duration: "5:15" },
     gradient: "from-blue via-purple to-magenta",
