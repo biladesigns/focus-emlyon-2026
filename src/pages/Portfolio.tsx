@@ -34,14 +34,6 @@ const featuredProjects = [
 
 const projects = [
   {
-    id: 1,
-    title: "Aftermovie WEI 2024",
-    category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
-    description: "Week-end d'intégration capturé dans toute son intensité",
-    videoUrl: "https://www.youtube.com/watch?v=example1"
-  },
-  {
     id: 10,
     title: "The Final Bargain",
     category: "Aftermovies",
@@ -78,7 +70,7 @@ const projects = [
     title: "28e édition des Neptuniades - 2025",
     category: "Aftermovies",
     thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
-    description: "Bientôt disponible",
+    description: "Week-end rassemblant plus de 300 étudiants de l'école",
     videoUrl: ""
   },
   {
