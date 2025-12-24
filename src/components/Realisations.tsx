@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, X } from "lucide-react";
 import thumbnailAdhemar from "@/assets/thumbnail-adhemar.jpg";
+import thumbnailRaid from "@/assets/thumbnail-raid.jpg";
 
 const realisations = [{
   title: "Séminaire ECHO",
@@ -15,7 +16,7 @@ const realisations = [{
 }, {
   title: "Aftermovie Raid 2025",
   category: "Aftermovie",
-  thumbnail: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&h=500&fit=crop",
+  thumbnail: thumbnailRaid,
   views: "18K vues",
   videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
   isDirectVideo: true
