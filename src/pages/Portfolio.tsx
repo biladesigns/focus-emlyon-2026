@@ -6,6 +6,7 @@ import { Play, Eye, ArrowRight, X } from "lucide-react";
 import TrustSection from "@/components/TrustSection";
 import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
 import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.jpg";
+import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
 
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 
@@ -53,7 +54,7 @@ const projects = [
     id: 12,
     title: "Prologue 26ème Raid Hannibal",
     category: "Aftermovies",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
+    thumbnail: thumbnailPrologueRaid,
     description: "Journée marquant le début de l'aventure tant attendue du Raid Hannibal",
     videoUrl: "https://www.dropbox.com/scl/fi/hxfm2rz3w22cich5lvyol/Prologue-Raid-2025.mov?rlkey=3ptbmuix3kp2jk41g57l7krow&st=ljctvwje&raw=1"
   },
