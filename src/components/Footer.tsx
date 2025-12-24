@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { Instagram, Youtube } from "lucide-react";
 import focusLogoWave from "@/assets/focus-logo-wave.png";
 import FocusContactButton from "./FocusContactButton";
-
 const Footer = () => {
-  return (
-    <footer className="relative z-10 px-4 md:px-8 pb-2 md:pb-4 -mt-8">
+  return <footer className="relative z-10 px-4 md:px-8 pb-2 md:pb-4 -mt-8">
       <div className="backdrop-blur-md rounded-3xl border bg-card/95 border-border/30 overflow-hidden">
         <div className="h-1 w-full bg-gradient-to-r from-magenta via-orange to-blue"></div>
         
@@ -48,22 +46,10 @@ const Footer = () => {
                 Suivez-nous
               </h4>
               <div className="flex gap-3">
-                <a 
-                  href="https://www.instagram.com/focus_music_club/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-full flex items-center justify-center bg-foreground/10 hover:bg-magenta/20 hover:text-magenta transition-all"
-                >
+                <a href="https://www.instagram.com/focus_music_club/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center bg-foreground/10 hover:bg-magenta/20 hover:text-magenta transition-all">
                   <Instagram size={18} />
                 </a>
-                <a 
-                  href="https://www.youtube.com/@focusemlyon" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-10 h-10 rounded-full flex items-center justify-center bg-foreground/10 hover:bg-orange/20 hover:text-orange transition-all"
-                >
-                  <Youtube size={18} />
-                </a>
+                
               </div>
             </div>
 
@@ -81,8 +67,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

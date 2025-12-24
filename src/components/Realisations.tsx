@@ -5,7 +5,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Play, X } from "lucide-react";
 import thumbnailAdhemar from "@/assets/thumbnail-adhemar.jpg";
 import thumbnailRaid from "@/assets/thumbnail-raid.jpg";
-
 const realisations = [{
   title: "Séminaire ECHO",
   category: "Captation",
@@ -95,9 +94,7 @@ const Realisations = () => {
             <Button variant="outline" className="border-2 border-magenta text-foreground hover:bg-magenta hover:text-foreground magenta-glow" asChild>
               <a href="https://www.instagram.com/focus_emlyon/" target="_blank" rel="noopener noreferrer">Instagram</a>
             </Button>
-            <Button variant="outline" className="border-2 border-blue text-foreground hover:bg-blue hover:text-foreground blue-glow">
-              YouTube
-            </Button>
+            
           </div>
         </div>
       </div>
@@ -115,19 +112,7 @@ const Realisations = () => {
           </DialogHeader>
           {currentVideo && <div className="space-y-4">
               <div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
-                {currentVideo.isDirectVideo ? (
-                  <video 
-                    width="100%" 
-                    height="100%" 
-                    src={currentVideo.videoUrl} 
-                    title={currentVideo.title} 
-                    controls 
-                    autoPlay
-                    className="w-full h-full"
-                  />
-                ) : (
-                  <iframe width="100%" height="100%" src={currentVideo.videoUrl} title={currentVideo.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />
-                )}
+                {currentVideo.isDirectVideo ? <video width="100%" height="100%" src={currentVideo.videoUrl} title={currentVideo.title} controls autoPlay className="w-full h-full" /> : <iframe width="100%" height="100%" src={currentVideo.videoUrl} title={currentVideo.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="w-full h-full" />}
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-3 py-1 bg-gradient-to-r from-blue to-purple rounded-full text-xs font-bold">
