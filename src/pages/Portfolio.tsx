@@ -39,7 +39,7 @@ const projects = [
     category: "Aftermovies",
     thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&h=400&fit=crop",
     description: "Une nuit, des débats, des images",
-    videoUrl: ""
+    videoUrl: "https://www.dropbox.com/scl/fi/ue1tpo413wehqkrnrplbv/Final-Bargain-2025.mov?rlkey=mg8v1r72ga9jor7imzf0q2x0o&st=d6e0mmk6&raw=1"
   },
   {
     id: 11,
