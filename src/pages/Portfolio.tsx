@@ -222,7 +222,7 @@ const Portfolio = () => {
       <section className="py-12 pb-24">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500">
+            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 cursor-pointer" onClick={() => project.videoUrl && handlePlayVideo({ ...project, id: String(project.id), subtitle: project.category, stats: { views: "", duration: "" }, gradient: "from-magenta to-orange" })}>
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
                   <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
@@ -231,11 +231,13 @@ const Portfolio = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60"></div>
                   
                   {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center magenta-glow">
-                      <Play className="w-7 h-7 text-foreground ml-1" fill="currentColor" />
+                  {project.videoUrl && (
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center magenta-glow">
+                        <Play className="w-7 h-7 text-foreground ml-1" fill="currentColor" />
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   {/* Category Badge */}
                   <div className="absolute top-3 left-3">
