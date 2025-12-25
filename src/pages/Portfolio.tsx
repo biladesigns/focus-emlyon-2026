@@ -11,112 +11,99 @@ import thumbnailCroizpak from "@/assets/thumbnail-croizpak.png";
 import thumbnailBargain from "@/assets/thumbnail-bargain.png";
 import thumbnailNeptuniade from "@/assets/thumbnail-neptuniade.png";
 import thumbnailPlumesLyon from "@/assets/thumbnail-plumes-lyon.png";
-
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
-
-const featuredProjects = [
-  {
-    id: "raid-ey",
-    title: "RAID EY",
-    subtitle: "Aftermovie",
-    description: "Captation et montage de l'aftermovie officiel du Raid EY, une aventure sportive intense capturée dans toute sa splendeur.",
-    thumbnail: thumbnailRaidEy,
-    videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
-    stats: { views: "125K", duration: "4:32" },
-    gradient: "from-orange via-magenta to-purple",
+const featuredProjects = [{
+  id: "raid-ey",
+  title: "RAID EY",
+  subtitle: "Aftermovie",
+  description: "Captation et montage de l'aftermovie officiel du Raid EY, une aventure sportive intense capturée dans toute sa splendeur.",
+  thumbnail: thumbnailRaidEy,
+  videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
+  stats: {
+    views: "125K",
+    duration: "4:32"
   },
-  {
-    id: "coupe-adhemar",
-    title: "COUPE ADHÉMAR",
-    subtitle: "Aftermovie",
-    description: "L'intensité et l'esprit collectif d'un grand tournoi de ski réunissant plus de 600 étudiants.",
-    thumbnail: thumbnailAdhemarPortfolio,
-    videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
-    stats: { views: "89K", duration: "5:15" },
-    gradient: "from-blue via-purple to-magenta",
+  gradient: "from-orange via-magenta to-purple"
+}, {
+  id: "coupe-adhemar",
+  title: "COUPE ADHÉMAR",
+  subtitle: "Aftermovie",
+  description: "L'intensité et l'esprit collectif d'un grand tournoi de ski réunissant plus de 600 étudiants.",
+  thumbnail: thumbnailAdhemarPortfolio,
+  videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
+  stats: {
+    views: "89K",
+    duration: "5:15"
   },
-];
-
-const projects = [
-  {
-    id: 10,
-    title: "The Final Bargain",
-    category: "Aftermovies",
-    thumbnail: thumbnailBargain,
-    description: "Une nuit, des débats, des images",
-    videoUrl: "https://www.dropbox.com/scl/fi/ue1tpo413wehqkrnrplbv/Final-Bargain-2025.mov?rlkey=mg8v1r72ga9jor7imzf0q2x0o&st=d6e0mmk6&raw=1"
-  },
-  {
-    id: 11,
-    title: "Les Plumes du Lyon",
-    category: "Aftermovies",
-    thumbnail: thumbnailPlumesLyon,
-    description: "Plus de 15 auteurs étaient réunis pour célébrer la richesse de la littérature lyonnaise",
-    videoUrl: "https://www.dropbox.com/scl/fi/sqxq2mlsjjksj0rhuabtv/Salon-du-livre-2025.mp4?rlkey=byfm9n2pbi20lxek60rikvrpq&st=dy64pny0&raw=1"
-  },
-  {
-    id: 12,
-    title: "Prologue 26ème Raid Hannibal",
-    category: "Aftermovies",
-    thumbnail: thumbnailPrologueRaid,
-    description: "Journée marquant le début de l'aventure tant attendue du Raid Hannibal",
-    videoUrl: "https://www.dropbox.com/scl/fi/hxfm2rz3w22cich5lvyol/Prologue-Raid-2025.mov?rlkey=3ptbmuix3kp2jk41g57l7krow&st=ljctvwje&raw=1"
-  },
-  {
-    id: 13,
-    title: "33e édition de la Croiz'pak - 2025",
-    category: "Aftermovies",
-    thumbnail: thumbnailCroizpak,
-    description: "Du 10 au 17 mai derniers, le clubvoile_emlyon nous a embarqués vers l'Isola d'Elba",
-    videoUrl: "https://www.dropbox.com/scl/fi/ceugk9hsesqxm0r3e9cos/Aftermovie-CP-2025.mp4?rlkey=vmi66jb6ky3ogee4umtrurfxi&st=4zk6qq3x&raw=1"
-  },
-  {
-    id: 14,
-    title: "28e édition des Neptuniades - 2025",
-    category: "Aftermovies",
-    thumbnail: thumbnailNeptuniade,
-    description: "Week-end rassemblant plus de 300 étudiants de l'école",
-    videoUrl: "https://www.dropbox.com/scl/fi/b90re0lcbh8txdpz83x7i/Aftermovie-Neptuniades-2025.mov?rlkey=30gq5nifng37wwl80bwbwxl21&st=0a8v8e3g&raw=1"
-  },
-  {
-    id: 3,
-    title: "CENA",
-    category: "Courts-métrages",
-    thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
-    description: "Court-métrage réalisé en 2025",
-    videoUrl: "https://www.dropbox.com/scl/fi/sp4160tlg5v99jc10zzh7/CENA-2025.mp4?rlkey=pehnssapqpemkohy0cfhcsgcs&st=usl74xlh&raw=1"
-  },
-  {
-    id: 7,
-    title: "Making Of Séminaire ECHO",
-    category: "Captation",
-    thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    description: "Coulisses d'un séminaire d'école",
-    videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1"
-  },
-  {
-    id: 9,
-    title: "Expérience en scène",
-    category: "Captation",
-    thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-    description: "Bientôt disponible",
-    videoUrl: ""
-  },
-];
-
+  gradient: "from-blue via-purple to-magenta"
+}];
+const projects = [{
+  id: 10,
+  title: "The Final Bargain",
+  category: "Aftermovies",
+  thumbnail: thumbnailBargain,
+  description: "Une nuit, des débats, des images",
+  videoUrl: "https://www.dropbox.com/scl/fi/ue1tpo413wehqkrnrplbv/Final-Bargain-2025.mov?rlkey=mg8v1r72ga9jor7imzf0q2x0o&st=d6e0mmk6&raw=1"
+}, {
+  id: 11,
+  title: "Les Plumes du Lyon",
+  category: "Aftermovies",
+  thumbnail: thumbnailPlumesLyon,
+  description: "Plus de 15 auteurs étaient réunis pour célébrer la richesse de la littérature lyonnaise",
+  videoUrl: "https://www.dropbox.com/scl/fi/sqxq2mlsjjksj0rhuabtv/Salon-du-livre-2025.mp4?rlkey=byfm9n2pbi20lxek60rikvrpq&st=dy64pny0&raw=1"
+}, {
+  id: 12,
+  title: "Prologue 26ème Raid Hannibal",
+  category: "Aftermovies",
+  thumbnail: thumbnailPrologueRaid,
+  description: "Journée marquant le début de l'aventure tant attendue du Raid Hannibal",
+  videoUrl: "https://www.dropbox.com/scl/fi/hxfm2rz3w22cich5lvyol/Prologue-Raid-2025.mov?rlkey=3ptbmuix3kp2jk41g57l7krow&st=ljctvwje&raw=1"
+}, {
+  id: 13,
+  title: "33e édition de la Croiz'pak - 2025",
+  category: "Aftermovies",
+  thumbnail: thumbnailCroizpak,
+  description: "Du 10 au 17 mai derniers, le clubvoile_emlyon nous a embarqués vers l'Isola d'Elba",
+  videoUrl: "https://www.dropbox.com/scl/fi/ceugk9hsesqxm0r3e9cos/Aftermovie-CP-2025.mp4?rlkey=vmi66jb6ky3ogee4umtrurfxi&st=4zk6qq3x&raw=1"
+}, {
+  id: 14,
+  title: "28e édition des Neptuniades - 2025",
+  category: "Aftermovies",
+  thumbnail: thumbnailNeptuniade,
+  description: "Week-end rassemblant plus de 300 étudiants de l'école",
+  videoUrl: "https://www.dropbox.com/scl/fi/b90re0lcbh8txdpz83x7i/Aftermovie-Neptuniades-2025.mov?rlkey=30gq5nifng37wwl80bwbwxl21&st=0a8v8e3g&raw=1"
+}, {
+  id: 3,
+  title: "CENA",
+  category: "Courts-métrages",
+  thumbnail: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
+  description: "Court-métrage réalisé en 2025",
+  videoUrl: "https://www.dropbox.com/scl/fi/sp4160tlg5v99jc10zzh7/CENA-2025.mp4?rlkey=pehnssapqpemkohy0cfhcsgcs&st=usl74xlh&raw=1"
+}, {
+  id: 7,
+  title: "Making Of Séminaire ECHO",
+  category: "Captation",
+  thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
+  description: "Coulisses d'un séminaire d'école",
+  videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1"
+}, {
+  id: 9,
+  title: "Expérience en scène",
+  category: "Captation",
+  thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
+  description: "Bientôt disponible",
+  videoUrl: ""
+}];
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [playerOpen, setPlayerOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState<typeof featuredProjects[0] | null>(null);
   const filteredProjects = activeCategory === "Tous" ? projects : projects.filter(p => p.category === activeCategory);
-
   const handlePlayVideo = (project: typeof featuredProjects[0]) => {
     setCurrentVideo(project);
     setPlayerOpen(true);
   };
-  
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue/5 via-transparent to-transparent pointer-events-none"></div>
@@ -138,7 +125,7 @@ const Portfolio = () => {
             </p>
             
             <div className="text-4xl md:text-5xl font-display tracking-wider gradient-text">
-              687 000 VUES
+              68700 VUES
             </div>
           </div>
         </div>
@@ -159,13 +146,9 @@ const Portfolio = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {featuredProjects.map((project, index) => (
-              <div
-                key={project.id}
-                className="group relative rounded-2xl overflow-hidden cursor-pointer"
-                style={{ animationDelay: `${index * 150}ms` }}
-                onClick={() => handlePlayVideo(project)}
-              >
+            {featuredProjects.map((project, index) => <div key={project.id} className="group relative rounded-2xl overflow-hidden cursor-pointer" style={{
+            animationDelay: `${index * 150}ms`
+          }} onClick={() => handlePlayVideo(project)}>
                 {/* Background Gradient Glow */}
                 <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl opacity-0 group-hover:opacity-70 blur-xl transition-all duration-700`}></div>
                 
@@ -173,11 +156,7 @@ const Portfolio = () => {
                 <div className="relative bg-card border border-border/50 rounded-2xl overflow-hidden group-hover:border-primary/30 transition-all duration-500">
                   {/* Image Container */}
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <img
-                      src={project.thumbnail}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
+                    <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
@@ -223,8 +202,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -233,19 +211,9 @@ const Portfolio = () => {
       <section className="pb-8 pt-8">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map(category => (
-              <Button
-                key={category}
-                variant={activeCategory === category ? "default" : "outline"}
-                onClick={() => setActiveCategory(category)}
-                className={activeCategory === category 
-                  ? "bg-gradient-to-r from-magenta to-orange text-foreground font-bold" 
-                  : "border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/50"
-                }
-              >
+            {categories.map(category => <Button key={category} variant={activeCategory === category ? "default" : "outline"} onClick={() => setActiveCategory(category)} className={activeCategory === category ? "bg-gradient-to-r from-magenta to-orange text-foreground font-bold" : "border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/50"}>
                 {category}
-              </Button>
-            ))}
+              </Button>)}
           </div>
         </div>
       </section>
@@ -254,18 +222,10 @@ const Portfolio = () => {
       <section className="py-12 pb-24">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map(project => (
-              <div
-                key={project.id}
-                className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500"
-              >
+            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500">
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                  <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60"></div>
@@ -294,8 +254,7 @@ const Portfolio = () => {
                     {project.description}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -314,18 +273,9 @@ const Portfolio = () => {
               </Button>
             </DialogTitle>
           </DialogHeader>
-          {currentVideo && (
-            <div className="space-y-4">
+          {currentVideo && <div className="space-y-4">
               <div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
-                <video
-                  width="100%"
-                  height="100%"
-                  src={currentVideo.videoUrl}
-                  title={currentVideo.title}
-                  controls
-                  autoPlay
-                  className="w-full h-full"
-                />
+                <video width="100%" height="100%" src={currentVideo.videoUrl} title={currentVideo.title} controls autoPlay className="w-full h-full" />
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-3 py-1 bg-gradient-to-r from-blue to-purple rounded-full text-xs font-bold">
@@ -333,12 +283,9 @@ const Portfolio = () => {
                 </span>
                 <span className="text-muted-foreground">{currentVideo.description}</span>
               </div>
-            </div>
-          )}
+            </div>}
         </DialogContent>
       </Dialog>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Portfolio;
