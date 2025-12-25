@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, X } from "lucide-react";
-import thumbnailAdhemar from "@/assets/thumbnail-adhemar.jpg";
+import thumbnailAdhemar from "@/assets/thumbnail-adhemar-home.png";
 import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
 const realisations = [{
   title: "Séminaire ECHO",
