@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, X } from "lucide-react";
 import thumbnailAdhemar from "@/assets/thumbnail-adhemar.jpg";
-import thumbnailRaid from "@/assets/thumbnail-raid.jpg";
+import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
 const realisations = [{
   title: "Séminaire ECHO",
   category: "Captation",
@@ -15,7 +15,7 @@ const realisations = [{
 }, {
   title: "Aftermovie Raid 2025",
   category: "Aftermovie",
-  thumbnail: thumbnailRaid,
+  thumbnail: thumbnailPrologueRaid,
   views: "Captation et réalisation de l'aftermovie d'un des plus grands évènements étudiants de France",
   videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
   isDirectVideo: true
