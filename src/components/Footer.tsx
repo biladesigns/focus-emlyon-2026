@@ -64,6 +64,14 @@ const Footer = () => {
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} FOCUS. Tous droits réservés. Designed by <a href="https://biladesigns.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline">Bila designs</a>
             </p>
+            <div className="flex gap-4 text-xs text-muted-foreground">
+              <Link to="/mentions-legales" className="hover:text-primary transition-colors">
+                Mentions légales
+              </Link>
+              <Link to="/politique-confidentialite" className="hover:text-primary transition-colors">
+                Politique de confidentialité
+              </Link>
+            </div>
           </div>
         </div>
       </div>
