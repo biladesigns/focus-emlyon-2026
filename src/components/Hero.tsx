@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import focusLogoWave from "@/assets/focus-logo-wave.png";
-import logoEmlyon from "@/assets/logo-emlyon.png";
+import focusLogoWave from "@/assets/focus-logo-wave.webp";
+import logoEmlyon from "@/assets/logo-emlyon.webp";
 import AnimatedRealisationsButton from "@/components/AnimatedRealisationsButton";
 
 const Hero = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import focusLogoFull from "@/assets/focus-logo-full.png";
+import focusLogoFull from "@/assets/focus-logo-full.webp";
 import FocusContactButton from "@/components/FocusContactButton";
 
 const navItems = [

@@ -3,8 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, X } from "lucide-react";
-import thumbnailAdhemar from "@/assets/thumbnail-adhemar-home.png";
-import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
+import thumbnailAdhemar from "@/assets/thumbnail-adhemar-home.webp";
+import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.webp";
 const realisations = [{
   title: "Séminaire ECHO",
   category: "Captation",
@@ -52,7 +52,7 @@ const Realisations = () => {
         }} onClick={() => handlePlayVideo(realisation)}>
               {/* Thumbnail */}
               <div className="relative overflow-hidden aspect-video">
-                <img src={realisation.thumbnail} alt={realisation.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src={realisation.thumbnail} alt={realisation.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>

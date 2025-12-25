@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, Eye, ArrowRight, X } from "lucide-react";
 
-import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
-import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.jpg";
-import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
-import thumbnailCroizpak from "@/assets/thumbnail-croizpak.png";
-import thumbnailBargain from "@/assets/thumbnail-bargain.png";
-import thumbnailNeptuniade from "@/assets/thumbnail-neptuniade.png";
-import thumbnailPlumesLyon from "@/assets/thumbnail-plumes-lyon.png";
+import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.webp";
+import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.webp";
+import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.webp";
+import thumbnailCroizpak from "@/assets/thumbnail-croizpak.webp";
+import thumbnailBargain from "@/assets/thumbnail-bargain.webp";
+import thumbnailNeptuniade from "@/assets/thumbnail-neptuniade.webp";
+import thumbnailPlumesLyon from "@/assets/thumbnail-plumes-lyon.webp";
 const categories = ["Tous", "Aftermovies", "Courts-métrages", "Captation"];
 const featuredProjects = [{
   id: "raid-ey",
@@ -156,7 +156,7 @@ const Portfolio = () => {
                 <div className="relative bg-card border border-border/50 rounded-2xl overflow-hidden group-hover:border-primary/30 transition-all duration-500">
                   {/* Image Container */}
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src={project.thumbnail} alt={project.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
@@ -225,7 +225,7 @@ const Portfolio = () => {
             {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 cursor-pointer" onClick={() => project.videoUrl && handlePlayVideo({ ...project, id: String(project.id), subtitle: project.category, stats: { views: "", duration: "" }, gradient: "from-magenta to-orange" })}>
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
-                  <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img src={project.thumbnail} alt={project.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60"></div>

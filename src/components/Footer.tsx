@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Youtube } from "lucide-react";
-import focusLogoWave from "@/assets/focus-logo-wave.png";
+import focusLogoWave from "@/assets/focus-logo-wave.webp";
 import FocusContactButton from "./FocusContactButton";
 const Footer = () => {
   return <footer className="relative z-10 px-4 md:px-8 pb-2 md:pb-4 -mt-8">
