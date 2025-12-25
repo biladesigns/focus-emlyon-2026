@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, Eye, ArrowRight, X } from "lucide-react";
-import TrustSection from "@/components/TrustSection";
+
 import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.jpg";
 import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.jpg";
 import thumbnailPrologueRaid from "@/assets/thumbnail-prologue-raid.png";
@@ -261,8 +261,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Ils nous font confiance */}
-      <TrustSection />
+
 
       {/* Video Player Dialog */}
       <Dialog open={playerOpen} onOpenChange={setPlayerOpen}>
