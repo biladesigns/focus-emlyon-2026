@@ -37,8 +37,9 @@ const ParticleNetwork = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Initialize particles
-    const particleCount = 80;
+    // Initialize particles - fewer on mobile for performance
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 30 : 80;
     particlesRef.current = [];
 
     for (let i = 0; i < particleCount; i++) {
@@ -98,18 +99,19 @@ const ParticleNetwork = () => {
         ctx.fill();
       });
 
-      // Draw connections
+      // Draw connections - shorter distance on mobile
+      const connectionDistance = isMobile ? 80 : 120;
       particlesRef.current.forEach((p1, i) => {
         particlesRef.current.slice(i + 1).forEach((p2) => {
           const dx = p1.x - p2.x;
           const dy = p1.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 120) {
+          if (distance < connectionDistance) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            const opacity = (1 - distance / 120) * 0.5;
+            const opacity = (1 - distance / connectionDistance) * 0.5;
             ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
