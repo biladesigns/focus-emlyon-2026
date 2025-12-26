@@ -13,11 +13,11 @@ const MentionsLegales = () => {
             <section>
               <h2 className="text-xl font-bold text-foreground mb-4">1. Éditeur du site</h2>
               <p>
-                Le site focus-emlyon.com est édité par l'association FOCUS, association audiovisuelle d'emlyon business school.
+                Le site focus-emlyon.com est édité par FOCUS, initiative audiovisuelle d'emlyon business school.
               </p>
               <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li>Nom de l'association : FOCUS</li>
-                <li>Statut : Association loi 1901</li>
+                <li>Nom : FOCUS</li>
+                <li>Statut : Initiative étudiante sous la tutelle du Conseil de Corporation des Étudiants d'emlyon</li>
                 <li>Siège social : emlyon business school, 144 avenue Jean Jaurès, 69007 Lyon, France</li>
                 <li>Email : contact@focus-emlyon.com</li>
               </ul>
@@ -33,7 +33,7 @@ const MentionsLegales = () => {
             <section>
               <h2 className="text-xl font-bold text-foreground mb-4">3. Propriété intellectuelle</h2>
               <p>
-                L'ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes) est la propriété exclusive de l'association FOCUS ou de ses partenaires. Toute reproduction, distribution, modification ou utilisation de ces contenus sans autorisation préalable est strictement interdite.
+                L'ensemble du contenu de ce site (textes, images, vidéos, logos, graphismes) est la propriété exclusive de FOCUS ou de ses partenaires. Toute reproduction, distribution, modification ou utilisation de ces contenus sans autorisation préalable est strictement interdite.
               </p>
             </section>
 
