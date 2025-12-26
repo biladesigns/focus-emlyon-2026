@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import Contact from "@/components/Contact";
 import { Mail, Phone } from "lucide-react";
 
@@ -30,6 +31,12 @@ const representatives = [
 const ContactPage = () => {
   return (
     <Layout>
+      <SEO
+        title="Contact | Devis Vidéo Gratuit Lyon"
+        description="Contactez FOCUS pour votre projet vidéo à Lyon. Devis gratuit sous 24h. Aftermovies, courts-métrages, captations événementielles. Équipe réactive et professionnelle."
+        keywords="contact vidéaste Lyon, devis vidéo Lyon, production audiovisuelle contact, FOCUS emlyon contact"
+        canonical="https://focus-emlyon.com/contact"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple/5 via-transparent to-transparent pointer-events-none"></div>

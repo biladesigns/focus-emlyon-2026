@@ -1,12 +1,18 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
 import ServiceProcess from "@/components/ServiceProcess";
 
-
 const Prestations = () => {
   return (
     <Layout>
+      <SEO
+        title="Prestations Vidéo Lyon | Aftermovie, Clip, Captation"
+        description="Découvrez nos prestations audiovisuelles à Lyon : aftermovies, courts-métrages, captations événementielles, clips musicaux, vidéos corporate. Devis gratuit."
+        keywords="prestation vidéo Lyon, aftermovie prix, captation événement Lyon, clip vidéo étudiant, vidéo corporate Lyon, devis vidéo Lyon"
+        canonical="https://focus-emlyon.com/prestations"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-magenta/5 via-transparent to-transparent pointer-events-none"></div>

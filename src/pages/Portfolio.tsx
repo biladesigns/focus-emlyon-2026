@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Play, Eye, ArrowRight, X } from "lucide-react";
@@ -104,6 +105,12 @@ const Portfolio = () => {
     setPlayerOpen(true);
   };
   return <Layout>
+      <SEO
+        title="Portfolio | Nos Réalisations Vidéo Lyon"
+        description="Découvrez nos réalisations vidéo : aftermovies événementiels, courts-métrages, captations. Plus de 68 000 vues cumulées. Qualité professionnelle par FOCUS emlyon."
+        keywords="portfolio vidéo Lyon, aftermovie exemple, court-métrage étudiant, réalisation vidéo emlyon, FOCUS portfolio"
+        canonical="https://focus-emlyon.com/portfolio"
+      />
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue/5 via-transparent to-transparent pointer-events-none"></div>
