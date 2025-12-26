@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Play, Eye, ArrowRight, X } from "lucide-react";
+import { Play, ArrowRight, X } from "lucide-react";
 
 import thumbnailRaidEy from "@/assets/thumbnail-raid-ey.webp";
 import thumbnailAdhemarPortfolio from "@/assets/thumbnail-adhemar-portfolio.webp";
@@ -177,14 +177,7 @@ const Portfolio = () => {
                       </div>
                     </div>
                     
-                    {/* Stats Badge */}
-                    <div className="absolute top-4 right-4 flex gap-2">
-                      <span className="px-3 py-1.5 bg-background/80 backdrop-blur-md rounded-full text-xs font-bold text-foreground flex items-center gap-1.5">
-                        <Eye className="w-3.5 h-3.5" />
-                        {project.stats.views}
-                      </span>
-                    </div>
-                  </div>
+                                      </div>
                   
                   {/* Content */}
                   <div className="p-6 relative">
