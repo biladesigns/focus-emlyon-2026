@@ -2,6 +2,8 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import Contact from "@/components/Contact";
 import { Mail, Phone } from "lucide-react";
+import lauraPhoto from "@/assets/contact-laura.jpg";
+import mathieuPhoto from "@/assets/contact-mathieu.jpg";
 
 const representatives = [
   {
@@ -9,22 +11,15 @@ const representatives = [
     name: "Laura Djaziri",
     email: "laura.djaziri@edu.em-lyon.com",
     phone: "+33 6 42 95 84 45",
-    image: "/placeholder.svg",
+    image: lauraPhoto,
   },
   {
     role: "Président",
-    name: "MATHIEU BILA",
+    name: "Mathieu Bila",
     email: "mathieu.bila@edu.em-lyon.com",
     phone: "+33 6 59 08 68 00",
-    image: "/placeholder.svg",
+    image: mathieuPhoto,
     featured: true,
-  },
-  {
-    role: "Responsable Entreprise",
-    name: "Jude HANDS",
-    email: "jude.hands@edu.em-lyon.com",
-    phone: "+33 6 42 95 84 45",
-    image: "/placeholder.svg",
   },
 ];
 
@@ -40,7 +35,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple/5 via-transparent to-transparent pointer-events-none"></div>
-        
+
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -48,11 +43,11 @@ const ContactPage = () => {
               <span className="text-sm tracking-[0.3em] text-purple font-bold uppercase">Parlons de votre projet</span>
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-purple"></div>
             </div>
-            
+
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-wider mb-6">
               <span className="gradient-text">CONTACT</span>
             </h1>
-            
+
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Une idée, un projet, une collaboration ? Contactez-nous et donnons vie à votre vision.
             </p>
@@ -69,13 +64,13 @@ const ContactPage = () => {
             </h2>
             <p className="text-muted-foreground">Les représentants de l'association à votre service</p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-end">
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto items-center">
             {representatives.map((rep, index) => (
               <div
                 key={index}
                 className={`group bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 text-center ${
-                  rep.featured ? "md:-mt-4 md:scale-105 border-primary/20 bg-card/70" : ""
+                  rep.featured ? "border-primary/20 bg-card/70" : ""
                 }`}
               >
                 {/* Photo */}
@@ -88,21 +83,21 @@ const ContactPage = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 {/* Role Badge */}
                 <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase mb-3 ${
-                  rep.featured 
-                    ? "bg-primary/20 text-primary" 
+                  rep.featured
+                    ? "bg-primary/20 text-primary"
                     : "bg-muted text-muted-foreground"
                 }`}>
                   {rep.role}
                 </span>
-                
+
                 {/* Name */}
                 <h3 className="font-display text-xl tracking-wide mb-4 text-foreground">
                   {rep.name}
                 </h3>
-                
+
                 {/* Contact Info */}
                 <div className="space-y-3">
                   <a
