@@ -39,7 +39,8 @@ const AnimatedRealisationsButton = ({ onClick }: AnimatedRealisationsButtonProps
       <button
         ref={buttonRef}
         onClick={handleClick}
-        className="btn-realisations relative z-[1] px-[52px] py-5 text-[17px] font-semibold tracking-[0.5px] text-foreground bg-[#12121f] border-none rounded-[56px] cursor-pointer overflow-hidden transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] active:scale-[0.98] group"
+        style={{ transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)" }}
+        className="btn-realisations relative z-[1] px-[52px] py-5 text-[17px] font-semibold tracking-[0.5px] text-foreground bg-[#12121f] border-none rounded-[56px] cursor-pointer overflow-hidden transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] group"
       >
         {/* Particles on hover */}
         <div className="absolute inset-0 rounded-[56px] overflow-hidden pointer-events-none">

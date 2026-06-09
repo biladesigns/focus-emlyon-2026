@@ -63,7 +63,7 @@ const PolitiqueConfidentialite = () => {
                 <li>Droit d'opposition au traitement</li>
               </ul>
               <p className="mt-4">
-                Pour exercer ces droits, contactez-nous à : contact@focus-emlyon.com
+                Pour exercer ces droits, contactez-nous à : focus@em-lyon.com
               </p>
             </section>
 
@@ -91,7 +91,7 @@ const PolitiqueConfidentialite = () => {
                 emlyon business school<br />
                 144 avenue Jean Jaurès<br />
                 69007 Lyon, France<br />
-                Email : contact@focus-emlyon.com
+                Email : focus@em-lyon.com
               </p>
             </section>
           </div>

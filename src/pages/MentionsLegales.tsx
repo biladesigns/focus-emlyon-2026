@@ -19,7 +19,7 @@ const MentionsLegales = () => {
                 <li>Nom : FOCUS</li>
                 <li>Statut : Initiative étudiante sous la tutelle du Conseil de Corporation des Étudiants d'emlyon</li>
                 <li>Siège social : emlyon business school, 144 avenue Jean Jaurès, 69007 Lyon, France</li>
-                <li>Email : contact@focus-emlyon.com</li>
+                <li>Email : focus@em-lyon.com</li>
               </ul>
             </section>
 
