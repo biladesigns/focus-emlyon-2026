@@ -1,3 +1,5 @@
+import mandatPhoto from '@/assets/focus-mandat-2026.jpg';
+
 const About = () => {
   return <section id="about" className="py-24 bg-transparent relative overflow-hidden">
       {/* Animated background orbs for visual interest */}
@@ -12,14 +14,9 @@ const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            {/* Zone pour photo de mandat en mode paysage */}
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-card/50 backdrop-blur-sm border-2 border-muted hover:border-primary transition-all duration-500 group">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center space-y-3">
-                  <div className="text-muted-foreground/50 text-sm font-medium">Photo de mandat</div>
-                  <div className="text-muted-foreground/30 text-xs">Format paysage 4:3</div>
-                </div>
-              </div>
+            {/* Photo de mandat */}
+            <div className="relative rounded-2xl overflow-hidden aspect-[3/2] hover:border-primary transition-all duration-500 group">
+              <img src={mandatPhoto} alt="Équipe FOCUS - Mandat 2026" className="w-full h-full object-cover" />
               {/* Gradient overlay for visual effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-magenta/10 via-transparent to-blue/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
