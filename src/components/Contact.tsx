@@ -4,6 +4,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, User, Mail, FileText, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+// Endpoint Formspree du formulaire de contact.
+// A recuperer sur formspree.io > le formulaire > Integration > "Form endpoint".
+// Cette valeur est publique par design (elle part dans le bundle), ce n'est pas un secret.
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/REMPLACER_PAR_VOTRE_ID";
+
+const ENDPOINT_CONFIGURE = !FORMSPREE_ENDPOINT.includes("REMPLACER_PAR_VOTRE_ID");
+
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,6 +20,8 @@ const Contact = () => {
     project: "",
     message: "",
   });
+  // Piege a bots : un humain ne remplit jamais ce champ, il est cache.
+  const [honeypot, setHoneypot] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -20,18 +29,56 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Bot detecte : on fait comme si tout allait bien, sans rien envoyer.
+    if (honeypot) return;
+
+    if (!ENDPOINT_CONFIGURE) {
+      toast({
+        variant: "destructive",
+        title: "Formulaire non configuré",
+        description: `Écrivez-nous directement à focus@em-lyon.com.`,
+      });
+      return;
+    }
+
     setIsSubmitting(true);
-    
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans les plus brefs délais.",
-    });
-    
-    setFormData({ name: "", email: "", project: "", message: "" });
-    setIsSubmitting(false);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nom: formData.name,
+          email: formData.email,
+          type_de_projet: formData.project,
+          message: formData.message,
+          _subject: `Nouveau message FOCUS : ${formData.project || "projet"} (${formData.name})`,
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        const detail = data?.errors?.map((err: { message: string }) => err.message).join(", ");
+        throw new Error(detail || `Erreur ${response.status}`);
+      }
+
+      toast({
+        title: "Message envoyé !",
+        description: "Nous vous répondrons dans les plus brefs délais.",
+      });
+      setFormData({ name: "", email: "", project: "", message: "" });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "L'envoi a échoué",
+        description: `${
+          error instanceof Error ? error.message : "Problème de connexion"
+        }. Réessayez ou écrivez-nous à focus@em-lyon.com.`,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -59,6 +106,17 @@ const Contact = () => {
 
               {/* Form */}
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Piege a bots, invisible et hors du parcours clavier */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  className="absolute left-[-9999px] w-px h-px opacity-0"
+                />
                 {/* Name & Email Row */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
