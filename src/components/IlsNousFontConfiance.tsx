@@ -1,12 +1,21 @@
 /**
  * Rubrique "Ils nous font confiance".
  *
- * Pour remplacer un placeholder par un vrai logo :
- *  1. deposer le fichier dans src/assets/ (webp ou png, fond transparent de preference)
- *  2. l'importer en haut de ce fichier
- *  3. renseigner "logo" sur la ligne correspondante, et "url" si le partenaire a un site
- * Le rendu bascule tout seul du placeholder au logo.
+ * Les logos sont poses sur une pastille claire. Ce n'est pas un choix
+ * esthetique gratuit : deux des logos (DJI, OJO) sont sombres et deviennent
+ * illisibles poses directement sur le bleu nuit du site. La pastille garde
+ * chaque marque lisible et fidele a sa charte.
+ *
+ * Ajouter un partenaire :
+ *  1. deposer le logo detoure dans src/assets/ (PNG a fond transparent)
+ *  2. l'importer ci-dessous
+ *  3. ajouter une ligne dans "partenaires", avec "url" si le partenaire a un site
+ * Sans "logo", la carte affiche simplement le nom : c'est le mode placeholder.
  */
+import logoDji from "@/assets/partenaire-dji-lyon.png";
+import logoAnrh from "@/assets/partenaire-anrh.png";
+import logoOjo from "@/assets/partenaire-ojo.png";
+import logoRaidHannibal from "@/assets/partenaire-raid-hannibal.png";
 
 interface Partenaire {
   nom: string;
@@ -15,12 +24,10 @@ interface Partenaire {
 }
 
 const partenaires: Partenaire[] = [
-  { nom: "Raid EY" },
-  { nom: "Neptuniades" },
-  { nom: "Croiz'Pak" },
-  { nom: "Salon du Livre" },
-  { nom: "Adhémar" },
-  { nom: "Bargain" },
+  { nom: "Raid Hannibal", logo: logoRaidHannibal },
+  { nom: "DJI Store Lyon", logo: logoDji },
+  { nom: "ANRH", logo: logoAnrh },
+  { nom: "OJO", logo: logoOjo },
 ];
 
 const IlsNousFontConfiance = () => {
@@ -47,23 +54,26 @@ const IlsNousFontConfiance = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {partenaires.map((partenaire) => {
             const contenu = partenaire.logo ? (
               <img
                 src={partenaire.logo}
                 alt={partenaire.nom}
                 loading="lazy"
-                className="max-h-14 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                className="max-h-20 max-w-[72%] w-auto object-contain"
               />
             ) : (
-              <span className="text-sm font-semibold tracking-wide text-muted-foreground/70 group-hover:text-foreground transition-colors duration-300 text-center px-2">
+              <span className="text-sm font-semibold tracking-wide text-muted-foreground text-center px-3">
                 {partenaire.nom}
               </span>
             );
 
-            const classeCarte =
-              "group flex items-center justify-center aspect-[3/2] rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2";
+            // Pastille claire pour les logos, carte sombre pour les placeholders :
+            // un placeholder est du texte, il reste lisible sur fond sombre.
+            const classeCarte = partenaire.logo
+              ? "group flex items-center justify-center aspect-[3/2] rounded-2xl bg-white/90 hover:bg-white p-5 ring-1 ring-white/10 hover:ring-primary/40 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2"
+              : "group flex items-center justify-center aspect-[3/2] rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2";
 
             return partenaire.url ? (
               <a
