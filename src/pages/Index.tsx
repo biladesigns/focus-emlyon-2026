@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import Hero from "@/components/Hero";
+import IlsNousFontConfiance from "@/components/IlsNousFontConfiance";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Realisations from "@/components/Realisations";
@@ -16,6 +17,7 @@ const Index = () => {
         canonical="https://focus-emlyon.com"
       />
       <Hero />
+      <IlsNousFontConfiance />
       <About />
       <Services />
       <Realisations />

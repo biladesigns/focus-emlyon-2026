@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import focusLogoWave from "@/assets/focus-logo-wave.webp";
 import logoEmlyon from "@/assets/logo-emlyon.webp";
+import logoEmlyonAlumni from "@/assets/logo-emlyon-alumni.png";
 import AnimatedRealisationsButton from "@/components/AnimatedRealisationsButton";
 
 const Hero = () => {
@@ -86,12 +87,28 @@ const Hero = () => {
             </div>
             
             {/* emlyon branding */}
-            <div className="flex items-center gap-6 pt-8">
+            {/* Grille a 2 colonnes : la 1re colonne prend la largeur du plus
+                long libelle, donc les deux logos demarrent au meme x. */}
+            <div className="grid grid-cols-[auto_auto] justify-start items-center gap-x-6 gap-y-4 pt-8">
               <div className="flex items-center gap-4">
                 <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
                 <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">UNE ASSOCIATION D'</span>
               </div>
               <img src={logoEmlyon} alt="emlyon business school" className="h-16 w-auto object-contain" />
+
+              <div className="flex items-center gap-4">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"></div>
+                <span className="text-sm tracking-[0.3em] text-primary font-bold uppercase">SOUTENU PAR</span>
+              </div>
+              <a
+                href="https://www.emlyon-alumni.com/fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="emlyon alumni, ouvre le site dans un nouvel onglet"
+                className="rounded-sm transition-transform duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                <img src={logoEmlyonAlumni} alt="emlyon alumni" className="h-16 w-auto object-contain" />
+              </a>
             </div>
           </div>
         </div>
