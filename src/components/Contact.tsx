@@ -7,7 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 // Endpoint Formspree du formulaire de contact.
 // A recuperer sur formspree.io > le formulaire > Integration > "Form endpoint".
 // Cette valeur est publique par design (elle part dans le bundle), ce n'est pas un secret.
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/REMPLACER_PAR_VOTRE_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdekezno";
 
 const ENDPOINT_CONFIGURE = !FORMSPREE_ENDPOINT.includes("REMPLACER_PAR_VOTRE_ID");
 
