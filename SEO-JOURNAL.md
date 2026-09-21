@@ -53,6 +53,31 @@ non mesurable.
 Tant que ce n'est pas corrigé, toute priorisation SEO est un pari. À traiter
 avant la première revue.
 
+### 21/09/2026, mesure d'audience : Umami, pas Google Analytics
+
+La politique de confidentialité du site affirme qu'aucun cookie de tracking
+n'est utilisé. Installer GA rendrait cette page fausse et imposerait un
+bandeau de consentement, qui coûte des visiteurs.
+
+Umami est sans cookie et sans donnée personnelle : pas de bandeau, et la
+politique reste vraie. **Ne repropose pas GA sur ce site** sans avoir d'abord
+réécrit la politique de confidentialité et ajouté un bandeau conforme.
+
+### 21/09/2026, plus aucun chiffre de vues sur le site
+
+« 68 700 vues » mesurait l'audience des clients de FOCUS, pas sa capacité à
+livrer. Un prospect n'achète pas des vues, et 68 700 sur dix films fait
+environ 7 000 par vidéo : trop peu pour convaincre, et intransférable à son
+propre événement.
+
+Remplacé par « 10 productions livrées », calculé depuis les données du
+portfolio, donc impossible à laisser périmer. Deux projets portaient aussi
+des vues écrites en dur (125K, 89K) qui n'étaient plus affichées nulle part.
+
+**Le bon chiffre reste à trouver** : le délai de livraison d'un aftermovie
+est le meilleur candidat, c'est le critère d'achat décisif sur ce produit.
+En attente des chiffres réels de Mathieu.
+
 ---
 
 ## Partie B, journal daté
@@ -64,12 +89,16 @@ avant la première revue.
 | 21/09/2026 | Retrait du `canonical` statique de `index.html` | Chaque page avait deux canonical, Google les ignore tous dans ce cas. Une seule balise désormais, la bonne. Vérifié. |
 | 21/09/2026 | JSON-LD sorti de react-helmet-async vers un hook | En 2.0.5, un enfant `<script>` dans `<Helmet>` fait échouer tout le bloc en silence : les pages perdaient title, canonical et og:*. |
 | 21/09/2026 | Création de `/articles` et `/articles/:slug` | Infrastructure prête, aucun article publié. BlogPosting et BreadcrumbList vérifiés. |
+| 21/09/2026 | Correctif `.htaccess` déployé, vérifié en production | Toutes les routes répondent 200. Manifest servi en `application/manifest+json`. |
+| 21/09/2026 | Mesure d'audience Umami installée, inerte tant que le Website ID n'est pas renseigné | Vérifié : aucun script, aucune requête, aucun cookie avant configuration. |
+| 21/09/2026 | Suivi de conversion sur le formulaire (`devis-demande`, `devis-echoue`) | Vérifié de bout en bout : type de projet et page d'origine remontés. Un envoi raté est tracé, pour qu'une panne ne passe plus inaperçue. |
+| 21/09/2026 | Suppression de tous les chiffres de vues | Remplacés par un décompte calculé sur les données. Description SEO du portfolio corrigée. |
 
 ---
 
 ## À traiter au prochain passage
 
-- [ ] Confirmer que le `.htaccess` est bien déployé : les routes doivent répondre 200.
+- [x] ~~Confirmer que le `.htaccess` est déployé~~ : fait le 21/09, toutes les routes en 200.
 - [ ] Soumettre le sitemap dans la Search Console et demander l'indexation des pages internes.
-- [ ] Installer une mesure d'audience, puis relever la répartition des sources sur 30 jours.
+- [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit.
 - [ ] Seulement ensuite : première vraie revue mensuelle, sur des données valides.

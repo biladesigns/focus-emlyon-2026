@@ -9,21 +9,21 @@ const realisations = [{
   title: "Séminaire ECHO",
   category: "Captation",
   thumbnail: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
-  views: "Réalisation du making-of d'un séminaire de l'école.",
+  description: "Réalisation du making-of d'un séminaire de l'école.",
   videoUrl: "https://www.dropbox.com/scl/fi/2zkxo3fjlx3pu4hdvzwhs/Making-off-s-minaire-ECHO-2025.mp4?rlkey=1duby09766dhd33dm92s9bdg4&st=xeowqtu6&raw=1",
   isDirectVideo: true
 }, {
   title: "Aftermovie Raid 2025",
   category: "Aftermovie",
   thumbnail: thumbnailPrologueRaid,
-  views: "Captation et réalisation de l'aftermovie d'un des plus grands évènements étudiants de France",
+  description: "Captation et réalisation de l'aftermovie d'un des plus grands évènements étudiants de France",
   videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
   isDirectVideo: true
 }, {
   title: "Aftermovie Adhémar 2025",
   category: "Aftermovie",
   thumbnail: thumbnailAdhemar,
-  views: "Captation et réalisation de l'aftermovie d'un évènement rassemblant plus de 600 personnes.",
+  description: "Captation et réalisation de l'aftermovie d'un évènement rassemblant plus de 600 personnes.",
   videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
   isDirectVideo: true
 }];
@@ -41,7 +41,7 @@ const Realisations = () => {
             Nos <span className="gradient-text glitch" data-text="Réalisations">Réalisations récentes </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Plus de <span className="text-magenta font-bold neon-glow">68700 vues</span> sur nos productions
+            Aftermovies, captations et courts-métrages, pour des <span className="text-magenta font-bold neon-glow">associations, des entreprises et des événements</span>
           </p>
           <div className="h-1 w-32 bg-gradient-to-r from-magenta via-orange to-blue mx-auto mt-6"></div>
         </div>
@@ -76,7 +76,7 @@ const Realisations = () => {
                   {realisation.title}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  {realisation.views}
+                  {realisation.description}
                 </p>
               </div>
               
@@ -118,7 +118,7 @@ const Realisations = () => {
                 <span className="px-3 py-1 bg-gradient-to-r from-blue to-purple rounded-full text-xs font-bold">
                   {currentVideo.category}
                 </span>
-                <span className="text-muted-foreground">{currentVideo.views}</span>
+                <span className="text-muted-foreground">{currentVideo.description}</span>
               </div>
             </div>}
         </DialogContent>

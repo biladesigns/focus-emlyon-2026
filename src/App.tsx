@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import { chargerAnalytics } from "@/lib/analytics";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -20,7 +21,14 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  // Chargee une seule fois au montage. Inerte tant que le Website ID
+  // n'est pas renseigne dans src/lib/analytics.ts.
+  useEffect(() => {
+    chargerAnalytics();
+  }, []);
+
+  return (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -45,6 +53,7 @@ const App = () => (
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
-);
+  );
+};
 
 export default App;

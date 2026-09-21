@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, User, Mail, FileText, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { suivreEvenement, EVENEMENTS } from "@/lib/analytics";
 
 // Endpoint Formspree du formulaire de contact.
 // A recuperer sur formspree.io > le formulaire > Integration > "Form endpoint".
@@ -63,12 +64,25 @@ const Contact = () => {
         throw new Error(detail || `Erreur ${response.status}`);
       }
 
+      // La conversion qui compte pour ce site. On enregistre le type de
+      // projet et la page d'origine pour savoir ce qui genere des devis.
+      suivreEvenement(EVENEMENTS.devisDemande, {
+        type_de_projet: formData.project || "non precise",
+        page: window.location.pathname,
+      });
+
       toast({
         title: "Message envoyé !",
         description: "Nous vous répondrons dans les plus brefs délais.",
       });
       setFormData({ name: "", email: "", project: "", message: "" });
     } catch (error) {
+      // Un envoi rate est un devis potentiellement perdu : il doit etre
+      // visible dans les stats, sinon la panne passe inapercue.
+      suivreEvenement(EVENEMENTS.devisEchoue, {
+        raison: error instanceof Error ? error.message : "inconnue",
+      });
+
       toast({
         variant: "destructive",
         title: "L'envoi a échoué",

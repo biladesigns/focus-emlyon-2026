@@ -21,7 +21,6 @@ const featuredProjects = [{
   thumbnail: thumbnailRaidEy,
   videoUrl: "https://www.dropbox.com/scl/fi/xkuibtx10u8mfawwqv3uy/Aftermovie-Raid-2025.mp4?rlkey=rdsxbyax7pz1xoys0af9xdmbj&st=ig6idn8h&raw=1",
   stats: {
-    views: "125K",
     duration: "4:32"
   },
   gradient: "from-orange via-magenta to-purple"
@@ -33,7 +32,6 @@ const featuredProjects = [{
   thumbnail: thumbnailAdhemarPortfolio,
   videoUrl: "https://www.dropbox.com/scl/fi/g5zqtinzs1adogetroclf/Aftermovie-Adh-mar-2025.mov?rlkey=hzogfb52haw8aorrcf6hzxdoh&st=iqaz2qmf&raw=1",
   stats: {
-    views: "89K",
     duration: "5:15"
   },
   gradient: "from-blue via-purple to-magenta"
@@ -95,6 +93,13 @@ const projects = [{
   description: "Bientôt disponible",
   videoUrl: ""
 }];
+// Compte les productions reellement presentes, sans doublon entre la
+// selection mise en avant et la grille complete. Un chiffre calcule ne
+// peut pas devenir faux, contrairement a un nombre ecrit en dur.
+const nombreDeProductions = new Set(
+  [...featuredProjects.map((p) => p.title), ...projects.map((p) => p.title)]
+).size;
+
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
   const [playerOpen, setPlayerOpen] = useState(false);
@@ -107,7 +112,7 @@ const Portfolio = () => {
   return <Layout>
       <SEO
         title="Portfolio | Nos Réalisations Vidéo Lyon"
-        description="Découvrez nos réalisations vidéo : aftermovies événementiels, courts-métrages, captations. Plus de 68 000 vues cumulées. Qualité professionnelle par FOCUS emlyon."
+        description="Découvrez nos réalisations vidéo à Lyon : aftermovies événementiels, courts-métrages, captations. Productions réalisées pour des associations, des entreprises et des événements."
         keywords="portfolio vidéo Lyon, aftermovie exemple, court-métrage étudiant, réalisation vidéo emlyon, FOCUS portfolio"
         canonical="https://focus-emlyon.com/portfolio"
       />
@@ -128,11 +133,11 @@ const Portfolio = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
-              Découvrez nos réalisations audiovisuelles qui cumulent plus de
+              Aftermovies, courts-métrages et captations
             </p>
-            
+
             <div className="text-4xl md:text-5xl font-display tracking-wider gradient-text">
-              68700 VUES
+              {nombreDeProductions} PRODUCTIONS LIVRÉES
             </div>
           </div>
         </div>
@@ -222,7 +227,7 @@ const Portfolio = () => {
       <section className="py-12 pb-24">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 cursor-pointer" onClick={() => project.videoUrl && handlePlayVideo({ ...project, id: String(project.id), subtitle: project.category, stats: { views: "", duration: "" }, gradient: "from-magenta to-orange" })}>
+            {filteredProjects.map(project => <div key={project.id} className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 cursor-pointer" onClick={() => project.videoUrl && handlePlayVideo({ ...project, id: String(project.id), subtitle: project.category, stats: { duration: "" }, gradient: "from-magenta to-orange" })}>
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
                   <img src={project.thumbnail} alt={project.title} loading="lazy" decoding="async" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
