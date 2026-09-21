@@ -5,7 +5,8 @@
  * Évite les dates écrites en dur qui périment silencieusement.
  */
 import { execFileSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 const ORIGIN = 'https://focus-emlyon.com';
 
@@ -15,6 +16,7 @@ const ROUTES = [
   { path: '/prestations',               changefreq: 'monthly', priority: '0.9', sources: ['src/pages/Prestations.tsx'] },
   { path: '/portfolio',                 changefreq: 'weekly',  priority: '0.8', sources: ['src/pages/Portfolio.tsx'] },
   { path: '/contact',                   changefreq: 'monthly', priority: '0.8', sources: ['src/pages/Contact.tsx', 'src/components/Contact.tsx'] },
+  { path: '/articles',                  changefreq: 'weekly',  priority: '0.7', sources: ['src/pages/Articles.tsx', 'src/content/articles'] },
   { path: '/mentions-legales',          changefreq: 'yearly',  priority: '0.3', sources: ['src/pages/MentionsLegales.tsx'] },
   { path: '/politique-confidentialite', changefreq: 'yearly',  priority: '0.3', sources: ['src/pages/PolitiqueConfidentialite.tsx'] },
 ];
@@ -34,9 +36,35 @@ const lastModified = (sources) => {
   return dates.sort().at(-1) || new Date().toISOString().slice(0, 10);
 };
 
-const body = ROUTES.map(({ path, changefreq, priority, sources }) => `  <url>
+// Articles markdown publies (les brouillons restent hors du sitemap).
+const DOSSIER_ARTICLES = 'src/content/articles';
+const articles = (() => {
+  let fichiers = [];
+  try {
+    fichiers = readdirSync(DOSSIER_ARTICLES).filter((f) => f.endsWith('.md'));
+  } catch {
+    return [];
+  }
+  return fichiers
+    .map((fichier) => {
+      const raw = readFileSync(join(DOSSIER_ARTICLES, fichier), 'utf8');
+      const bloc = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
+      const champ = (cle) =>
+        bloc.match(new RegExp(`^${cle}:\\s*(.+)$`, 'm'))?.[1].trim().replace(/^["']|["']$/g, '') ?? '';
+      if (champ('brouillon') === 'true') return null;
+      return {
+        path: `/articles/${fichier.replace(/\.md$/, '')}`,
+        changefreq: 'monthly',
+        priority: '0.7',
+        lastmod: champ('date') || lastModified([join(DOSSIER_ARTICLES, fichier)]),
+      };
+    })
+    .filter(Boolean);
+})();
+
+const body = [...ROUTES, ...articles].map(({ path, changefreq, priority, sources, lastmod }) => `  <url>
     <loc>${ORIGIN}${path}</loc>
-    <lastmod>${lastModified(sources)}</lastmod>
+    <lastmod>${lastmod ?? lastModified(sources)}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`).join('\n');
@@ -46,4 +74,4 @@ writeFileSync(
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`
 );
 
-console.log(`sitemap.xml genere : ${ROUTES.length} URLs`);
+console.log(`sitemap.xml genere : ${ROUTES.length} pages + ${articles.length} article(s)`);

@@ -12,6 +12,8 @@ const Index = lazy(() => import("./pages/Index"));
 const Prestations = lazy(() => import("./pages/Prestations"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const ContactPage = lazy(() => import("./pages/Contact"));
+const ArticlesPage = lazy(() => import("./pages/Articles"));
+const ArticlePage = lazy(() => import("./pages/Article"));
 const MentionsLegales = lazy(() => import("./pages/MentionsLegales"));
 const PolitiqueConfidentialite = lazy(() => import("./pages/PolitiqueConfidentialite"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -32,6 +34,8 @@ const App = () => (
             <Route path="/prestations" element={<Prestations />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/articles/:slug" element={<ArticlePage />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
             <Route path="*" element={<NotFound />} />

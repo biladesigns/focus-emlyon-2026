@@ -1,0 +1,74 @@
+# Configuration Apache / Hostinger pour FOCUS
+# A deposer a la racine web, au meme niveau que index.html.
+
+# ---------------------------------------------------------------
+# 1. Routage SPA : indispensable.
+# Sans ca, toute URL autre que "/" renvoie une 404 du serveur, car
+# le fichier /contact n'existe pas sur le disque. React Router gere
+# les routes cote client, mais encore faut-il que le serveur serve
+# index.html au lieu de chercher un fichier.
+# ---------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Les fichiers et dossiers qui existent vraiment sont servis tels quels.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Tout le reste part sur index.html, en 200 et non en 404.
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# ---------------------------------------------------------------
+# 2. Types MIME corrects.
+# Le manifest etait servi en text/plain, ce qui pousse les
+# navigateurs et Google a l'ignorer, donc a ignorer les icones
+# 192 et 512 qu'il declare.
+# ---------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/manifest+json  .webmanifest
+  AddType image/x-icon               .ico
+  AddType image/webp                 .webp
+  AddType image/svg+xml              .svg
+  AddType application/javascript     .js
+  AddType text/css                   .css
+  AddType application/json           .json
+</IfModule>
+
+# ---------------------------------------------------------------
+# 3. Compression.
+# ---------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/manifest+json image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------
+# 4. Cache.
+# Les assets buildes portent un hash dans leur nom, ils peuvent etre
+# caches un an sans risque. index.html et les fichiers SEO ne doivent
+# jamais l'etre, sinon un redeploiement passe inapercu.
+# ---------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg            "access plus 1 year"
+  ExpiresByType image/png             "access plus 1 year"
+  ExpiresByType image/webp            "access plus 1 year"
+  ExpiresByType image/x-icon          "access plus 1 year"
+  ExpiresByType text/css              "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/html             "access plus 0 seconds"
+  ExpiresByType application/xml       "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml|txt|webmanifest)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
