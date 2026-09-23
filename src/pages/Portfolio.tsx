@@ -93,12 +93,10 @@ const projects = [{
   description: "Bientôt disponible",
   videoUrl: ""
 }];
-// Compte les productions reellement presentes, sans doublon entre la
-// selection mise en avant et la grille complete. Un chiffre calcule ne
-// peut pas devenir faux, contrairement a un nombre ecrit en dur.
-const nombreDeProductions = new Set(
-  [...featuredProjects.map((p) => p.title), ...projects.map((p) => p.title)]
-).size;
+// Chiffre d'activite revendique par l'association, volontairement superieur
+// aux projets exposes sur le site : le portfolio n'est qu'une selection.
+// A tenir a jour a la main, il ne se deduit pas du contenu.
+const nombreDeProductions = "+100";
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");

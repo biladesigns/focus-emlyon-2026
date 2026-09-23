@@ -78,6 +78,39 @@ des vues écrites en dur (125K, 89K) qui n'étaient plus affichées nulle part.
 est le meilleur candidat, c'est le critère d'achat décisif sur ce produit.
 En attente des chiffres réels de Mathieu.
 
+### 23/09/2026, premier article : le creneau etudiant, pas le generique
+
+SERP observee avant d'ecrire, comme l'impose la routine §2.
+
+**« prix aftermovie » : mur commercial, abandonne.** La premiere page est
+tenue par des agences video dediees (Global Films, Kactus, Cliple,
+Mvoproduction, Komuniweb, WePlus). Elles ont des sites entiers sur ce sujet.
+Aucune qualite de redaction ne comble cet ecart. **Ne repropose pas cette
+requete** tant que le domaine n'a pas d'autorite.
+
+**« aftermovie + gala etudiant / BDE » : SERP faible, retenu.** La page est
+occupee par des prestataires d'evenementiel (salle, animation, photo) qui ne
+font pas de video, par des agences corporate qui s'adressent a des marques, et
+par des videos YouTube. Personne n'a ecrit le guide destine a une association
+etudiante qui veut faire filmer son evenement.
+
+L'angle commercial est net : les agences annoncent 5 000 a 20 000 €, un BDE
+n'a pas ce budget. FOCUS est une association etudiante qui filme des
+evenements etudiants, la legitimite est reelle et non fabriquee.
+
+Article publie : `/articles/aftermovie-gala-etudiant-budget-delais`.
+Requete visee : « aftermovie gala etudiant ». Longue traine assumee, faible
+volume, mais trafic qualifie : le lecteur est un prospect.
+
+**A verifier a la revue d'octobre** : impressions et position moyenne sur
+cette requete. Si la page monte en impressions sans bouger en position, c'est
+que Google la teste, pas qu'elle approche (routine §1). Ne pas conclure trop
+tot.
+
+Ce qui invaliderait la decision : zero impression apres six semaines
+d'indexation confirmee, ce qui signifierait que la requete n'a pas de volume
+reel et qu'il faut viser plus large.
+
 ---
 
 ## Partie B, journal daté
@@ -93,12 +126,15 @@ En attente des chiffres réels de Mathieu.
 | 21/09/2026 | Mesure d'audience Umami installée, inerte tant que le Website ID n'est pas renseigné | Vérifié : aucun script, aucune requête, aucun cookie avant configuration. |
 | 21/09/2026 | Suivi de conversion sur le formulaire (`devis-demande`, `devis-echoue`) | Vérifié de bout en bout : type de projet et page d'origine remontés. Un envoi raté est tracé, pour qu'une panne ne passe plus inaperçue. |
 | 21/09/2026 | Suppression de tous les chiffres de vues | Remplacés par un décompte calculé sur les données. Description SEO du portfolio corrigée. |
+| 23/09/2026 | Chiffre de la page portfolio passe a « +100 productions livrées » | Demande de Mathieu. Ce n'est plus un calcul sur les données du site mais une donnée métier revendiquée, à tenir à jour à la main. |
+| 23/09/2026 | SERP examinée sur « prix aftermovie » puis « aftermovie gala étudiant » | La première est un mur commercial, abandonnée. La seconde est vide pour cette audience, retenue. |
+| 23/09/2026 | Premier article publié | `/articles/aftermovie-gala-etudiant-budget-delais`, BlogPosting et BreadcrumbList vérifiés, lien interne vers `/contact` en place. |
 
 ---
 
 ## À traiter au prochain passage
 
 - [x] ~~Confirmer que le `.htaccess` est déployé~~ : fait le 21/09, toutes les routes en 200.
-- [ ] Soumettre le sitemap dans la Search Console et demander l'indexation des pages internes.
+- [ ] Soumettre le sitemap dans la Search Console, demander l'indexation des pages internes **et du premier article**.
 - [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit.
 - [ ] Seulement ensuite : première vraie revue mensuelle, sur des données valides.
