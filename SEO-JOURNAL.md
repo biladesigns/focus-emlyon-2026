@@ -39,10 +39,31 @@ Trois raisons, dans l'ordre d'importance :
 3. La routine §3.1 impose de vérifier qu'une page n'existe pas déjà. En
    publication automatique, la cannibalisation est une question de semaines.
 
-**Ne repropose pas la publication automatique quotidienne.** Si le sujet
-revient, la forme acceptable est : un cron qui prépare des *brouillons*
-accompagnés d'un relevé de SERP, validés à la main avant publication, à une
-cadence d'un à deux par semaine.
+**Décision révisée le 23/09/2026.** Mathieu a choisi la publication
+automatique en connaissance de cause, le risque lui ayant été exposé
+explicitement. La décision lui appartient, elle est donc appliquée.
+
+Garde-fous en place, à ne pas retirer sans décision écrite :
+- l'agent n'écrit QUE s'il trouve une SERP réellement faible. Ne rien
+  publier un jour donné est un résultat attendu, pas un échec ;
+- il vérifie l'absence de doublon avant d'écrire ;
+- il lui est interdit d'inventer un tarif, un délai, un nombre de clients
+  ou une référence FOCUS ;
+- il doit faire passer `npm run build` avant de pousser, le build échouant
+  volontairement si le frontmatter est incomplet ;
+- il journalise ici la SERP observée qui justifie chaque publication.
+
+Fait important qui réduit le risque : **le site se déploie à la main.**
+L'agent pousse sur `main`, rien n'atteint la production tant que Mathieu
+n'a pas fait `npm run build` puis uploadé `dist/`. La publication reste
+donc sous son contrôle de fait.
+
+Le risque résiduel assumé : la politique Google « scaled content abuse »
+vise le volume et l'intention, pas l'outil. Si le rythme de publication
+devient élevé et que les articles ne sont pas relus, le profil du site se
+rapproche de celui des sites désindexés en mars 2024. **À surveiller au
+point hebdomadaire :** si le nombre d'articles publiés dépasse nettement
+ce qu'un humain peut relire, ramener la cadence.
 
 ### 21/09/2026, aucune mesure d'audience installée
 
@@ -129,6 +150,7 @@ reel et qu'il faut viser plus large.
 | 23/09/2026 | Chiffre de la page portfolio passe a « +100 productions livrées » | Demande de Mathieu. Ce n'est plus un calcul sur les données du site mais une donnée métier revendiquée, à tenir à jour à la main. |
 | 23/09/2026 | SERP examinée sur « prix aftermovie » puis « aftermovie gala étudiant » | La première est un mur commercial, abandonnée. La seconde est vide pour cette audience, retenue. |
 | 23/09/2026 | Premier article publié | `/articles/aftermovie-gala-etudiant-budget-delais`, BlogPosting et BreadcrumbList vérifiés, lien interne vers `/contact` en place. |
+| 23/09/2026 | Deux routines cloud créées | `trig_01TC3KHLCeBxyZMSJWruchNT` article quotidien 7h23 Paris, `trig_01W51ZDy5Qjab2dhbDPHWVVs` point SEO le lundi 9h37 Paris. Les deux lisent ce journal avant d'agir. |
 
 ---
 
