@@ -179,12 +179,17 @@ piege documente dans la routine. Ne pas en tirer de pourcentage.
 | 23/09/2026 | Premier article publié | `/articles/aftermovie-gala-etudiant-budget-delais`, BlogPosting et BreadcrumbList vérifiés, lien interne vers `/contact` en place. |
 | 23/09/2026 | Deux routines cloud créées | `trig_01TC3KHLCeBxyZMSJWruchNT` article quotidien 7h23 Paris, `trig_01W51ZDy5Qjab2dhbDPHWVVs` point SEO le lundi 9h37 Paris. Les deux lisent ce journal avant d'agir. |
 | 23/09/2026 | Relevé Search Console effectué en direct | 20 clics et 334 impressions sur 3 mois, toutes sur la page d'accueil. Sitemap non relu depuis le 20/01/2026. 1 page indexée sur 5 connues. |
+| 23/09/2026 | Sitemap resoumis dans la GSC | « URL envoyées » passe du 28/12/2025 au 23/09/2026. « Dernière lecture » reste au 20/01/2026 tant que Google n'est pas repassé : c'est l'indicateur à surveiller. |
+| 23/09/2026 | Inspection d'URL sur /portfolio | « Google ne reconnaît pas cette URL », dernière exploration « sans objet ». La page n'a jamais été explorée, preuve directe de l'effet des 404. |
+| 23/09/2026 | Demandes d'indexation manuelles : **échec, quota quotidien dépassé** | Aucune demande n'a abouti. À refaire un autre jour pour /portfolio, /prestations, /contact, /articles et l'article. Quota Google d'environ une dizaine d'URLs par jour. |
 
 ---
 
 ## À traiter au prochain passage
 
 - [x] ~~Confirmer que le `.htaccess` est déployé~~ : fait le 21/09, toutes les routes en 200.
-- [ ] Soumettre le sitemap dans la Search Console, demander l'indexation des pages internes **et du premier article**.
+- [x] ~~Soumettre le sitemap~~ : resoumis le 23/09/2026.
+- [ ] **Vérifier que « Dernière lecture » du sitemap a dépassé le 20/01/2026.** Tant que cette date ne bouge pas, Google n'est pas repassé et rien ne s'indexera.
+- [ ] **Refaire les demandes d'indexation manuelles** (quota dépassé le 23/09) : /portfolio, /prestations, /contact, /articles, /articles/aftermovie-gala-etudiant-budget-delais.
 - [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit.
 - [ ] Seulement ensuite : première vraie revue mensuelle, sur des données valides.
