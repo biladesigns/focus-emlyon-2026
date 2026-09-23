@@ -132,6 +132,33 @@ Ce qui invaliderait la decision : zero impression apres six semaines
 d'indexation confirmee, ce qui signifierait que la requete n'a pas de volume
 reel et qu'il faut viser plus large.
 
+### 23/09/2026, premieres donnees Search Console reelles
+
+Relevees directement dans la GSC, periode 21/06 au 20/09/2026.
+
+- 20 clics, 334 impressions, CTR 6 %, position moyenne 7,2.
+- **Pages** : `focus-emlyon.com/` fait 20 clics et 329 impressions. La
+  variante `www.` fait 5 impressions. **Aucune autre page n'a jamais recu
+  une seule impression.** Ni portfolio, ni prestations, ni contact.
+- **Indexation** : 1 page dans l'index, 4 non indexees (2 redirections,
+  1 introuvable 404, 1 canonique). Google ne connait que 5 URLs.
+- **Sitemap** : soumis le 28/12/2025, **derniere lecture le 20/01/2026**,
+  soit huit mois sans relecture.
+- **Requetes** : sur 17 requetes nommees, une seule est commerciale
+  (« entreprise montage video lyon », 1 impression, 0 clic). Tout le reste
+  est navigationnel : focus emlyon, focus lyon, focus association.
+
+Lecture : ces chiffres confirment le diagnostic du 21/09. Google a lu le
+sitemap en janvier, a trouve des 404 sur toutes les routes internes, et
+n'est jamais revenu. Le site n'a donc jamais capte la moindre demande
+commerciale, non par manque de contenu, mais parce qu'il n'y avait rien
+d'atteignable a indexer.
+
+Precaution de lecture : la somme des clics par requete nommee (2) est tres
+inferieure au total (20), les requetes rares etant anonymisees. La part
+marque contre hors-marque n'est donc PAS mesurable ici, conformement au
+piege documente dans la routine. Ne pas en tirer de pourcentage.
+
 ---
 
 ## Partie B, journal daté
@@ -151,6 +178,7 @@ reel et qu'il faut viser plus large.
 | 23/09/2026 | SERP examinée sur « prix aftermovie » puis « aftermovie gala étudiant » | La première est un mur commercial, abandonnée. La seconde est vide pour cette audience, retenue. |
 | 23/09/2026 | Premier article publié | `/articles/aftermovie-gala-etudiant-budget-delais`, BlogPosting et BreadcrumbList vérifiés, lien interne vers `/contact` en place. |
 | 23/09/2026 | Deux routines cloud créées | `trig_01TC3KHLCeBxyZMSJWruchNT` article quotidien 7h23 Paris, `trig_01W51ZDy5Qjab2dhbDPHWVVs` point SEO le lundi 9h37 Paris. Les deux lisent ce journal avant d'agir. |
+| 23/09/2026 | Relevé Search Console effectué en direct | 20 clics et 334 impressions sur 3 mois, toutes sur la page d'accueil. Sitemap non relu depuis le 20/01/2026. 1 page indexée sur 5 connues. |
 
 ---
 
