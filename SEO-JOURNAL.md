@@ -159,6 +159,58 @@ inferieure au total (20), les requetes rares etant anonymisees. La part
 marque contre hors-marque n'est donc PAS mesurable ici, conformement au
 piege documente dans la routine. Ne pas en tirer de pourcentage.
 
+### 24/09/2026, deuxieme article : le territoire WEI, pas encore le gala a nouveau
+
+Territoire explore : evenements etudiants, sous-theme WEI / voyage
+d'integration. Choisi pour deux raisons : different du territoire couvert
+la veille (gala), et coherent avec la saisonnalite de fin septembre, periode
+ou les WEI se calent pour un depart en octobre.
+
+8 requetes candidates testees en recherche web reelle : « aftermovie WEI
+weekend integration prix », « videaste WEI ecole de commerce », « aftermovie
+WEI budget association etudiante », « captation video WEI integration BDE »,
+« comment trouver un videaste pour son WEI », « budget videaste WEI combien
+coute », « filmer voyage integration etudiant conseils », « prix aftermovie »
+(deja exclue le 23/09).
+
+**SERP observee, requete par requete :**
+
+- « aftermovie WEI » (variantes) : uniquement des aftermovies YouTube publies
+  par des ecoles elles-memes, et des sites d'organisation de sejours WEI
+  (planete-wei.com, zetrip.fr, funbreak.fr) qui vendent le voyage, pas la
+  video. Aucun prestataire video n'a de page dediee a ce sujet.
+- « comment trouver un videaste pour son WEI » : la premiere page renvoie
+  des annuaires generalistes de freelances (Gens de Confiance, Linkaband,
+  FlashBiz) et des guides pour choisir un videaste de mariage ou
+  d'entreprise. Rien ecrit pour une association etudiante qui organise un
+  WEI specifiquement.
+- « budget videaste WEI combien coute » : melange de guides de prix videaste
+  mariage/entreprise (hors sujet pour un BDE) et d'un article funbreak.fr
+  sur le cout global du sejour WEI, pas de la video. Aucune page ne repond
+  a la question posee.
+- Fait interessant trouve en cours de recherche : zetrip.fr, dans son
+  article « Tendances WEI 2026 », affirme qu'un videaste ou photographe
+  professionnel suit desormais la quasi-totalite des WEI, pour un budget
+  moyen annonce de 500 a 800 €. Chiffre attribue explicitement a cette
+  source dans l'article, ce n'est pas une donnee FOCUS.
+
+**Mur commercial : aucun.** Pas d'agence video avec un site entier sur ce
+sujet, contrairement a « prix aftermovie » generique. SERP faible, retenue.
+
+Article publie : `/articles/aftermovie-wei-budget-videaste`. Requete visee :
+« aftermovie WEI ». Angle : ce qui differe d'un gala (duree de presence sur
+plusieurs jours, hebergement du videaste, droit a l'image plus sensible en
+contexte de soiree, format vertical pour Instagram/TikTok).
+
+Maillage : lien ajoute depuis le nouvel article vers l'article gala du
+23/09, et reciproquement, un lien a ete ajoute a la fin de l'article gala
+vers le nouvel article WEI, pour qu'aucun des deux ne reste orphelin.
+
+**A verifier a la revue d'octobre**, comme pour l'article du 23/09 :
+impressions et position sur « aftermovie WEI ». Meme reserve : une hausse
+d'impressions sans hausse de position veut dire que Google teste la page,
+pas qu'elle progresse.
+
 ---
 
 ## Partie B, journal daté
@@ -182,6 +234,8 @@ piege documente dans la routine. Ne pas en tirer de pourcentage.
 | 23/09/2026 | Sitemap resoumis dans la GSC | « URL envoyées » passe du 28/12/2025 au 23/09/2026. « Dernière lecture » reste au 20/01/2026 tant que Google n'est pas repassé : c'est l'indicateur à surveiller. |
 | 23/09/2026 | Inspection d'URL sur /portfolio | « Google ne reconnaît pas cette URL », dernière exploration « sans objet ». La page n'a jamais été explorée, preuve directe de l'effet des 404. |
 | 23/09/2026 | Demandes d'indexation manuelles : **échec, quota quotidien dépassé** | Aucune demande n'a abouti. À refaire un autre jour pour /portfolio, /prestations, /contact, /articles et l'article. Quota Google d'environ une dizaine d'URLs par jour. |
+| 24/09/2026 | SERP examinée sur le territoire WEI (8 requêtes testées) | Aucun mur commercial ni d'autorité : ni agence vidéo dédiée, ni média. SERP faible retenue sur « aftermovie WEI ». |
+| 24/09/2026 | Deuxième article publié | `/articles/aftermovie-wei-budget-videaste`. Lien interne réciproque ajouté avec l'article gala du 23/09, `npm run build` vérifié avant push. |
 
 ---
 

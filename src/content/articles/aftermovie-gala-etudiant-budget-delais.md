@@ -126,3 +126,7 @@ Chez FOCUS, on filme des événements étudiants depuis plusieurs années, à Ly
 et ailleurs en France, du raid sportif au gala. Si vous préparez le vôtre,
 [parlez-nous-en](/contact) : on vous dira franchement ce qui est réaliste
 avec votre budget et votre calendrier.
+
+Vous organisez plutôt un week-end d'intégration ? Le budget et le brief
+sont différents, voir notre article sur
+[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste).
