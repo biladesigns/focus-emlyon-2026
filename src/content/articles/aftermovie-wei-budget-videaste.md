@@ -143,3 +143,7 @@ des propositions sur les mêmes bases. Si vous préparez aussi un gala dans
 la foulée, l'essentiel du budget et des délais à anticiper reste proche
 de ce qu'on détaille dans notre article sur
 [l'aftermovie de gala étudiant](/articles/aftermovie-gala-etudiant-budget-delais).
+
+Avant même l'événement, beaucoup d'associations doivent d'abord recruter
+leurs membres et leur bureau : voir notre article sur
+[la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante).

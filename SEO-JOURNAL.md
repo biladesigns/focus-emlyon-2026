@@ -211,6 +211,68 @@ impressions et position sur « aftermovie WEI ». Meme reserve : une hausse
 d'impressions sans hausse de position veut dire que Google teste la page,
 pas qu'elle progresse.
 
+### 25/09/2026, troisième article : territoire recrutement, plus l'événementiel
+
+Territoire exploré : associations et clubs, sous thème recrutement de
+nouveaux membres, différent des deux premiers articles qui portaient sur
+la couverture d'un événement (gala le 23/09, WEI le 24/09). Choisi pour
+deux raisons : territoire encore non traité, et cohérent avec la
+saisonnalité de fin septembre, période de campagne d'adhésion et de forum
+des assos dans la quasi totalité des écoles.
+
+10 requêtes candidates testées en recherche web réelle : « vidéo de
+recrutement association étudiante BDE », « comment recruter nouveaux
+membres association étudiante avec une vidéo », « film de présentation
+junior entreprise », « vidéo teaser recrutement bureau association
+étudiante », « vidéo forum des associations étudiantes », « budget vidéo
+recrutement BDE combien ça coûte », « vidéaste pour association étudiante
+Lyon », « vidéo de présentation club sportif étudiant recrutement »,
+« comment faire une vidéo teaser pour candidater au bureau BDE », « teaser
+vidéo recrutement BDE prix », « vidéaste association étudiante devis ».
+
+**SERP observée, requête par requête :**
+
+- « film de présentation junior entreprise » et « budget/teaser vidéo
+  recrutement BDE prix » : **mur commercial**, mêmes agences vidéo
+  corporate que sur « prix aftermovie » (topovideo, playplay, pixmove,
+  mavideocorporate, biux.fr, jumpstartstudio, etc.), toutes répondent à
+  une entreprise qui recrute des salariés, pas à une association
+  étudiante. Dès qu'une requête contient « recrutement » + « vidéo » +
+  « prix »/« budget », elle tombe dans ce mur générique marque employeur.
+  Abandonné, comme prévu par la décision du 23/09.
+- « vidéaste association étudiante devis » : un concurrent direct existe
+  (rsfilmmaking.fr/associations, page dédiée « vidéaste et réalisation de
+  vidéos associatifs »), mais générique associations, pas spécifique
+  étudiant ni recrutement. Signal faible, pas un mur.
+- « vidéo de présentation club sportif étudiant recrutement », « comment
+  faire une vidéo teaser pour candidater au bureau BDE » : mauvaise
+  intention de requête (CV vidéo de sportif pour être recruté par un
+  club, candidature individuelle), écartées car hors sujet de l'offre
+  FOCUS.
+- **« vidéo de recrutement association étudiante » (phrase exacte) : SERP
+  faible, retenue.** Résultats seulement institutionnels et génériques
+  (Panopto pour l'admission universitaire, CNAM/ESGT, capcampus,
+  LaToileScoute), aucune agence vidéo dédiée, aucun média. Personne n'a
+  écrit le guide du teaser de recrutement pour une association
+  étudiante, à la différence de la vidéo marque employeur d'entreprise
+  qui, elle, est un territoire saturé.
+
+Article publié : `/articles/video-recrutement-association-etudiante`.
+Requête visée : « vidéo de recrutement association étudiante ». Angle :
+distinguer ce format d'un aftermovie d'événement et d'une vidéo marque
+employeur corporate, calendrier de tournage en amont de la campagne
+(filmer la vie de l'asso plusieurs semaines avant, pas en urgence),
+brief, droit à l'image des membres identifiés qui témoignent.
+
+Maillage : liens réciproques ajoutés entre ce nouvel article et les deux
+articles événementiels (gala du 23/09, WEI du 24/09), lien vers /contact
+en place, `npm run build` vérifié avant push.
+
+**À vérifier à la revue d'octobre**, comme pour les deux premiers
+articles : impressions et position sur « vidéo de recrutement association
+étudiante ». Même réserve : une hausse d'impressions sans hausse de
+position signifie que Google teste la page, pas qu'elle progresse.
+
 ---
 
 ## Partie B, journal daté
@@ -236,6 +298,8 @@ pas qu'elle progresse.
 | 23/09/2026 | Demandes d'indexation manuelles : **échec, quota quotidien dépassé** | Aucune demande n'a abouti. À refaire un autre jour pour /portfolio, /prestations, /contact, /articles et l'article. Quota Google d'environ une dizaine d'URLs par jour. |
 | 24/09/2026 | SERP examinée sur le territoire WEI (8 requêtes testées) | Aucun mur commercial ni d'autorité : ni agence vidéo dédiée, ni média. SERP faible retenue sur « aftermovie WEI ». |
 | 24/09/2026 | Deuxième article publié | `/articles/aftermovie-wei-budget-videaste`. Lien interne réciproque ajouté avec l'article gala du 23/09, `npm run build` vérifié avant push. |
+| 25/09/2026 | SERP examinée sur le territoire recrutement associatif (11 requêtes testées) | « prix/teaser recrutement BDE » et « film de présentation junior entreprise » : mur commercial marque employeur, abandonnées. « vidéo de recrutement association étudiante » : SERP faible, retenue. |
+| 25/09/2026 | Troisième article publié | `/articles/video-recrutement-association-etudiante`. Liens internes réciproques ajoutés avec les articles gala et WEI, `npm run build` vérifié avant push. |
 
 ---
 
