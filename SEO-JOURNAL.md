@@ -273,6 +273,77 @@ articles : impressions et position sur « vidéo de recrutement association
 étudiante ». Même réserve : une hausse d'impressions sans hausse de
 position signifie que Google teste la page, pas qu'elle progresse.
 
+### 26/09/2026, quatrième article : territoire avant/après la prestation, pas encore un quatrième type d'événement
+
+Territoire exploré : avant et après la prestation (comment briefer un
+vidéaste, quoi demander dans un devis, exploitation de la vidéo, durée de
+conservation des rushes), différent des trois premiers articles qui
+portaient tous sur un type d'événement ou une association (gala, WEI,
+recrutement). Choisi pour sortir du seul axe « événement étudiant » et
+couvrir un moment du parcours client pas encore traité : celui où un
+prospect a déjà compris qu'il veut une vidéo, et cherche comment cadrer sa
+demande.
+
+8 requêtes candidates testées en recherche web réelle : « comment briefer
+un vidéaste pour un événement étudiant », « quoi demander dans un devis
+vidéo événementiel », « combien de temps garder les rushes vidéo après un
+tournage », « que faire des vidéos après un événement étudiant réseaux
+sociaux », « délai de livraison aftermovie combien de temps », « questions
+à poser avant de signer un devis vidéo événementiel », « cahier des
+charges vidéo événement associatif », « comment choisir un vidéaste pour
+son événement étudiant ». Deux requêtes de vérification supplémentaires :
+« brief vidéaste BDE association étudiante modèle » et « cahier des
+charges vidéo BDE association étudiante ».
+
+**SERP observée, requête par requête :**
+
+- « quoi demander dans un devis vidéo événementiel », « délai de livraison
+  aftermovie combien de temps », « questions à poser avant de signer un
+  devis vidéo événementiel », « comment choisir un vidéaste pour son
+  événement étudiant » : **mur commercial**, mêmes agences vidéo corporate
+  que sur les recherches précédentes (globalfilms, biux, cliple,
+  topovideo, leafproduction, videodevis, dm-video, etc.), toutes
+  génériques entreprise ou mariage, aucune spécifique étudiant. Abandonné.
+- « combien de temps garder les rushes vidéo après un tournage » : SERP
+  faible (forums de monteurs, écoles de post-production) mais mauvaise
+  intention de requête, l'audience est celle des professionnels de la
+  vidéo qui archivent leur travail, pas celle d'une association qui
+  embauche un prestataire. Écarté, hors sujet de l'offre FOCUS.
+- « que faire des vidéos après un événement réseaux sociaux » : SERP
+  occupée par des agences événementielles généralistes (stratégie
+  réseaux sociaux d'un événement), intention diffuse, pas centrée sur la
+  vidéo elle-même. Signal faible mais peu exploitable en l'état.
+- « cahier des charges vidéo événement associatif » : mélange de modèles
+  de CDC vidéo génériques et de CDC événementiel générique, aucun des deux
+  ne couvre la combinaison vidéo + associatif étudiant. Signal faible,
+  retenu comme piste secondaire mais pas prioritaire.
+- **« comment briefer un vidéaste pour un événement étudiant » : SERP
+  faible, retenue.** La requête générique (« comment briefer un
+  vidéaste ») est tenue par des agences corporate (topovideo, braave,
+  agence-maverick) qui parlent de charte de marque et de codecs de
+  diffusion TV, hors sujet pour un BDE. Vérification complémentaire :
+  « brief vidéaste BDE association étudiante modèle » et « cahier des
+  charges vidéo BDE association étudiante » ne renvoient QUE des guides
+  génériques de création d'association (HelloAsso, AssoConnect,
+  L'Étudiant), aucun ne mentionne le brief vidéo. Personne n'a écrit ce
+  guide pour une association étudiante.
+
+Article publié : `/articles/briefer-videaste-evenement-etudiant`. Requête
+visée : « briefer un vidéaste événement étudiant ». Angle : les cinq
+informations à réunir avant le premier contact, le déroulé minute par
+minute, les visages à ne pas manquer, le format de sortie à décider avant
+le tournage, les références plutôt que des consignes vagues, et le droit
+à l'image comme ligne à ne pas oublier dans le brief.
+
+Maillage : liens réciproques ajoutés depuis et vers les trois articles
+existants (gala du 23/09, WEI du 24/09, recrutement du 25/09), lien vers
+`/contact` en place, `npm ci` puis `npm run build` vérifiés avant push.
+
+**À vérifier à la revue d'octobre**, comme pour les trois premiers
+articles : impressions et position sur « briefer un vidéaste événement
+étudiant ». Même réserve : une hausse d'impressions sans hausse de
+position signifie que Google teste la page, pas qu'elle progresse.
+
 ---
 
 ## Partie B, journal daté
@@ -300,6 +371,8 @@ position signifie que Google teste la page, pas qu'elle progresse.
 | 24/09/2026 | Deuxième article publié | `/articles/aftermovie-wei-budget-videaste`. Lien interne réciproque ajouté avec l'article gala du 23/09, `npm run build` vérifié avant push. |
 | 25/09/2026 | SERP examinée sur le territoire recrutement associatif (11 requêtes testées) | « prix/teaser recrutement BDE » et « film de présentation junior entreprise » : mur commercial marque employeur, abandonnées. « vidéo de recrutement association étudiante » : SERP faible, retenue. |
 | 25/09/2026 | Troisième article publié | `/articles/video-recrutement-association-etudiante`. Liens internes réciproques ajoutés avec les articles gala et WEI, `npm run build` vérifié avant push. |
+| 26/09/2026 | SERP examinée sur le territoire avant/après la prestation (8 requêtes + 2 de vérification) | Quatre requêtes en mur commercial agences corporate, une hors sujet (audience monteurs pro), une signal faible secondaire (CDC vidéo associatif). « Comment briefer un vidéaste pour un événement étudiant » : SERP faible confirmée, retenue. |
+| 26/09/2026 | Quatrième article publié | `/articles/briefer-videaste-evenement-etudiant`. Liens internes réciproques ajoutés avec les trois articles existants (gala, WEI, recrutement), `npm ci` puis `npm run build` vérifiés avant push. |
 
 ---
 

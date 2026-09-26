@@ -145,3 +145,7 @@ Vous préparez aussi un événement plus tard dans l'année, gala ou WEI ? Les
 contraintes de budget et de délai y sont différentes, voir nos articles
 sur [l'aftermovie de gala étudiant](/articles/aftermovie-gala-etudiant-budget-delais)
 et [l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste).
+
+Et quel que soit l'événement, voir notre article sur
+[comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant)
+avant votre premier échange avec un prestataire.

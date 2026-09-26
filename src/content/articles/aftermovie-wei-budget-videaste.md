@@ -147,3 +147,6 @@ de ce qu'on détaille dans notre article sur
 Avant même l'événement, beaucoup d'associations doivent d'abord recruter
 leurs membres et leur bureau : voir notre article sur
 [la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante).
+
+Et pour préparer votre premier contact avec un vidéaste, voir notre article
+sur [comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant).

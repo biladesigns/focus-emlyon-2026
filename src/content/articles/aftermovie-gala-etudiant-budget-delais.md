@@ -134,3 +134,7 @@ sont différents, voir notre article sur
 Vous préparez surtout votre campagne de recrutement avant de penser à
 l'événement de l'année ? Voir notre article sur
 [la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante).
+
+Et avant d'envoyer le moindre message à un vidéaste, voir notre article sur
+[comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant),
+pour ne rien oublier dans votre premier contact.
