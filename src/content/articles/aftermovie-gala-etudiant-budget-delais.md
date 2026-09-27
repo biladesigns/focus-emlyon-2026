@@ -138,3 +138,8 @@ l'événement de l'année ? Voir notre article sur
 Et avant d'envoyer le moindre message à un vidéaste, voir notre article sur
 [comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant),
 pour ne rien oublier dans votre premier contact.
+
+Un dernier point qu'on vous conseille de régler avant le montage : le choix
+de la musique. Un titre connu expose votre aftermovie à une coupure de son
+une fois publié, voir notre article sur
+[quelle musique choisir pour un aftermovie](/articles/musique-aftermovie-droit-auteur).

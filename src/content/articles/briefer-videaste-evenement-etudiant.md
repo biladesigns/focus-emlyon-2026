@@ -106,6 +106,9 @@ en trente secondes ce qu'une page de description n'arrive pas à formuler.
 Précisez ce qui vous plaît dans chaque exemple : le rythme, la musique, la
 façon de filmer la foule. Ça évite un aller-retour de montage qui ne sert
 qu'à corriger un malentendu qu'une référence aurait évité dès le départ.
+Si l'un de vos exemples utilise un titre connu, vérifiez d'abord qu'il est
+reproductible sans risque, voir notre article sur
+[quelle musique choisir pour un aftermovie](/articles/musique-aftermovie-droit-auteur).
 
 ## Le droit à l'image, une ligne qui évite un problème plus tard
 

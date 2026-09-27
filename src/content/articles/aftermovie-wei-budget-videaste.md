@@ -150,3 +150,7 @@ leurs membres et leur bureau : voir notre article sur
 
 Et pour préparer votre premier contact avec un vidéaste, voir notre article
 sur [comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant).
+
+Au montage, le choix de la musique mérite qu'on s'y arrête aussi : voir notre
+article sur [quelle musique pour un aftermovie](/articles/musique-aftermovie-droit-auteur)
+et ce que dit le droit d'auteur sur un titre connu.

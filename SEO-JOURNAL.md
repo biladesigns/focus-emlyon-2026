@@ -344,6 +344,90 @@ articles : impressions et position sur « briefer un vidéaste événement
 étudiant ». Même réserve : une hausse d'impressions sans hausse de
 position signifie que Google teste la page, pas qu'elle progresse.
 
+### 27/09/2026, cinquième article : territoire technique et juridique, la musique plutôt que le droit à l'image
+
+Territoire exploré : technique et juridique (droit à l'image, musique et
+droits, format et durée, livrables, sous-titres), différent des quatre
+premiers articles qui portaient tous sur un type d'événement, une
+association, ou le brief en amont. Choisi pour sortir de l'axe « parcours
+client » et couvrir un point technique concret que les quatre premiers
+articles mentionnent en passant (la musique dans le brief, le format
+vertical) sans jamais le traiter au fond.
+
+9 requêtes candidates testées en recherche web réelle : « droit à l'image
+événement étudiant vidéo autorisation », « autorisation droit à l'image
+étudiant modèle association BDE », « droit à l'image soirée étudiante
+alcool photo vidéo », « quelle musique utiliser aftermovie sans droit
+d'auteur », « musique libre de droit vidéo événementiel Instagram TikTok »,
+« format vertical aftermovie réseaux sociaux », « combien de temps doit
+durer un aftermovie », « livrables vidéo événement définition rushes
+montage brut », « sous-titres vidéo événementielle réseaux sociaux
+obligatoire ». Trois requêtes de vérification supplémentaires sur le
+territoire musique : « peut-on utiliser une musique connue dans son
+aftermovie droit d'auteur », « SACEM diffusion vidéo événement étudiant
+musique », « aftermovie musique connue démonétisé YouTube Instagram coupé
+son ».
+
+**SERP observée, requête par requête :**
+
+- « combien de temps doit durer un aftermovie » : **mur commercial**, la
+  première page est tenue par des agences vidéo dont une lyonnaise
+  (eoprod, studiok7.fr à Lyon, cliple, alfevents, clakprod, oopercast,
+  peuplades.tv), toutes avec une page dédiée à la définition et à la durée
+  d'un aftermovie. Abandonné.
+- « format vertical aftermovie réseaux sociaux » : SERP occupée par des
+  guides génériques de formats réseaux sociaux (metricool, digital-passengers,
+  youlovewords) et des agences corporate (libelluleproductions, arimedias,
+  krangfilms, lesasfrenchies) qui traitent le sujet en général, pas
+  spécifiquement pour un aftermovie étudiant. Signal faible mais peu
+  différenciant, écarté au profit d'une requête plus nette.
+- « sous-titres vidéo événementielle réseaux sociaux obligatoire » : SERP
+  tenue par des outils de sous-titrage (checksub, keepitsimple) et des
+  agences (videomenthe, axio-formation, clakprod, mygustav, webfrance),
+  proche d'un mur commercial d'éditeurs de logiciels. Abandonné.
+- « livrables vidéo événement définition rushes montage brut » : mélange de
+  sites de définition généralistes et d'agences corporate (aceproductions,
+  tulipfilms, studiowebcast), pas d'angle étudiant. Signal faible, écarté
+  au profit d'une requête plus nette.
+- « droit à l'image événement étudiant » et « autorisation droit à l'image
+  étudiant modèle association BDE » : **mur d'autorité et de templates**,
+  tenu par des sites institutionnels (associations.gouv.fr, CCI, académies)
+  et des mines de modèles génériques (edusign, dpo-partage, associationmodeemploi,
+  juristique.org). Trop saturé pour espérer un positionnement, abandonné.
+- « droit à l'image soirée étudiante alcool photo vidéo » : SERP faible
+  mais matière insuffisante pour un article distinct de ce que l'article
+  WEI du 24/09 couvre déjà sur ce point (« droit à l'image plus sensible en
+  contexte de soirée »). Écarté pour éviter la cannibalisation.
+- **« quelle musique utiliser aftermovie sans droit d'auteur » et ses
+  variantes (SACEM, Content ID, « libre de droits ») : SERP faible,
+  retenue.** Aucune agence vidéo ni média n'a écrit ce guide pour un
+  aftermovie étudiant. Les résultats sont soit des banques de musique
+  (envato, pixabay, musicscreen) qui vendent un produit sans expliquer le
+  droit, soit des cabinets d'avocats et sites institutionnels (CNC, enssib,
+  associations.gouv.fr, alwy-lawyers, kohenavocats.com) qui traitent le
+  droit d'auteur musical en général, sans jamais le relier à un aftermovie
+  ni à la confusion fréquente entre la déclaration SACEM de la soirée et
+  les droits de synchronisation nécessaires pour la vidéo publiée après
+  coup. Cette confusion précise, vérifiée via trois recherches
+  complémentaires, n'est traitée nulle part.
+
+Article publié : `/articles/musique-aftermovie-droit-auteur`. Requête
+visée : « musique aftermovie droit d'auteur ». Angle : les deux droits à
+réunir (éditeur et producteur), ce que fait réellement Content ID,
+pourquoi la SACEM de la soirée ne couvre pas la vidéo publiée après, ce
+que signifie vraiment « libre de droits », et comment vérifier ce point
+dans un devis vidéaste.
+
+Maillage : liens réciproques ajoutés depuis et vers les trois articles
+événementiels existants (gala du 23/09, WEI du 24/09) et l'article brief
+du 26/09, lien vers `/contact` en place, `npm ci` puis `npm run build`
+vérifiés avant push.
+
+**À vérifier à la revue d'octobre**, comme pour les quatre premiers
+articles : impressions et position sur « musique aftermovie droit
+d'auteur ». Même réserve : une hausse d'impressions sans hausse de
+position signifie que Google teste la page, pas qu'elle progresse.
+
 ---
 
 ## Partie B, journal daté
@@ -373,6 +457,8 @@ position signifie que Google teste la page, pas qu'elle progresse.
 | 25/09/2026 | Troisième article publié | `/articles/video-recrutement-association-etudiante`. Liens internes réciproques ajoutés avec les articles gala et WEI, `npm run build` vérifié avant push. |
 | 26/09/2026 | SERP examinée sur le territoire avant/après la prestation (8 requêtes + 2 de vérification) | Quatre requêtes en mur commercial agences corporate, une hors sujet (audience monteurs pro), une signal faible secondaire (CDC vidéo associatif). « Comment briefer un vidéaste pour un événement étudiant » : SERP faible confirmée, retenue. |
 | 26/09/2026 | Quatrième article publié | `/articles/briefer-videaste-evenement-etudiant`. Liens internes réciproques ajoutés avec les trois articles existants (gala, WEI, recrutement), `npm ci` puis `npm run build` vérifiés avant push. |
+| 27/09/2026 | SERP examinée sur le territoire technique et juridique (9 requêtes + 3 de vérification) | Quatre requêtes en mur commercial ou mur de templates/autorité, une écartée pour cannibalisation avec l'article WEI. « Quelle musique pour un aftermovie / droit d'auteur / SACEM » : SERP faible confirmée, retenue. |
+| 27/09/2026 | Cinquième article publié | `/articles/musique-aftermovie-droit-auteur`. Liens internes réciproques ajoutés avec les articles gala, WEI et brief vidéaste, `npm ci` puis `npm run build` vérifiés avant push. |
 
 ---
 
