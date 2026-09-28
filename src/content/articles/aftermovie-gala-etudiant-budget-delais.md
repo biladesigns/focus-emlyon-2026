@@ -95,6 +95,21 @@ Prévoyez aussi le cas du participant qui demande le retrait après coup. Ça
 arrive, et il vaut mieux savoir qui coupe quoi avant que la situation se
 présente.
 
+## Pensez au format avant même le tournage
+
+Beaucoup d'associations ne demandent qu'un film pour YouTube ou pour une
+projection en salle. C'est oublier que, le soir même, les participants
+partagent déjà leurs propres stories, et que votre aftermovie officiel
+arrive souvent trop tard pour ce moment-là s'il n'existe qu'en un seul
+format.
+
+Demandez dès le devis une version verticale, pensée pour Instagram et
+TikTok, en plus du film horizontal classique. Les deux ne se montent pas
+identiquement : le format vertical cadre plus serré sur les visages, et
+mérite d'être compréhensible sans le son, sous-titré. Un vidéaste qui sait
+dès le tournage qu'il doit livrer les deux formats filme différemment,
+il ne s'agit pas d'un simple recadrage fait après coup.
+
 ## Ce qui rend un aftermovie réellement regardé
 
 Une vérité qui dérange : la plupart des aftermovies étudiants sont trop longs.

@@ -428,6 +428,71 @@ articles : impressions et position sur « musique aftermovie droit
 d'auteur ». Même réserve : une hausse d'impressions sans hausse de
 position signifie que Google teste la page, pas qu'elle progresse.
 
+### 28/09/2026, territoire entreprises à Lyon : mur commercial confirmé sur toute la ligne, amélioration d'article à la place
+
+Territoire exploré : entreprises à Lyon (séminaire, conférence, salon, film
+de recrutement, témoignage client), seul grand territoire de la liste
+encore jamais testé. 8 requêtes candidates testées en recherche web
+réelle : « captation vidéo séminaire entreprise Lyon prix », « film de
+recrutement entreprise Lyon vidéo », « vidéo témoignage client entreprise
+Lyon », « captation conférence entreprise vidéaste budget », « vidéaste
+étudiant entreprise Lyon », « vidéo entreprise petit budget alternative
+agence vidéo », « filmer salon professionnel stand entreprise vidéo
+aftermovie », « faire filmer un événement entreprise par une association
+étudiante avantages ». Deux requêtes de vérification : « vidéo entreprise
+réalisée par des étudiants qualité professionnelle », « pourquoi faire
+appel à une école de commerce pour une vidéo entreprise ».
+
+**SERP observée : mur commercial sur toutes les requêtes**, sans
+exception. Dès qu'une requête associe « entreprise » et « Lyon » à
+« vidéo »/« captation », la première page est occupée par des agences
+lyonnaises dédiées avec des pages entières sur le sujet (monolith-video,
+lesfilmsdegustave, teazit, kabocharts, bluevista, pioucube,
+francoisxavierdriant, lucassajot, awastudio, biux, le-scribe-audio,
+ned-photographie), certaines affichant même des tarifs précis (dès 450 à
+875 € pour une captation simple, 2 100 € pour une conférence multicaméra).
+Même les angles de niche testés (vidéaste étudiant, association étudiante
+qui filme pour des entreprises) ne trouvent aucune page vide : soit des
+annuaires de freelances génériques, soit rien de spécifique à retenir.
+**Aucune requête retenue.** Conclusion cohérente avec le mur déjà
+documenté le 23/09 et le 25/09 sur « prix aftermovie » et « budget vidéo
+recrutement BDE » : toute requête orientée entreprise + Lyon + budget est
+un territoire saturé par des agences professionnelles, à la différence des
+requêtes orientées association étudiante qui restent vides.
+
+**Niveau 2 appliqué** sur l'article du 23/09
+(`/articles/aftermovie-gala-etudiant-budget-delais`), le premier publié et
+le plus exposé à ce mur générique :
+1. Comblé un manque de couverture réel : l'article ne mentionnait jamais
+   le format vertical (Instagram/TikTok/stories), alors que les deux
+   articles voisins (WEI du 24/09, recrutement du 25/09) le traitent
+   comme un point important. Ajout d'une section « Pensez au format avant
+   même le tournage ».
+2. Ajouté un lien interne depuis une page bien plus importante que
+   `/articles` : la carte « Aftermovie » de la page `/prestations`
+   (composant `Services.tsx`) ne pointait vers aucun article. Elle pointe
+   désormais vers cet article. C'est la première fois qu'une page de
+   service commerciale relie vers un article de blog, jusqu'ici les
+   articles n'étaient atteignables que depuis le lien « Articles » du
+   header et entre eux.
+
+Trouvaille utile trouvée en cours de recherche, sans lien direct avec la
+tâche du jour mais à connaître : l'association **Ligne 2 Mire (L2M)**,
+créée en 1991, était *l'* association audiovisuelle officielle d'emlyon
+avant FOCUS. Selon un article de Mediacités (01/10/2024), l'école l'a
+dissoute en octobre 2024 après une affaire de vidéos jugées humiliantes et
+à caractère sexuel diffusées en interne. Plusieurs pages tierces avec une
+autorité réelle référencent encore L2M comme association audiovisuelle
+d'emlyon sans mentionner FOCUS : la page officielle
+`em-lyon.com/en/student-associations`, `emlyon-alumni.com/en/group/l2m`,
+et un article de « Monsieur Écoles de Commerce ». Sur le plan SEO pur,
+ça veut dire qu'une recherche du type « association audiovisuelle emlyon »
+peut encore renvoyer vers l'ancienne structure dissoute plutôt que vers
+FOCUS, et qu'un lien depuis la page officielle de l'école vers
+focus-emlyon.com n'existe apparemment pas. Sujet sensible (l'affaire de la
+dissolution), à traiter avec Mathieu directement plutôt qu'à documenter
+davantage ici : voir le message final.
+
 ---
 
 ## Partie B, journal daté
@@ -459,6 +524,8 @@ position signifie que Google teste la page, pas qu'elle progresse.
 | 26/09/2026 | Quatrième article publié | `/articles/briefer-videaste-evenement-etudiant`. Liens internes réciproques ajoutés avec les trois articles existants (gala, WEI, recrutement), `npm ci` puis `npm run build` vérifiés avant push. |
 | 27/09/2026 | SERP examinée sur le territoire technique et juridique (9 requêtes + 3 de vérification) | Quatre requêtes en mur commercial ou mur de templates/autorité, une écartée pour cannibalisation avec l'article WEI. « Quelle musique pour un aftermovie / droit d'auteur / SACEM » : SERP faible confirmée, retenue. |
 | 27/09/2026 | Cinquième article publié | `/articles/musique-aftermovie-droit-auteur`. Liens internes réciproques ajoutés avec les articles gala, WEI et brief vidéaste, `npm ci` puis `npm run build` vérifiés avant push. |
+| 28/09/2026 | SERP examinée sur le territoire entreprises à Lyon (8 requêtes + 2 de vérification) | Mur commercial confirmé sur toutes les requêtes, aucune retenue. Niveau 2 appliqué à la place. |
+| 28/09/2026 | Article gala amélioré : section format vertical ajoutée, lien ajouté depuis la carte « Aftermovie » de `/prestations` | `npm ci` puis `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 

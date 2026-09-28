@@ -16,7 +16,11 @@ const services = [{
   icon: Briefcase,
   title: "Aftermovie",
   description: "Mariages, galas, soirées de prestige : nous immortalisons vos événements les plus précieux. Un film soigné qui capture l'émotion et l'atmosphère pour revivre ces instants à l'infini.",
-  details: "Des souvenirs qui traversent le temps."
+  details: "Des souvenirs qui traversent le temps.",
+  link: {
+    to: "/articles/aftermovie-gala-etudiant-budget-delais",
+    label: "Budget et délais d'un aftermovie de gala"
+  }
 }];
 const Services = () => {
   return <section className="py-24 bg-transparent relative overflow-hidden">
@@ -36,6 +40,11 @@ const Services = () => {
               <h3 className="text-xl font-bold mb-2 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground mb-2">{service.description}</p>
               <p className="text-sm text-primary/70">{service.details}</p>
+              {service.link && (
+                <Link to={service.link.to} className="inline-block mt-3 text-sm text-primary underline underline-offset-4 hover:text-primary/80">
+                  {service.link.label}
+                </Link>
+              )}
             </Card>)}
         </div>
 
