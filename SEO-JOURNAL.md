@@ -493,6 +493,45 @@ focus-emlyon.com n'existe apparemment pas. Sujet sensible (l'affaire de la
 dissolution), à traiter avec Mathieu directement plutôt qu'à documenter
 davantage ici : voir le message final.
 
+### 28/09/2026, point hebdomadaire : cadence au seuil de vigilance, mesure d'audience toujours pas branchée
+
+Revue du lundi. Aucun nouvel export Search Console trouvé dans le dépôt
+depuis celui du 23/09 : impossible de vérifier positions, impressions ou
+indexation cette semaine sans que Mathieu en fournisse un nouveau.
+
+**Accès réseau sortant bloqué pour cette session.** Testé sur
+`focus-emlyon.com` et sur `example.com` (témoin neutre) : les deux ont été
+refusés par le proxy réseau de l'environnement. Impossible donc de relever
+les codes HTTP en production ni de lire `sitemap.xml` en direct, ce que la
+routine §2 demande pourtant. Contournement partiel via une recherche web
+(`site:focus-emlyon.com`) : seule la page d'accueil ressort, ce qui est
+cohérent avec l'état du 23/09 (1 page indexée sur 5 connues) mais n'est pas
+une preuve d'indexation fiable, l'opérateur `site:` étant connu pour sous-
+compter. **Si ce blocage se reproduit la semaine prochaine**, il faudra que
+Mathieu ouvre l'accès réseau de cet environnement (menu de l'environnement
+cloud, Modifier, accès réseau) pour que la revue hebdomadaire puisse à
+nouveau vérifier le site en direct.
+
+Vérifié localement, sans dépendance réseau : `npm ci` et `npm run build`
+passent sans erreur, `dist/sitemap.xml` contient les 7 pages fixes et les
+5 articles, `public/.htaccess` est bien copié dans `dist/`. Les 5 articles
+publiés ont tous `brouillon: false`, aucun brouillon en attente.
+
+Cadence : 5 articles publiés cinq jours de suite (23 au 27/09), le 28/09
+étant une amélioration de l'article existant plutôt qu'un sixième article
+neuf. Aucun des cinq n'a la moindre donnée de performance, la période GSC
+connue s'arrêtant au 20/09, avant le premier article. C'est exactement le
+seuil décrit dans la décision du 21/09 : « si le nombre d'articles publiés
+dépasse nettement ce qu'un humain peut relire, ramener la cadence ».
+Recommandation transmise à Mathieu dans le point de cette semaine, décision
+laissée à sa main, pas prise ici.
+
+Le Website ID Umami est toujours la valeur par défaut
+(`REMPLACER_PAR_VOTRE_WEBSITE_ID`) dans `src/lib/analytics.ts`, sept jours
+après la décision du 21/09 de l'installer. Tant qu'il n'est pas renseigné,
+aucune des cinq publications ne peut être reliée à une visite réelle ni,
+in fine, à une demande de devis.
+
 ---
 
 ## Partie B, journal daté
@@ -526,6 +565,9 @@ davantage ici : voir le message final.
 | 27/09/2026 | Cinquième article publié | `/articles/musique-aftermovie-droit-auteur`. Liens internes réciproques ajoutés avec les articles gala, WEI et brief vidéaste, `npm ci` puis `npm run build` vérifiés avant push. |
 | 28/09/2026 | SERP examinée sur le territoire entreprises à Lyon (8 requêtes + 2 de vérification) | Mur commercial confirmé sur toutes les requêtes, aucune retenue. Niveau 2 appliqué à la place. |
 | 28/09/2026 | Article gala amélioré : section format vertical ajoutée, lien ajouté depuis la carte « Aftermovie » de `/prestations` | `npm ci` puis `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 28/09/2026 | Point hebdomadaire : `npm ci` + `npm run build` relancés, sitemap et `.htaccess` vérifiés en local | Build propre, 5 articles publiés sans brouillon en attente. Vérification live impossible, accès réseau sortant bloqué pour cette session (testé sur focus-emlyon.com et example.com). |
+| 28/09/2026 | Point hebdomadaire : demande d'export Search Console envoyée à Mathieu | Aucun export trouvé dans le dépôt depuis celui du 23/09. En attente. |
+| 28/09/2026 | Point hebdomadaire : cadence de publication et Website ID Umami signalés à Mathieu | 5 articles en 5 jours sans aucune donnée de performance ; Website ID Umami toujours au placeholder. Décisions laissées à Mathieu. |
 
 ---
 
@@ -537,3 +579,6 @@ davantage ici : voir le message final.
 - [ ] **Refaire les demandes d'indexation manuelles** (quota dépassé le 23/09) : /portfolio, /prestations, /contact, /articles, /articles/aftermovie-gala-etudiant-budget-delais.
 - [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit.
 - [ ] Seulement ensuite : première vraie revue mensuelle, sur des données valides.
+- [ ] **Fournir l'export Search Console demandé le 28/09** (Performances 3 mois + Indexation) pour la revue du 05/10.
+- [ ] **Décider si on ralentit la cadence de publication automatique** le temps d'obtenir la première lecture d'indexation des 5 articles publiés du 23 au 27/09.
+- [ ] Si l'accès réseau reste bloqué à la prochaine revue hebdomadaire, ouvrir l'accès réseau de l'environnement cloud (menu de l'environnement, Modifier).
