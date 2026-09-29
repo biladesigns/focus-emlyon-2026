@@ -144,7 +144,10 @@ avec votre budget et votre calendrier.
 
 Vous organisez plutôt un week-end d'intégration ? Le budget et le brief
 sont différents, voir notre article sur
-[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste).
+[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste). Et si
+votre association organise un tournoi ou une compétition sportive, la
+logique de couverture change encore, voir notre article sur
+[l'aftermovie de tournoi sportif étudiant](/articles/aftermovie-tournoi-sportif-etudiant).
 
 Vous préparez surtout votre campagne de recrutement avant de penser à
 l'événement de l'année ? Voir notre article sur

@@ -152,9 +152,12 @@ Vous préparez plutôt un gala ? Notre article sur
 [le budget et les délais d'un aftermovie de gala étudiant](/articles/aftermovie-gala-etudiant-budget-delais)
 complète celui-ci. Pour un week-end d'intégration, la logistique du brief
 change sensiblement, voir
-[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste). Et si votre
-priorité est d'abord de recruter de nouveaux membres avant de penser à
-l'événement de l'année, notre article sur
+[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste). Pour un
+tournoi ou une compétition sportive, le brief doit trancher entre
+plusieurs terrains et plusieurs matchs, voir notre article sur
+[l'aftermovie de tournoi sportif étudiant](/articles/aftermovie-tournoi-sportif-etudiant).
+Et si votre priorité est d'abord de recruter de nouveaux membres avant de
+penser à l'événement de l'année, notre article sur
 [la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante)
 aborde un brief différent, tourné vers le témoignage plutôt que la
 captation en direct.

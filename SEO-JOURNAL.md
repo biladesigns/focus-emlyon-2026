@@ -532,6 +532,95 @@ après la décision du 21/09 de l'installer. Tant qu'il n'est pas renseigné,
 aucune des cinq publications ne peut être reliée à une visite réelle ni,
 in fine, à une demande de devis.
 
+### 29/09/2026, sixième article : territoire événements étudiants, le tournoi sportif plutôt que le gala ou le WEI à nouveau
+
+Territoire exploré : événements étudiants, sous-thème compétition sportive
+inter-écoles (tournoi, crit, coupe interne organisée par un Bureau des
+Sports), différent des sous-thèmes déjà traités dans ce même grand
+territoire (gala le 23/09, WEI le 24/09). Choisi parce que la liste des
+territoires cite explicitement « raid sportif, tournoi, soirée
+d'intégration, compétition inter-écoles » comme sous-thèmes distincts du
+gala et du WEI, et que la saisonnalité de fin septembre correspond au
+calendrier réel de plusieurs grands tournois inter-écoles de commerce
+(Challenge Ecricome en avril, mais les BDS commencent leur saison sportive
+et leurs premiers tournois internes dès la rentrée).
+
+9 requêtes candidates testées en recherche web réelle : « aftermovie
+tournoi sportif inter écoles de commerce », « captation vidéo crit inter
+école commerce », « vidéaste tournoi sportif étudiant budget »,
+« aftermovie compétition inter écoles de commerce », « vidéo soirée
+d'intégration étudiante prix », « vidéaste bureau des sports école de
+commerce BDS », « comment filmer un tournoi sportif inter-écoles
+étudiant », « aftermovie crit business school prix », « vidéaste pour un
+tournoi inter-écoles de commerce prix devis ». Trois requêtes de
+vérification supplémentaires : « comment trouver un vidéaste pour un
+événement sportif étudiant », « captation vidéo tournoi inter écoles
+droit à l'image sportifs », « aftermovie tournoi sportif étudiant »
+(phrase exacte).
+
+**SERP observée, requête par requête :**
+
+- « aftermovie tournoi sportif inter écoles de commerce », « aftermovie
+  compétition inter écoles de commerce », « captation vidéo challenge
+  ecricome » : uniquement des pages d'écoles ou d'associations qui
+  présentent leur propre tournoi (TGO, LR Beach Cup, Challenge Ecricome,
+  TEAMS), et des aftermovies déjà publiés sur YouTube ou Facebook par les
+  organisateurs eux-mêmes. Aucun prestataire vidéo n'a de page dédiée à ce
+  sujet précis.
+- « vidéaste tournoi sportif étudiant budget » et « comment trouver un
+  vidéaste pour un événement sportif étudiant » : mêmes symptômes que sur
+  le territoire WEI du 24/09, à savoir des annuaires de freelances
+  génériques (Linkaband, FlashBiz, ClicSoumission, LesBonsFreelances) et
+  des vidéastes sport indépendants qui s'adressent à des clubs amateurs ou
+  des marques (corentinbonnin.com, jpradel.com, emilelusant.com), jamais à
+  une association étudiante qui organise elle-même la compétition.
+- « vidéaste pour un tournoi inter-écoles de commerce prix devis » et
+  « aftermovie crit business school prix » : mur de comparateurs
+  génériques de tarifs vidéaste (codeur.com, starofservice, flashbiz,
+  monpro, videastepro, ecoledesvideastes) et l'agence lyonnaise déjà
+  repérée le 27/09 (studiok7.fr) sur une page aftermovie générique, aucune
+  n'aborde la spécificité d'un tournoi multi-terrains.
+- « captation vidéo crit inter école commerce », « vidéo soirée
+  d'intégration étudiante prix », « vidéaste bureau des sports école de
+  commerce BDS » : résultats hors sujet (pages pédagogiques,
+  présentations institutionnelles de BDS sans angle vidéo) ou déjà
+  couverts par l'article WEI existant (soirée étudiante). Écartées.
+- « comment filmer un tournoi sportif inter-écoles étudiant » : guides
+  techniques génériques de captation sportive (repaire.net, wearefamara,
+  vuedestribunes), écrits pour un caméraman, pas pour l'association qui
+  cherche à en embaucher un. Signal faible mais peu différenciant seul.
+- « captation vidéo tournoi inter écoles droit à l'image sportifs » : mur
+  d'autorité juridique (village-justice.com, fff.fr, regimbeau.eu,
+  avocats), comme sur le droit à l'image générique déjà écarté le
+  27/09. Traité comme sous-partie de l'article plutôt qu'en requête
+  principale.
+
+**Mur commercial : aucune agence vidéo avec une page dédiée à ce sujet
+précis.** Les seuls murs rencontrés sont génériques (comparateurs de
+tarifs vidéaste, annuaires de freelances, guides juridiques), pas
+spécifiques à l'intersection tournoi sportif + association étudiante,
+exactement le schéma déjà validé sur le territoire WEI. SERP faible
+retenue.
+
+Article publié : `/articles/aftermovie-tournoi-sportif-etudiant`. Requête
+visée : « aftermovie tournoi sportif étudiant ». Angle : ce qui distingue
+un tournoi (plusieurs terrains, plusieurs équipes dont certaines d'écoles
+adverses, timing qui échappe à l'organisation) d'un gala ou d'un WEI, le
+droit à l'image de participants qui n'appartiennent pas à l'association
+organisatrice, et la mise en avant des sponsors, propre à ce format.
+
+Maillage : liens réciproques ajoutés entre ce nouvel article et les
+articles gala du 23/09 et brief vidéaste du 26/09 (qui listent déjà les
+autres formats d'événements traités), lien interne du nouvel article vers
+le WEI du 24/09 et le brief du 26/09, lien vers `/contact` en place.
+`npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push.
+
+**À vérifier à la revue d'octobre**, comme pour les cinq premiers
+articles : impressions et position sur « aftermovie tournoi sportif
+étudiant ». Même réserve que les fois précédentes : une hausse
+d'impressions sans hausse de position signifie que Google teste la page,
+pas qu'elle progresse.
+
 ---
 
 ## Partie B, journal daté
@@ -568,6 +657,8 @@ in fine, à une demande de devis.
 | 28/09/2026 | Point hebdomadaire : `npm ci` + `npm run build` relancés, sitemap et `.htaccess` vérifiés en local | Build propre, 5 articles publiés sans brouillon en attente. Vérification live impossible, accès réseau sortant bloqué pour cette session (testé sur focus-emlyon.com et example.com). |
 | 28/09/2026 | Point hebdomadaire : demande d'export Search Console envoyée à Mathieu | Aucun export trouvé dans le dépôt depuis celui du 23/09. En attente. |
 | 28/09/2026 | Point hebdomadaire : cadence de publication et Website ID Umami signalés à Mathieu | 5 articles en 5 jours sans aucune donnée de performance ; Website ID Umami toujours au placeholder. Décisions laissées à Mathieu. |
+| 29/09/2026 | SERP examinée sur le territoire tournoi sportif inter-écoles (9 requêtes + 3 de vérification) | Aucun mur commercial spécifique, seulement des murs génériques (comparateurs de tarifs, annuaires, droit à l'image générique). « Aftermovie tournoi sportif étudiant » : SERP faible confirmée, retenue. |
+| 29/09/2026 | Sixième article publié | `/articles/aftermovie-tournoi-sportif-etudiant`. Liens internes réciproques ajoutés avec les articles gala et brief vidéaste, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 
