@@ -154,3 +154,7 @@ sur [comment briefer un vidéaste pour son événement étudiant](/articles/brie
 Au montage, le choix de la musique mérite qu'on s'y arrête aussi : voir notre
 article sur [quelle musique pour un aftermovie](/articles/musique-aftermovie-droit-auteur)
 et ce que dit le droit d'auteur sur un titre connu.
+
+Si votre WEI est financé par des sponsors, pensez aussi à la vidéo qui
+servira à démarcher les suivants : voir notre article sur
+[la vidéo dans un dossier de sponsoring étudiant](/articles/video-dossier-sponsoring-association-etudiante).

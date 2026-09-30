@@ -621,6 +621,102 @@ articles : impressions et position sur « aftermovie tournoi sportif
 d'impressions sans hausse de position signifie que Google teste la page,
 pas qu'elle progresse.
 
+### 30/09/2026, septième article : territoire associations et clubs, la vidéo de sponsoring plutôt que le recrutement ou l'événement
+
+Territoire exploré : associations et clubs, sous-thème financement par
+les sponsors (junior-entreprises, clubs culturels et humanitaires inclus
+dans les candidates testées), différent du recrutement de membres déjà
+traité le 25/09 et des types d'événements déjà couverts (gala, WEI,
+tournoi). Choisi parce que c'était le dernier grand sous-thème du
+territoire « associations et clubs » encore jamais testé.
+
+12 requêtes candidates testées en recherche web réelle : « vidéo junior
+entreprise présentation client étudiant », « aftermovie association
+humanitaire étudiante vidéo », « vidéo pour convaincre des sponsors
+association étudiante », « captation spectacle étudiant théâtre danse
+association vidéo », « vidéo bilan de mandat association étudiante
+partenaires », « film promotionnel junior entreprise gagner des
+missions », « vidéo teaser dossier de sponsoring association étudiante
+partenaires », « aftermovie collecte de fonds action humanitaire
+étudiante », « vidéo sponsoring association étudiante trouver des
+partenaires », « pourquoi ajouter une vidéo à son dossier de sponsoring
+BDE », « vidéo teaser édition précédente convaincre sponsor entreprise »,
+« dossier de sponsoring vidéo étudiant exemple ».
+
+**SERP observée, requête par requête :**
+
+- « vidéo junior entreprise présentation client » et « film promotionnel
+  junior entreprise gagner des missions » : **mur commercial**, mêmes
+  agences corporate déjà rencontrées sur les territoires précédents
+  (playplay, mvoproduction, kabocharts, cliple, pixmove, mavideocorporate),
+  toutes génériques entreprise, aucune angle junior-entreprise étudiante.
+  Abandonné.
+- « aftermovie association humanitaire étudiante » : **mur commercial**,
+  agences aftermovie génériques (and-friends, agencevideocom, i3a,
+  cliple, pause-b-films), même profil que le mur déjà documenté le
+  23/09 sur « prix aftermovie ». Abandonné.
+- « captation spectacle étudiant théâtre danse association » : **mur
+  commercial dédié**, plusieurs prestataires ont une page entière sur la
+  captation de gala de danse ou de spectacle associatif (xaleo.fr,
+  anaphora-productions, video-spectacle.com avec grille tarifaire
+  publique, slisproductions, captavideo). Abandonné.
+- « vidéo bilan de mandat association étudiante partenaires » et
+  « aftermovie collecte de fonds action humanitaire étudiante » :
+  mauvaise intention de requête ou sujet hors offre vidéo (reporting
+  associatif générique, financement humanitaire sans angle vidéo).
+  Écartées.
+- « vidéo sponsoring association étudiante trouver des partenaires » et
+  « dossier de sponsoring vidéo étudiant exemple » : résultats uniquement
+  textuels sur la structure d'un dossier de sponsoring (hubspot,
+  helloasso, kisskissbankbank, wweeddoo, cairn) ou des plateformes de
+  mise en relation (boostmybde, trouvermonsponsor), aucun ne traite la
+  vidéo comme pièce jointe au dossier. Signal faible, confirmé par les
+  deux requêtes suivantes.
+- **« pourquoi ajouter une vidéo à son dossier de sponsoring BDE » et
+  « vidéo teaser dossier de sponsoring association étudiante » : SERP
+  faible, retenue.** Un seul résultat proche existe (un billet de blog
+  d'une société de production, airvideeteauprod.substack.com, sur la
+  vidéo comme outil de financement de projet), mais ce n'est pas une page
+  dédiée à ce sujet précis pour une association étudiante, et le reste de
+  la page reste tenu par des guides de rédaction du dossier écrit ou par
+  des agences de teaser vidéo événementiel générique (topovideo,
+  storyfox, picmediaprod, videotelling) qui parlent d'entreprises, pas
+  d'associations qui démarchent des sponsors. Personne n'a écrit ce
+  guide.
+
+**Mur commercial confirmé sur les angles junior-entreprise, humanitaire et
+spectacle culturel testés isolément**, comme sur les territoires
+précédents dès qu'une requête ressemble à un format déjà vendu par une
+agence dédiée. Signal faible net uniquement sur l'angle vidéo de
+sponsoring, transversal à tous les types d'association.
+
+Article publié : `/articles/video-dossier-sponsoring-association-etudiante`.
+Requête visée : « vidéo dossier de sponsoring association étudiante ».
+Angle : ce que la vidéo apporte que le dossier écrit ne transmet pas,
+pourquoi elle diffère d'un aftermovie classique (public, durée, contenu),
+le bon moment pour la préparer (à la fin de l'édition précédente, pas au
+moment de démarcher), et le droit à l'image des partenaires dont le logo
+apparaît.
+
+Maillage : liens réciproques ajoutés depuis et vers les articles gala du
+23/09, WEI du 24/09 et brief vidéaste du 26/09, lien simple (non
+réciproque, cité pour le droit à l'image) vers l'article musique du
+27/09, lien vers `/contact` en place. `npm ci`, `npm run build` et
+`tsc --noEmit` vérifiés avant push.
+
+**À vérifier à la revue d'octobre**, comme pour les six premiers
+articles : impressions et position sur « vidéo dossier de sponsoring
+association étudiante ». Même réserve que les fois précédentes : une
+hausse d'impressions sans hausse de position signifie que Google teste la
+page, pas qu'elle progresse.
+
+**Rappel cadence, déjà signalé le 28/09** : ceci porte à 7 le nombre
+d'articles publiés en 8 jours (23 au 30/09, seul le 28/09 ayant été une
+amélioration plutôt qu'une nouvelle publication). Toujours aucune donnée
+de performance disponible pour évaluer un seul de ces articles. La
+décision de ralentir reste à la main de Mathieu, signalée à nouveau dans
+le message final.
+
 ---
 
 ## Partie B, journal daté
@@ -659,6 +755,8 @@ pas qu'elle progresse.
 | 28/09/2026 | Point hebdomadaire : cadence de publication et Website ID Umami signalés à Mathieu | 5 articles en 5 jours sans aucune donnée de performance ; Website ID Umami toujours au placeholder. Décisions laissées à Mathieu. |
 | 29/09/2026 | SERP examinée sur le territoire tournoi sportif inter-écoles (9 requêtes + 3 de vérification) | Aucun mur commercial spécifique, seulement des murs génériques (comparateurs de tarifs, annuaires, droit à l'image générique). « Aftermovie tournoi sportif étudiant » : SERP faible confirmée, retenue. |
 | 29/09/2026 | Sixième article publié | `/articles/aftermovie-tournoi-sportif-etudiant`. Liens internes réciproques ajoutés avec les articles gala et brief vidéaste, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 30/09/2026 | SERP examinée sur le territoire associations et clubs, angle sponsoring (12 requêtes testées) | Mur commercial confirmé sur junior-entreprise, humanitaire et spectacle culturel testés isolément. « Vidéo dossier de sponsoring association étudiante » : SERP faible confirmée, retenue. |
+| 30/09/2026 | Septième article publié | `/articles/video-dossier-sponsoring-association-etudiante`. Liens internes réciproques ajoutés avec les articles gala, WEI et brief vidéaste, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 

@@ -161,3 +161,8 @@ penser à l'événement de l'année, notre article sur
 [la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante)
 aborde un brief différent, tourné vers le témoignage plutôt que la
 captation en direct.
+
+Si votre événement est financé par des sponsors, précisez-le dès le brief :
+les mêmes images peuvent servir à démarcher les suivants, voir notre
+article sur
+[la vidéo dans un dossier de sponsoring étudiant](/articles/video-dossier-sponsoring-association-etudiante).

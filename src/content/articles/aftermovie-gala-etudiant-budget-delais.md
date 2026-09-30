@@ -161,3 +161,7 @@ Un dernier point qu'on vous conseille de régler avant le montage : le choix
 de la musique. Un titre connu expose votre aftermovie à une coupure de son
 une fois publié, voir notre article sur
 [quelle musique choisir pour un aftermovie](/articles/musique-aftermovie-droit-auteur).
+
+Enfin, si votre gala est financé par des sponsors, les mêmes images
+peuvent resservir pour démarcher les suivants : voir notre article sur
+[la vidéo dans un dossier de sponsoring étudiant](/articles/video-dossier-sponsoring-association-etudiante).
