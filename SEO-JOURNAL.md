@@ -717,6 +717,84 @@ de performance disponible pour évaluer un seul de ces articles. La
 décision de ralentir reste à la main de Mathieu, signalée à nouveau dans
 le message final.
 
+### 01/10/2026, huitième article : territoire avant/après la prestation, le cahier des charges plutôt que le brief à nouveau
+
+Territoire exploré : avant et après la prestation, sous-thème cahier des
+charges et comparaison de devis, déjà repéré le 26/09 comme « signal faible,
+retenu comme piste secondaire mais pas prioritaire » sans avoir été exploité
+depuis. Avant de s'y remettre, deux autres sous-thèmes ont été testés en
+recherche web réelle et écartés.
+
+**Essai 1, événements étudiants, sous-thème raid sportif** (distinct du
+tournoi du 29/09 et du WEI du 24/09, explicitement cité dans la liste des
+territoires) : « aftermovie raid étudiant école de commerce », « captation
+vidéo raid sportif étudiant budget », « aftermovie 4L Trophy prix vidéaste »,
+« vidéaste pour 4L Trophy équipage aftermovie », « comment filmer un raid
+humanitaire étudiant ». Aucun mur commercial strict, mais surtout aucune
+intention commerciale réelle : un raid étudiant façon 4L Trophy se filme
+quasi systématiquement en autoproduction (GoPro par les participants), pas
+par un prestataire embauché. Le seul résultat technique trouvé
+(technicam.fr, page dédiée captation marathon/trail/raid) s'adresse à des
+organisateurs de courses sportives grand public, pas à des associations
+étudiantes. Écarté pour mauvais fit avec l'offre FOCUS, pas pour mur
+commercial.
+
+**Essai 2, événements étudiants, sous-thème concert/festival étudiant** :
+« aftermovie concert étudiant école de commerce », « captation vidéo
+festival étudiant association budget », « vidéaste soirée concert étudiante
+droit à l'image artiste », « aftermovie passation de bureau association
+étudiante ». Mur commercial confirmé sur concert et festival (i3a, eoprod,
+stardust-group, biux, jumpstartstudio, slisproductions, komuniweb avec une
+page dédiée « tarifs clip vidéo club, concert et festival »), mur d'autorité
+générique sur le droit à l'image d'un artiste sur scène, et absence totale
+de volume ou d'intention commerciale sur la passation de bureau (sujet
+interne à l'association, pas un événement qu'on fait filmer). Écarté.
+
+**Retour au cahier des charges**, confirmé par trois requêtes
+supplémentaires : « cahier des charges vidéo événement associatif modèle »,
+« modèle cahier des charges aftermovie BDE association étudiante devis »,
+« "cahier des charges" vidéo association étudiante BDE », « comment
+comparer plusieurs devis vidéaste événementiel association ». La dernière
+tombe dans le même mur de comparateurs de tarifs déjà documenté le 26/09
+(codeur.com, flashbiz, skiss, aoyos, picmediaprod, videotelling). Les
+templates de cahier des charges vidéo existent (mars-videos.fr,
+videostorytelling.fr, cahiersdescharges.com) mais tous génériques
+entreprise, et les résultats croisant « BDE » ou « association étudiante »
+ne renvoient que des guides de création d'association ou de dossiers de
+subvention, jamais un cahier des charges vidéo. L'intersection précise
+(cahier des charges vidéo + association étudiante qui consulte plusieurs
+prestataires) n'est écrite nulle part. SERP faible confirmée, retenue.
+
+Article publié :
+`/articles/cahier-des-charges-video-association-etudiante`. Requête visée :
+« cahier des charges vidéo association étudiante ». Angle : différence avec
+le brief de l'article du 26/09 (le cahier des charges sert à consulter
+plusieurs prestataires et comparer des devis, le brief sert à préparer le
+tournage avec un vidéaste déjà choisi), ce que le document doit contenir,
+comment lire objectivement des devis reçus (durée sur place, niveau de
+montage, livrables, droits d'usage), le piège d'un document trop détaillé
+qui bride la proposition du prestataire, et les cas où ce document est
+inutile (un seul prestataire consulté, relation déjà établie).
+
+Maillage : lien ajouté depuis le nouvel article vers le brief du 26/09, le
+dossier de sponsoring du 30/09, le WEI du 24/09 et le tournoi du 29/09, lien
+vers `/contact` en place. Lien réciproque ajouté depuis l'article brief du
+26/09 vers le nouvel article, pour qu'il ne reste pas accessible uniquement
+depuis lui-même. `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant
+push.
+
+**À vérifier à la revue d'octobre**, comme pour les sept premiers articles :
+impressions et position sur « cahier des charges vidéo association
+étudiante ». Même réserve que les fois précédentes : une hausse
+d'impressions sans hausse de position signifie que Google teste la page,
+pas qu'elle progresse.
+
+**Rappel cadence, déjà signalé le 28/09 et le 30/09** : ceci porte à 8 le
+nombre d'articles publiés en 9 jours (23/09 au 01/10, seul le 28/09 ayant
+été une amélioration plutôt qu'une nouvelle publication). Toujours aucune
+donnée de performance disponible pour évaluer un seul de ces articles. La
+décision de ralentir reste à la main de Mathieu.
+
 ---
 
 ## Partie B, journal daté
@@ -757,6 +835,8 @@ le message final.
 | 29/09/2026 | Sixième article publié | `/articles/aftermovie-tournoi-sportif-etudiant`. Liens internes réciproques ajoutés avec les articles gala et brief vidéaste, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 | 30/09/2026 | SERP examinée sur le territoire associations et clubs, angle sponsoring (12 requêtes testées) | Mur commercial confirmé sur junior-entreprise, humanitaire et spectacle culturel testés isolément. « Vidéo dossier de sponsoring association étudiante » : SERP faible confirmée, retenue. |
 | 30/09/2026 | Septième article publié | `/articles/video-dossier-sponsoring-association-etudiante`. Liens internes réciproques ajoutés avec les articles gala, WEI et brief vidéaste, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 01/10/2026 | SERP examinée sur raid sportif puis concert/festival étudiant (9 requêtes), les deux écartés, puis retour au cahier des charges déjà repéré le 26/09 (4 requêtes de confirmation) | Raid : pas de mur mais mauvaise intention commerciale (autoproduction GoPro). Concert/festival : mur commercial confirmé. Cahier des charges vidéo association étudiante : SERP faible confirmée, retenue. |
+| 01/10/2026 | Huitième article publié | `/articles/cahier-des-charges-video-association-etudiante`. Lien réciproque ajouté avec l'article brief vidéaste du 26/09, liens vers sponsoring, WEI et tournoi, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 

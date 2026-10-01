@@ -166,3 +166,8 @@ Si votre événement est financé par des sponsors, précisez-le dès le brief :
 les mêmes images peuvent servir à démarcher les suivants, voir notre
 article sur
 [la vidéo dans un dossier de sponsoring étudiant](/articles/video-dossier-sponsoring-association-etudiante).
+
+Ce brief suppose que vous avez déjà choisi votre vidéaste. Si vous
+consultez encore plusieurs prestataires et que vous voulez comparer des
+devis qui parlent du même projet, commencez plutôt par notre article sur
+[le cahier des charges vidéo pour une association étudiante](/articles/cahier-des-charges-video-association-etudiante).
