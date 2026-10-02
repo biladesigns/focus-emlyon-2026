@@ -141,3 +141,8 @@ et sur [l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste).
 
 Et pour la partie du brief commune à tous les formats, voir notre article
 sur [comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant).
+
+Si votre association organise aussi un business game ou un hackathon, les
+questions de sponsors et de droit à l'image des intervenants extérieurs se
+posent de façon proche, comme le détaille notre article sur
+[l'aftermovie de business game ou de hackathon étudiant](/articles/aftermovie-business-game-hackathon-etudiant).

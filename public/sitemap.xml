@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://focus-emlyon.com/articles</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -41,6 +41,12 @@
     <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://focus-emlyon.com/articles/aftermovie-business-game-hackathon-etudiant</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://focus-emlyon.com/articles/aftermovie-gala-etudiant-budget-delais</loc>

@@ -137,9 +137,12 @@ déjà plus.
 
 Cette vidéo se construit souvent à partir des mêmes images que
 l'aftermovie de l'événement. Voir nos articles sur
-[l'aftermovie de gala étudiant](/articles/aftermovie-gala-etudiant-budget-delais)
-et sur [l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste)
-pour ce qui distingue chaque format d'événement au moment du tournage.
+[l'aftermovie de gala étudiant](/articles/aftermovie-gala-etudiant-budget-delais),
+sur [l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste)
+et sur [l'aftermovie de business game ou de hackathon étudiant](/articles/aftermovie-business-game-hackathon-etudiant),
+un format particulièrement dépendant des entreprises partenaires à mettre
+en valeur, pour ce qui distingue chaque format d'événement au moment du
+tournage.
 
 Et pour transmettre ce double usage (aftermovie et vidéo de sponsoring)
 dès le premier échange, voir notre article sur

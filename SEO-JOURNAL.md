@@ -795,6 +795,97 @@ nombre d'articles publiés en 9 jours (23/09 au 01/10, seul le 28/09 ayant
 donnée de performance disponible pour évaluer un seul de ces articles. La
 décision de ralentir reste à la main de Mathieu.
 
+### 02/10/2026, neuvième article : territoire événements étudiants, le business game et le hackathon plutôt que le gala, le WEI ou le tournoi à nouveau
+
+Territoire exploré : événements étudiants, sous-thème compétition
+académique ou professionnelle inter-écoles (business game, hackathon,
+concours de pitch), distinct du tournoi sportif du 29/09 (même grand
+territoire, sous-thème sportif) et des trois autres formats déjà couverts
+(gala, WEI). Choisi parce que la liste des territoires cite
+« compétition inter-écoles » sans la limiter au sport, et que ce sous-thème
+n'avait jamais été testé.
+
+10 requêtes candidates testées en recherche web réelle : « aftermovie
+business game étudiant école de commerce vidéaste », « captation vidéo
+hackathon étudiant prix budget », « vidéo concours de pitch étudiant inter
+écoles de commerce », « vidéaste pour un business game étudiant devis
+prix », « comment filmer un hackathon étudiant conseils vidéo »,
+« "aftermovie" hackathon étudiant » (phrase exacte), « "aftermovie" business
+game » (phrase exacte), « captation vidéo business game inter écoles
+commerce », « vidéaste événement étudiant Lyon business game hackathon ».
+
+**SERP observée, requête par requête :**
+
+- « aftermovie business game étudiant » et « aftermovie hackathon étudiant »
+  (phrases exactes) : uniquement des aftermovies publiés par les écoles ou
+  associations organisatrices elles-mêmes sur YouTube et Facebook (UCL
+  Business Game, HEC Business Game, Solvay Business Game, TUM Business Game,
+  plusieurs hackathons européens), jamais de page expliquant comment ces
+  vidéos ont été préparées. Aucun prestataire vidéo n'a de page dédiée à ce
+  sujet.
+- « captation vidéo hackathon étudiant prix budget » et « vidéaste pour un
+  business game étudiant devis prix » : dès que la requête contient
+  « prix »/« devis », même mur générique que sur tous les territoires
+  précédents (jumpstartstudio, biux, lesfilmsdegustave, weplus, monpro,
+  flashbiz, peerspace), pages de tarifs captation ou vidéaste corporate sans
+  aucun angle business game ni hackathon. Confirme que ce mur n'est pas
+  propre à ce territoire mais générique à toute requête de prix vidéo, comme
+  déjà noté le 26/09 et le 01/10.
+- « captation vidéo business game inter écoles commerce » : résultats
+  uniquement des éditeurs de logiciels de simulation pédagogique
+  (urbangaming.fr, agilateur.fr, naodev.net, Galityco), aucun ne traite la
+  vidéo. Confirme l'absence de concurrent sur l'intersection précise.
+- « vidéaste événement étudiant Lyon business game hackathon » : résultats
+  uniquement des pages d'écoles ou d'associations qui annoncent leurs propres
+  événements (emlyon elle-même organise le HSIL Hackathon et est partenaire
+  du MindFhack, iaelyon organise son Business Game), aucune page vidéaste.
+  Fait notable : emlyon organise déjà ce type d'événement en interne, la
+  légitimité de FOCUS sur ce sujet est directe.
+- « vidéo concours de pitch étudiant inter écoles de commerce » : résultats
+  institutionnels (Oteci, Kedge, UCLouvain, Pépite) qui annoncent des
+  concours de pitch, aucun lien avec un prestataire vidéo. Signal faible mais
+  traité comme sous-partie du format plutôt qu'en requête principale, le
+  pitch final étant déjà couvert dans l'article comme le moment le plus
+  filmable de l'événement.
+- « comment filmer un hackathon étudiant conseils vidéo » : mélange de
+  guides d'organisation de hackathon (wheeldogs.fr, cursus.edu) et de tutos
+  génériques de prise de vue, aucun destiné à un prestataire ou une
+  association qui embauche un vidéaste pour ce format précis.
+
+**Mur commercial : aucun sur l'intersection précise business
+game/hackathon + vidéo.** Les seuls murs rencontrés sont les mêmes murs
+génériques de prix vidéaste déjà documentés sur tous les territoires
+précédents dès qu'une requête contient « prix »/« devis », pas un mur
+spécifique à ce format. SERP faible retenue, schéma identique à celui déjà
+validé sur WEI (24/09) et tournoi sportif (29/09).
+
+Article publié :
+`/articles/aftermovie-business-game-hackathon-etudiant`. Requête visée :
+« aftermovie business game étudiant ». Angle : ce qui distingue ce format de
+tous les autres (peu d'énergie visuelle continue, moments filmables très
+précis à identifier à l'avance comme le lancement, le point d'étape nocturne
+et le pitch final), le droit à l'image des intervenants extérieurs
+(entreprises partenaires, jury) plutôt que des seuls membres de
+l'association, et le double usage de la vidéo (teaser réseaux sociaux et
+pièce de conviction pour de futurs sponsors).
+
+Maillage : liens réciproques ajoutés avec l'article tournoi sportif du
+29/09 et l'article sponsoring du 30/09, liens simples (non réciproques) vers
+le brief vidéaste du 26/09 et le cahier des charges du 01/10, lien vers
+`/contact` en place. `npm ci`, `npm run build` et `tsc --noEmit` vérifiés
+avant push.
+
+**À vérifier à la revue d'octobre**, comme pour les huit premiers articles :
+impressions et position sur « aftermovie business game étudiant ». Même
+réserve que les fois précédentes : une hausse d'impressions sans hausse de
+position signifie que Google teste la page, pas qu'elle progresse.
+
+**Rappel cadence, déjà signalé le 28/09, le 30/09 et le 01/10** : ceci porte
+à 9 le nombre d'articles publiés en 10 jours (23/09 au 02/10, seul le 28/09
+ayant été une amélioration plutôt qu'une nouvelle publication). Toujours
+aucune donnée de performance disponible pour évaluer un seul de ces
+articles. La décision de ralentir reste à la main de Mathieu.
+
 ---
 
 ## Partie B, journal daté
@@ -837,6 +928,8 @@ décision de ralentir reste à la main de Mathieu.
 | 30/09/2026 | Septième article publié | `/articles/video-dossier-sponsoring-association-etudiante`. Liens internes réciproques ajoutés avec les articles gala, WEI et brief vidéaste, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 | 01/10/2026 | SERP examinée sur raid sportif puis concert/festival étudiant (9 requêtes), les deux écartés, puis retour au cahier des charges déjà repéré le 26/09 (4 requêtes de confirmation) | Raid : pas de mur mais mauvaise intention commerciale (autoproduction GoPro). Concert/festival : mur commercial confirmé. Cahier des charges vidéo association étudiante : SERP faible confirmée, retenue. |
 | 01/10/2026 | Huitième article publié | `/articles/cahier-des-charges-video-association-etudiante`. Lien réciproque ajouté avec l'article brief vidéaste du 26/09, liens vers sponsoring, WEI et tournoi, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 02/10/2026 | SERP examinée sur le territoire business game et hackathon étudiant (9 requêtes testées) | Aucun mur commercial sur l'intersection précise, seulement le mur générique de prix vidéaste déjà documenté sur tous les territoires dès qu'une requête contient « prix »/« devis ». « Aftermovie business game étudiant » : SERP faible confirmée, retenue. |
+| 02/10/2026 | Neuvième article publié | `/articles/aftermovie-business-game-hackathon-etudiant`. Liens réciproques ajoutés avec les articles tournoi sportif et sponsoring, liens vers brief vidéaste et cahier des charges, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 
