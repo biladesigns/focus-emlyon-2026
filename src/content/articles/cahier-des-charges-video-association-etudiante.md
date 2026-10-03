@@ -70,9 +70,12 @@ sert à démarcher des partenaires, dites-le, voir notre article sur
 présence du matin au soir ne demande ni le même nombre de vidéastes, ni le
 même matériel. Précisez si l'événement dure plusieurs jours, comme un WEI,
 voir notre article sur
-[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste), ou se
+[l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste), se
 déroule sur plusieurs terrains en parallèle, comme un tournoi, voir
-[l'aftermovie de tournoi sportif étudiant](/articles/aftermovie-tournoi-sportif-etudiant).
+[l'aftermovie de tournoi sportif étudiant](/articles/aftermovie-tournoi-sportif-etudiant),
+ou s'étale sur une nuit entière avec des moments filmables très précis,
+comme un business game ou un hackathon, voir
+[l'aftermovie de business game ou de hackathon étudiant](/articles/aftermovie-business-game-hackathon-etudiant).
 
 **Les livrables attendus.** Un aftermovie court pour les réseaux, une
 version plus longue pour les archives, un format vertical pour les stories :
@@ -101,10 +104,27 @@ d'eux a-t-il compris une demi-journée là où vous en demandiez une entière ?
 Le niveau de montage est-il comparable : un montage brut n'a rien à voir
 avec un montage rythmé, avec habillage graphique et sous-titres. Les
 livrables sont-ils tous listés, ou l'un des devis ne mentionne qu'un seul
-format quand vous en demandiez trois ? Les droits d'usage de la vidéo
-sont-ils précisés : pouvez-vous la republier sur tous vos réseaux, la
-réutiliser l'année suivante en teaser, ou le devis ne couvre-t-il qu'une
-diffusion ponctuelle ?
+format quand vous en demandiez trois ?
+
+## Un point que presque aucun devis ne précise de lui-même : les droits d'usage
+
+En droit d'auteur français, une vidéo reste par défaut la propriété de
+celui qui l'a tournée et montée, même une fois la facture payée. Le
+paiement d'une prestation ne transfère pas automatiquement les droits : il
+faut une cession écrite, et sans elle, le vidéaste reste juridiquement
+libre de retirer son accord sur la façon dont vous utilisez son travail.
+
+Dans la pratique, la plupart des vidéastes qui travaillent avec des
+associations étudiantes ne cherchent pas à reprendre leurs images. Mais un
+cahier des charges sérieux demande que ce point soit écrit noir sur blanc
+dans le devis, pas supposé à l'oral : pouvez-vous republier la vidéo sur
+tous les réseaux de l'association, la réutiliser l'année suivante en
+teaser, la garder dans vos archives au-delà de la saison en cours ? Une
+cession de droits se précise par une durée, un support et un usage. Un
+devis qui ne mentionne aucun de ces trois points ne veut pas dire qu'il y a
+un problème, mais vous ne le saurez qu'en posant la question avant de
+signer, pas après avoir eu besoin de réutiliser la vidéo pour une nouvelle
+campagne de sponsoring ou de recrutement.
 
 Un devis sensiblement moins cher que les autres n'est pas nécessairement un
 bon plan. C'est souvent celui qui a compris le moins de choses, ou qui a

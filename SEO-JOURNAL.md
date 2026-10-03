@@ -886,6 +886,92 @@ ayant été une amélioration plutôt qu'une nouvelle publication). Toujours
 aucune donnée de performance disponible pour évaluer un seul de ces
 articles. La décision de ralentir reste à la main de Mathieu.
 
+### 03/10/2026, territoire technique et juridique épuisé sur trois angles neufs, amélioration d'article à la place
+
+Territoire exploré : technique et juridique, trois sous-thèmes jamais testés
+jusqu'ici dans ce territoire (musique seule traitée le 27/09) : livrables et
+formats de livraison, cession de droits sur la vidéo, et réutilisation ou
+timing de publication d'un aftermovie. 11 requêtes candidates testées en
+recherche web réelle, réparties sur ces trois angles : « différence entre un
+teaser et un aftermovie », « combien de livrables prévoir pour une vidéo
+d'événement étudiant », « quels formats vidéo demander pour son événement
+réseaux sociaux Instagram TikTok », « pack livrable vidéo événementiel teaser
+aftermovie reels », « teaser aftermovie différence association étudiante
+BDE », « qui détient les droits d'une vidéo après un tournage association
+étudiante », « cession de droits vidéo événementiel association étudiante
+vidéaste », « droits d'utilisation vidéo après prestation vidéaste combien
+de temps », « peut-on reposter la vidéo d'un vidéaste sur les réseaux sociaux
+de l'association », « comment réutiliser son aftermovie l'année suivante
+association étudiante », « quand publier son aftermovie après l'événement
+meilleur moment », « à quoi sert un aftermovie après l'événement association
+étudiante communication », « combien de temps un aftermovie reste efficace
+avant de devenir périmé ». Deux requêtes supplémentaires testées hors ce
+sous-territoire, sur le choix vidéaste/photographe : « vidéaste ou
+photographe pour son événement étudiant lequel choisir budget », « faut-il un
+vidéaste et un photographe en même temps pour un événement association ».
+
+**SERP observée, requête par requête :**
+
+- Angle livrables et formats (teaser/aftermovie/reels, formats réseaux
+  sociaux) : **mur commercial systématique**. Chaque requête remonte des
+  agences avec une page dédiée exactement sur ce sujet (jumpstartstudio,
+  asfilmsprod, lesfilmsdegustave, pantome, arimedias, aktua-prod, eoprod,
+  biux, grainedeproduction, ttwprod, lmzprod, krangfilms). Aucune ne cible
+  spécifiquement une association étudiante, mais le mur est générique sur
+  « combien de formats/livrables », pas une faille à exploiter. Abandonné.
+- Angle cession de droits sur la vidéo : **mur d'autorité**, tenu par des
+  cabinets d'avocats et sites juridiques (village-justice.com, assokit.fr,
+  kohenavocats.com déjà repéré le 27/09, archimag, irtshdf.fr). Même profil
+  que le mur droit à l'image déjà documenté le 27/09. Abandonné comme
+  requête principale, mais fait juridique retenu pour combler un article
+  existant (voir plus bas).
+- Angle réutilisation et timing de publication d'un aftermovie : **mur
+  commercial confirmé**, mêmes agences génériques déjà croisées sur
+  plusieurs jours (studiok7.fr à Lyon déjà vu le 27/09, peuplades.tv,
+  teazit, i3a, cliple, stardust-group, grainedeproduction, pichenette.studio,
+  libelluleproductions). C'est le même territoire générique « aftermovie,
+  intérêt et durée de vie » que « combien de temps doit durer un
+  aftermovie » du 27/09, entièrement occupé par des agences. Abandonné.
+- Angle vidéaste vs photographe : mur commercial de comparateurs et de
+  prestataires combinés photo/vidéo (linkaband, seminaire.com,
+  lesfilmsdegustave, flashbiz, starofservice, kevincogan, corentinbonnin).
+  Abandonné.
+
+**Aucune requête retenue sur ce territoire aujourd'hui.** Fait exploitable
+trouvé en cours de recherche, confirmé par trois sources juridiques
+concordantes : en droit d'auteur français, les droits sur une vidéo restent
+par défaut au vidéaste, même une fois la prestation payée ; sans cession
+écrite précisant durée, support et usage, le client n'a aucune garantie de
+pouvoir republier ou réutiliser la vidéo librement. L'article du 01/10
+mentionnait déjà la question des droits d'usage en une ligne, sans jamais
+expliquer cette règle par défaut ni ce qu'il faut faire écrire dans le
+devis.
+
+**Niveau 2 appliqué** sur l'article du 01/10
+(`/articles/cahier-des-charges-video-association-etudiante`), deux leviers :
+1. Comblé un manque de couverture réel : la section « Comment lire les devis
+   que vous recevez » posait la question des droits d'usage sans jamais
+   expliquer la règle par défaut ni ce qu'une cession doit préciser. Ajout
+   d'une nouvelle section dédiée avec ce point de droit, qu'aucun article du
+   site n'abordait jusqu'ici.
+2. Corrigé un maillage à sens unique : l'article business game du 02/10
+   pointait vers le cahier des charges sans lien retour. Ajout d'un lien
+   réciproque dans la section sur la présence attendue sur place.
+
+`npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push.
+
+**À vérifier à la revue d'octobre** : ce territoire (technique et
+juridique) a maintenant été testé sur quatre sous-thèmes au total (musique
+le 27/09, droit à l'image le 27/09, livrables/cession/réutilisation
+aujourd'hui) sans qu'aucun gain supplémentaire au-delà de l'article musique
+n'ait été trouvé. Le considérer comme largement épuisé pour une prochaine
+revue, au même titre que le territoire entreprises à Lyon marqué le 28/09.
+
+**Rappel cadence** : 9 articles publiés et 2 améliorations en 11 jours
+(23/09 au 03/10), toujours sans aucune donnée de performance disponible.
+Rappel transmis une nouvelle fois dans le message final, décision laissée à
+Mathieu.
+
 ---
 
 ## Partie B, journal daté
@@ -930,6 +1016,8 @@ articles. La décision de ralentir reste à la main de Mathieu.
 | 01/10/2026 | Huitième article publié | `/articles/cahier-des-charges-video-association-etudiante`. Lien réciproque ajouté avec l'article brief vidéaste du 26/09, liens vers sponsoring, WEI et tournoi, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 | 02/10/2026 | SERP examinée sur le territoire business game et hackathon étudiant (9 requêtes testées) | Aucun mur commercial sur l'intersection précise, seulement le mur générique de prix vidéaste déjà documenté sur tous les territoires dès qu'une requête contient « prix »/« devis ». « Aftermovie business game étudiant » : SERP faible confirmée, retenue. |
 | 02/10/2026 | Neuvième article publié | `/articles/aftermovie-business-game-hackathon-etudiant`. Liens réciproques ajoutés avec les articles tournoi sportif et sponsoring, liens vers brief vidéaste et cahier des charges, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 03/10/2026 | SERP examinée sur le territoire technique et juridique, angles livrables/formats, cession de droits et réutilisation d'aftermovie (11 requêtes + 2 de vérification vidéaste/photographe) | Mur commercial sur livrables/formats et sur réutilisation/timing, mur d'autorité (avocats) sur la cession de droits. Aucune requête retenue. |
+| 03/10/2026 | Article cahier des charges amélioré : section cession de droits ajoutée, lien réciproque ajouté vers l'article business game | `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 
