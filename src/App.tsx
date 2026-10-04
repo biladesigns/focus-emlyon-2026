@@ -18,6 +18,9 @@ const pages: Pages = {
   MentionsLegales: lazy(() => import("./pages/MentionsLegales")),
   PolitiqueConfidentialite: lazy(() => import("./pages/PolitiqueConfidentialite")),
   NotFound: lazy(() => import("./pages/NotFound")),
+  VideasteEvenementielLyon: lazy(() => import("./pages/VideasteEvenementielLyon")),
+  AftermovieLyon: lazy(() => import("./pages/AftermovieLyon")),
+  VideasteSoireePriveeLyon: lazy(() => import("./pages/VideasteSoireePriveeLyon")),
 };
 
 const queryClient = new QueryClient();

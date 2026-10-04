@@ -16,6 +16,9 @@ import Article from "./pages/Article";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import NotFound from "./pages/NotFound";
+import VideasteEvenementielLyon from "./pages/VideasteEvenementielLyon";
+import AftermovieLyon from "./pages/AftermovieLyon";
+import VideasteSoireePriveeLyon from "./pages/VideasteSoireePriveeLyon";
 export { articlesPublies } from "@/lib/articles";
 
 const pages: Pages = {
@@ -28,6 +31,9 @@ const pages: Pages = {
   MentionsLegales,
   PolitiqueConfidentialite,
   NotFound,
+  VideasteEvenementielLyon,
+  AftermovieLyon,
+  VideasteSoireePriveeLyon,
 };
 
 export const render = (url: string) => {

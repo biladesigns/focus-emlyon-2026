@@ -31,6 +31,15 @@ const Footer = () => {
                 <Link to="/prestations" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Prestations
                 </Link>
+                <Link to="/videaste-evenementiel-lyon" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Vidéaste événementiel Lyon
+                </Link>
+                <Link to="/aftermovie-lyon" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Aftermovie Lyon
+                </Link>
+                <Link to="/videaste-soiree-privee-lyon" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Soirée privée et anniversaire
+                </Link>
                 <Link to="/portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Portfolio
                 </Link>

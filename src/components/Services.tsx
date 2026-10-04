@@ -1,7 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Film, Clapperboard, Briefcase } from "lucide-react";
-const services = [{
+
+interface Service {
+  icon: typeof Film;
+  title: string;
+  description: string;
+  details: string;
+  link?: { to: string; label: string };
+}
+const services: Service[] = [{
   icon: Film,
   title: "Montage",
   description: "Confiez-nous vos rushes et nous transformerons vos images en une vidéo percutante et professionnelle. Colorimétrie, sound design, effets visuels : nous maîtrisons chaque étape de la post-production.",
@@ -10,12 +19,20 @@ const services = [{
   icon: Clapperboard,
   title: "Captation",
   description: "Notre équipe se déplace pour capturer vos moments clés avec un équipement professionnel. Conférences, événements d'entreprise, spectacles : nous réalisons des vidéos sur-mesure, courtes ou longues, selon vos besoins.",
-  details: "Multi-caméras et qualité cinématographique."
+  details: "Multi-caméras et qualité cinématographique.",
+  link: {
+    to: "/videaste-evenementiel-lyon",
+    label: "Vidéaste événementiel à Lyon"
+  }
 }, {
   icon: Briefcase,
   title: "Aftermovie",
   description: "Mariages, galas, soirées de prestige : nous immortalisons vos événements les plus précieux. Un film soigné qui capture l'émotion et l'atmosphère pour revivre ces instants à l'infini.",
-  details: "Des souvenirs qui traversent le temps."
+  details: "Des souvenirs qui traversent le temps.",
+  link: {
+    to: "/aftermovie-lyon",
+    label: "Nos aftermovies à Lyon"
+  }
 }];
 const Services = () => {
   return <section className="py-24 bg-transparent relative overflow-hidden">
@@ -35,6 +52,11 @@ const Services = () => {
               <h3 className="text-xl font-bold mb-2 text-foreground">{service.title}</h3>
               <p className="text-muted-foreground mb-2">{service.description}</p>
               <p className="text-sm text-primary/70">{service.details}</p>
+              {service.link && (
+                <Link to={service.link.to} className="inline-block mt-3 text-sm text-primary underline underline-offset-4 hover:text-primary/80">
+                  {service.link.label}
+                </Link>
+              )}
             </Card>)}
         </div>
 

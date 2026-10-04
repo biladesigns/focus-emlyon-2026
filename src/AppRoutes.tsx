@@ -12,6 +12,9 @@ export interface Pages {
   MentionsLegales: ComponentType;
   PolitiqueConfidentialite: ComponentType;
   NotFound: ComponentType;
+  VideasteEvenementielLyon: ComponentType;
+  AftermovieLyon: ComponentType;
+  VideasteSoireePriveeLyon: ComponentType;
 }
 
 // Partage entre le navigateur (pages chargees a la demande) et le
@@ -27,6 +30,9 @@ const AppRoutes = ({ pages: p }: { pages: Pages }) => (
         <Route path="/contact" element={<p.Contact />} />
         <Route path="/articles" element={<p.Articles />} />
         <Route path="/articles/:slug" element={<p.Article />} />
+        <Route path="/videaste-evenementiel-lyon" element={<p.VideasteEvenementielLyon />} />
+        <Route path="/aftermovie-lyon" element={<p.AftermovieLyon />} />
+        <Route path="/videaste-soiree-privee-lyon" element={<p.VideasteSoireePriveeLyon />} />
         <Route path="/mentions-legales" element={<p.MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<p.PolitiqueConfidentialite />} />
         <Route path="*" element={<p.NotFound />} />

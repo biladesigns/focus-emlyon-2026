@@ -118,12 +118,12 @@ déroulé de la prestation, formules, FAQ, appel à /contact, et données
 structurées Service. /prestations devient la page carrefour qui relie les
 piliers.
 
-- [ ] Titre et description de l'accueil : viser « vidéaste Lyon » et retirer
+- [x] (04/10) Titre et description de l'accueil : viser « vidéaste Lyon » et retirer
   « tarifs étudiants ». Non bloqué.
-- [ ] P1 `/videaste-evenementiel-lyon` (soirées, galas, soirées d'entreprise).
+- [x] (04/10) P1 `/videaste-evenementiel-lyon` (soirées, galas, soirées d'entreprise).
   Non bloqué : le portfolio existe.
-- [ ] P2 `/aftermovie-lyon`. Non bloqué : c'est le cœur du portfolio.
-- [ ] P3 `/videaste-soiree-privee-lyon` (anniversaire, soirée privée). SERP
+- [x] (04/10) P2 `/aftermovie-lyon`. Non bloqué : c'est le cœur du portfolio.
+- [x] (04/10) P3 `/videaste-soiree-privee-lyon` (anniversaire, soirée privée). SERP
   faible : linkaband et une page modèle nationale (eqwazproduction).
 - [ ] P4 `/tarifs`. Bloqué par D2.
 - [ ] P5 `/videaste-mariage-lyon`. Bloqué par D1 et D3.

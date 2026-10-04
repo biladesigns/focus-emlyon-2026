@@ -1,8 +1,28 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import Services from "@/components/Services";
 import Benefits from "@/components/Benefits";
 import ServiceProcess from "@/components/ServiceProcess";
+
+const pagesService = [
+  {
+    to: "/videaste-evenementiel-lyon",
+    titre: "Vidéaste événementiel",
+    texte: "Soirées d'entreprise, galas, salons : une équipe et plusieurs angles sur vos moments clés.",
+  },
+  {
+    to: "/aftermovie-lyon",
+    titre: "Aftermovie",
+    texte: "Le film court de votre événement, d'une soirée à un week-end de plusieurs jours.",
+  },
+  {
+    to: "/videaste-soiree-privee-lyon",
+    titre: "Soirée privée et anniversaire",
+    texte: "Un film souvenir de votre soirée, tourné avec discrétion, et une version à partager.",
+  },
+];
 
 const Prestations = () => {
   return (
@@ -10,7 +30,7 @@ const Prestations = () => {
       <SEO
         title="Prestations Vidéo Lyon | Aftermovie, Clip, Captation"
         description="Découvrez nos prestations audiovisuelles à Lyon : aftermovies, courts-métrages, captations événementielles, clips musicaux, vidéos corporate. Devis gratuit."
-        keywords="prestation vidéo Lyon, aftermovie prix, captation événement Lyon, clip vidéo étudiant, vidéo corporate Lyon, devis vidéo Lyon"
+        keywords="vidéaste Lyon, vidéaste événementiel Lyon, aftermovie Lyon, captation événement Lyon, vidéaste soirée privée Lyon, devis vidéo Lyon"
         canonical="https://focus-emlyon.com/prestations"
       />
       {/* Hero Section */}
@@ -32,6 +52,28 @@ const Prestations = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Des solutions audiovisuelles complètes pour donner vie à vos projets avec créativité et professionnalisme.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-8">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {pagesService.map((page) => (
+              <Link
+                key={page.to}
+                to={page.to}
+                className="group block p-6 rounded-xl bg-card/50 backdrop-blur border border-border/50 hover:border-primary/50 transition-colors"
+              >
+                <h2 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                  {page.titre} à Lyon
+                </h2>
+                <p className="text-muted-foreground mb-4">{page.texte}</p>
+                <span className="inline-flex items-center gap-2 text-sm text-primary font-bold">
+                  Découvrir <ArrowRight className="w-4 h-4" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

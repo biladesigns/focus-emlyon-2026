@@ -11,8 +11,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title="FOCUS | Production Audiovisuelle Lyon - Vidéo, Aftermovie, Court-métrage"
-        description="FOCUS, association audiovisuelle emlyon business school. Production vidéo professionnelle à Lyon : aftermovies, courts-métrages, captations événementielles, clips. Tarifs étudiants, qualité pro."
+        title="FOCUS | Vidéaste à Lyon : événements, soirées, aftermovies"
+        description="Une équipe de vidéastes basée à Lyon pour filmer vos soirées, galas, événements d'entreprise et soirées privées. Aftermovies, captation multi-caméras, montage. Devis détaillé."
         keywords="production vidéo Lyon, aftermovie Lyon, vidéaste Lyon, court-métrage, captation événement, clip vidéo, FOCUS emlyon, association audiovisuelle, vidéo entreprise Lyon"
         canonical="https://focus-emlyon.com"
       />
