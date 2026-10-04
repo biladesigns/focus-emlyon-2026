@@ -972,6 +972,75 @@ revue, au même titre que le territoire entreprises à Lyon marqué le 28/09.
 Rappel transmis une nouvelle fois dans le message final, décision laissée à
 Mathieu.
 
+### 04/10/2026, territoires soirée d'intégration puis associations/clubs testés, amélioration d'article à la place
+
+Territoire exploré en premier : événements étudiants, sous-thème « soirée
+d'intégration », seul sous-thème de ce grand territoire jamais testé
+explicitement (distinct du WEI, du gala, du tournoi et du business
+game/hackathon déjà couverts). 5 requêtes testées en recherche web réelle :
+« aftermovie soirée d'intégration étudiante vidéaste », « vidéaste soirée
+d'intégration école de commerce budget », « captation vidéo soirée de
+rentrée étudiante BDE prix », « comment filmer une soirée d'intégration
+étudiante conseils », « "soirée d'intégration" aftermovie différence WEI ».
+
+**Résultat déterminant trouvé dans la dernière requête : une « soirée
+d'intégration » est, dans l'immense majorité des écoles, la soirée du
+samedi soir À L'INTÉRIEUR d'un WEI, pas un format d'événement distinct.**
+Plusieurs sources concordantes (meltycampus.fr, zetrip.fr, funbreak.fr) le
+confirment : le WEI est le week-end complet, la soirée d'intégration en
+est la composante festive du samedi soir. Écrire un article dédié aurait
+cannibalisé l'article WEI du 24/09, qui couvre déjà explicitement « le
+moment de la soirée à thème » dans son brief. Abandonné pour ce motif, pas
+pour mur commercial (aucun mur rencontré, mais pas non plus de SERP
+exploitable : annuaires, guides d'organisation génériques, aucun
+prestataire vidéo dédié).
+
+Territoire exploré en second : associations et clubs, sous-thèmes encore
+non creusés en profondeur (bilan de saison sportive, mission humanitaire
+avec retour vidéo, congrès national de junior-entreprise, club culturel,
+vidéo promotionnelle générique, weekend de formation inter-associations).
+6 requêtes testées : « vidéo bilan de saison club sportif étudiant
+aftermovie », « vidéo mission humanitaire étudiante association film retour
+voyage », « vidéo congrès national junior entreprise film », « aftermovie
+club œnologie ou club culturel étudiant vidéaste », « vidéo promotionnelle
+association étudiante site internet pourquoi », « aftermovie weekend
+sportif inter associations étudiantes budget vidéaste ».
+
+**Aucune requête retenue.** Le bilan de saison et le weekend de formation
+inter-associations retombent dans le mur générique de prix vidéaste déjà
+documenté sur tous les territoires précédents. Le congrès national de
+junior-entreprise (CNJE) a déjà sa propre production interne (aftermovies
+YouTube existants pour chaque édition), signal d'absence de besoin externe,
+pas d'opportunité. La mission humanitaire et le club culturel ne remontent
+que du contenu fragmenté sans gap net ni mur, signal trop faible pour
+justifier un article seul. La vidéo promotionnelle générique associative
+recoupe trop l'angle déjà traité dans l'article recrutement du 25/09,
+risque de cannibalisation.
+
+**Niveau 2 appliqué** sur l'article du 25/09
+(`/articles/video-recrutement-association-etudiante`), le plus ancien
+jamais retouché depuis sa publication et le moins connecté au maillage
+actuel (seulement 3 liens entrants, aucun vers les articles sponsoring ou
+cahier des charges publiés depuis) :
+1. Comblé un manque de couverture réel : l'article ne donnait aucune
+   indication de budget, alors que c'est la question commerciale implicite
+   de tout lecteur qui compare des devis. Ajout d'une section expliquant
+   pourquoi les tarifs de vidéo marque employeur d'entreprise trouvés en
+   ligne (le mur déjà documenté le 25/09 sur « budget/teaser recrutement
+   BDE prix ») ne sont pas une référence pertinente pour ce format léger
+   basé sur des images existantes, sans jamais avancer un chiffre FOCUS.
+2. Ajouté des liens internes réciproques avec les deux articles qui ne le
+   référençaient pas encore : la vidéo de sponsoring du 30/09 et le cahier
+   des charges du 01/10. Les deux articles ont aussi reçu un lien retour
+   vers l'article recrutement, qui ne les référençait pas.
+
+`npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push.
+
+**Rappel cadence** : 9 articles publiés et 3 améliorations en 12 jours
+(23/09 au 04/10), toujours sans aucune donnée de performance disponible.
+Rappel transmis une nouvelle fois dans le message final, décision laissée
+à Mathieu.
+
 ---
 
 ## Partie B, journal daté
@@ -1018,6 +1087,8 @@ Mathieu.
 | 02/10/2026 | Neuvième article publié | `/articles/aftermovie-business-game-hackathon-etudiant`. Liens réciproques ajoutés avec les articles tournoi sportif et sponsoring, liens vers brief vidéaste et cahier des charges, `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 | 03/10/2026 | SERP examinée sur le territoire technique et juridique, angles livrables/formats, cession de droits et réutilisation d'aftermovie (11 requêtes + 2 de vérification vidéaste/photographe) | Mur commercial sur livrables/formats et sur réutilisation/timing, mur d'autorité (avocats) sur la cession de droits. Aucune requête retenue. |
 | 03/10/2026 | Article cahier des charges amélioré : section cession de droits ajoutée, lien réciproque ajouté vers l'article business game | `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 04/10/2026 | SERP examinée sur soirée d'intégration (5 requêtes) puis associations/clubs (6 requêtes) | Soirée d'intégration : composante du WEI, pas un format distinct, cannibalisation évitée. Associations/clubs : mur générique ou signal trop faible partout, aucune requête retenue. |
+| 04/10/2026 | Article recrutement amélioré : section budget ajoutée (sans chiffre FOCUS), liens réciproques ajoutés avec sponsoring et cahier des charges | `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 
 ---
 

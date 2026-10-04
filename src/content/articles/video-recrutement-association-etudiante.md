@@ -39,6 +39,27 @@ emploi, elle vend une expérience à côté des cours, du bénévole, du temps
 libre engagé. Copier les codes corporate produit une vidéo qui sonne
 faux, précisément parce que la promesse n'est pas la même.
 
+## Un budget qui n'a rien à voir avec une vidéo marque employeur
+
+Chercher le prix d'une « vidéo de recrutement » en ligne renvoie presque
+exclusivement des devis d'agences pour des films marque employeur
+d'entreprise : plusieurs journées de tournage mises en scène, un casting
+de salariés, une direction artistique complète. Ces tarifs n'ont aucun
+rapport avec ce que demande un teaser associatif, inutile de les prendre
+comme référence pour évaluer une proposition reçue.
+
+La raison tient à la matière de départ. Un teaser de recrutement s'appuie
+sur des images de la vie courante de l'association, pas sur un tournage
+dédié monté de zéro : moins de jours de présence, pas de mise en scène à
+préparer, un montage court. Le travail du vidéaste porte surtout sur le
+tri et le montage d'images existantes, pas sur l'organisation d'un
+plateau. Dites-le dès le premier échange, pour recevoir un devis qui
+reflète ce format léger plutôt qu'une grille tarifaire pensée pour une
+entreprise. Si vous consultez plusieurs prestataires pour comparer leurs
+réponses, notre article sur le
+[cahier des charges vidéo pour une association étudiante](/articles/cahier-des-charges-video-association-etudiante)
+aide à poser les mêmes questions à chacun.
+
 ## Le bon moment pour la tourner
 
 La grande erreur : commencer à filmer pendant la campagne de recrutement,
@@ -149,3 +170,8 @@ et [l'aftermovie de WEI](/articles/aftermovie-wei-budget-videaste).
 Et quel que soit l'événement, voir notre article sur
 [comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant)
 avant votre premier échange avec un prestataire.
+
+Une fois le bureau recruté, beaucoup d'associations doivent aussi
+démarcher des sponsors pour financer leurs événements : voir notre
+article sur
+[la vidéo dans un dossier de sponsoring étudiant](/articles/video-dossier-sponsoring-association-etudiante).

@@ -147,3 +147,7 @@ tournage.
 Et pour transmettre ce double usage (aftermovie et vidéo de sponsoring)
 dès le premier échange, voir notre article sur
 [comment briefer un vidéaste pour son événement étudiant](/articles/briefer-videaste-evenement-etudiant).
+
+Avant de démarcher des sponsors, encore faut-il avoir un bureau au complet
+pour porter le projet : voir notre article sur
+[la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante).

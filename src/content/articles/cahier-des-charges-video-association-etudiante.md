@@ -63,7 +63,10 @@ situer le projet en trois lignes.
 **L'objectif de la vidéo.** Un aftermovie pour recruter l'an prochain, un
 souvenir pour les participants, une pièce pour un dossier de sponsoring :
 l'objectif change la durée attendue, le ton, et donc le prix. Si la vidéo
-sert à démarcher des partenaires, dites-le, voir notre article sur
+sert à faire campagne pour le recrutement du bureau, dites-le aussi, voir
+notre article sur
+[la vidéo de recrutement pour association étudiante](/articles/video-recrutement-association-etudiante).
+Si elle sert à démarcher des partenaires, voir notre article sur
 [la vidéo dans un dossier de sponsoring étudiant](/articles/video-dossier-sponsoring-association-etudiante).
 
 **La présence attendue sur place.** Une captation de deux heures ou une
