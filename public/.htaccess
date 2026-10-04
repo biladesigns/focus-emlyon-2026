@@ -12,14 +12,30 @@
   RewriteEngine On
   RewriteBase /
 
-  # Les fichiers et dossiers qui existent vraiment sont servis tels quels.
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # Le dossier interne des pages pre-rendues n'est jamais servi en direct,
+  # sinon chaque page existerait sous deux URLs.
+  RewriteCond %{THE_REQUEST} \s/+_p/
+  RewriteRule ^ - [R=404,L]
+
+  # Une seule URL par page : /contact/ redirige vers /contact.
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # Anciens articles orientes etudiants, retires le 04/10/2026 :
+  # 410 indique a Google qu'ils sont supprimes volontairement.
+  RewriteRule ^articles/(aftermovie-gala-etudiant-budget-delais|aftermovie-wei-budget-videaste|video-recrutement-association-etudiante|briefer-videaste-evenement-etudiant|musique-aftermovie-droit-auteur|aftermovie-tournoi-sportif-etudiant|video-dossier-sponsoring-association-etudiante|cahier-des-charges-video-association-etudiante|aftermovie-business-game-hackathon-etudiant)$ - [G,L]
+
+  # Les fichiers qui existent vraiment sont servis tels quels.
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Tout le reste part sur index.html, en 200 et non en 404.
-  RewriteRule . /index.html [L]
+  # Chaque page est pre-rendue au build : /contact -> /_p/contact.html.
+  RewriteCond %{DOCUMENT_ROOT}/_p/$1.html -f
+  RewriteRule ^(.+)$ /_p/$1.html [L]
 </IfModule>
+
+# Toute URL inconnue renvoie un vrai 404, plus une copie de l'accueil en 200.
+ErrorDocument 404 /_p/404.html
 
 # ---------------------------------------------------------------
 # 2. Types MIME corrects.

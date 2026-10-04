@@ -19,6 +19,7 @@ const ArticlesPage = () => {
         description="Nos conseils sur la production vidéo à Lyon : aftermovies, captations d'événements, courts-métrages. Retours d'expérience de l'équipe FOCUS."
         keywords="conseils vidéo Lyon, blog production audiovisuelle, aftermovie conseils, FOCUS emlyon articles"
         canonical="https://focus-emlyon.com/articles"
+        noindex={articlesPublies.length === 0}
       />
 
       <section className="pt-32 pb-16 relative overflow-hidden">

@@ -1,8 +1,14 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 
 const PolitiqueConfidentialite = () => {
   return (
     <Layout>
+      <SEO
+        title="Politique de confidentialité"
+        description="Politique de confidentialité de FOCUS : données collectées via le formulaire de contact, durée de conservation, vos droits."
+        canonical="https://focus-emlyon.com/politique-confidentialite"
+      />
       <section className="pt-32 pb-24 min-h-screen">
         <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
           <h1 className="font-display text-4xl md:text-5xl tracking-wider mb-8">

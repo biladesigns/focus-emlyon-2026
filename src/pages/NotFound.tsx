@@ -1,5 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import SEO from "@/components/SEO";
 
 const NotFound = () => {
   const location = useLocation();
@@ -10,6 +11,7 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-6">
+      <SEO title="Page introuvable" description="Cette page n'existe pas ou a été supprimée." noindex />
       <div className="text-center">
         <h1 className="font-display text-7xl md:text-8xl tracking-wider mb-6">
           <span className="gradient-text">404</span>

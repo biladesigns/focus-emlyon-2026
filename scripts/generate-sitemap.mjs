@@ -62,7 +62,10 @@ const articles = (() => {
     .filter(Boolean);
 })();
 
-const body = [...ROUTES, ...articles].map(({ path, changefreq, priority, sources, lastmod }) => `  <url>
+// Une page /articles vide est en noindex : elle ne doit pas figurer au sitemap.
+const routes = articles.length ? ROUTES : ROUTES.filter((r) => r.path !== '/articles');
+
+const body = [...routes, ...articles].map(({ path, changefreq, priority, sources, lastmod }) => `  <url>
     <loc>${ORIGIN}${path}</loc>
     <lastmod>${lastmod ?? lastModified(sources)}</lastmod>
     <changefreq>${changefreq}</changefreq>
@@ -74,4 +77,4 @@ writeFileSync(
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`
 );
 
-console.log(`sitemap.xml genere : ${ROUTES.length} pages + ${articles.length} article(s)`);
+console.log(`sitemap.xml genere : ${routes.length} pages + ${articles.length} article(s)`);

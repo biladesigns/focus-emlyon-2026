@@ -1,8 +1,14 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 
 const MentionsLegales = () => {
   return (
     <Layout>
+      <SEO
+        title="Mentions légales"
+        description="Mentions légales du site focus-emlyon.com : éditeur, hébergement, propriété intellectuelle."
+        canonical="https://focus-emlyon.com/mentions-legales"
+      />
       <section className="pt-32 pb-24 min-h-screen">
         <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
           <h1 className="font-display text-4xl md:text-5xl tracking-wider mb-8">

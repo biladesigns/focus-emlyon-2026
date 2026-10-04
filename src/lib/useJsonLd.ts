@@ -1,4 +1,7 @@
-import { useEffect } from "react";
+import { createContext, useContext, useEffect } from "react";
+
+/** Fourni uniquement au pre-rendu du build : recoit les blocs JSON-LD de la page. */
+export const JsonLdCollector = createContext<string[] | null>(null);
 
 /**
  * Injecte un bloc JSON-LD dans le <head>, le retire au demontage.
@@ -17,8 +20,15 @@ export const useJsonLd = (schema: unknown | null) => {
   // d'identite a chaque rendu et relancerait l'effet en boucle.
   const serialise = schema ? JSON.stringify(schema) : null;
 
+  const collecteur = useContext(JsonLdCollector);
+  if (collecteur && serialise) collecteur.push(serialise);
+
   useEffect(() => {
     if (!serialise) return;
+
+    // Les blocs ecrits au pre-rendu sont remplaces par ceux du navigateur,
+    // sinon chaque donnee structuree apparaitrait deux fois.
+    document.querySelectorAll("script[data-jsonld-ssr]").forEach((s) => s.remove());
 
     const script = document.createElement("script");
     script.type = "application/ld+json";

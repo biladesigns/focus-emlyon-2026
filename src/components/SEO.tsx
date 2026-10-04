@@ -10,6 +10,7 @@ interface SEOProps {
   ogImage?: string;
   /** "article" pour un billet, "website" partout ailleurs. */
   type?: "website" | "article";
+  noindex?: boolean;
 }
 
 /**
@@ -25,6 +26,7 @@ const SEO = ({
   canonical = ORIGIN,
   ogImage = `${ORIGIN}/og-image.jpg`,
   type = "website",
+  noindex = false,
 }: SEOProps) => {
   const fullTitle = title.includes("FOCUS") ? title : `${title} | FOCUS emlyon`;
 
@@ -33,6 +35,7 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
       <link rel="canonical" href={canonical} />
 
       <meta property="og:type" content={type} />
