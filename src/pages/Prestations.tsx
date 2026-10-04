@@ -22,6 +22,11 @@ const pagesService = [
     titre: "Soirée privée et anniversaire",
     texte: "Un film souvenir de votre soirée, tourné avec discrétion, et une version à partager.",
   },
+  {
+    to: "/aftermovie-soiree-club-lyon",
+    titre: "Soirées en club, bar ou péniche",
+    texte: "Aftermovies, teasers et vidéos courtes pour remplir vos prochaines soirées.",
+  },
 ];
 
 const Prestations = () => {
@@ -58,7 +63,7 @@ const Prestations = () => {
 
       <section className="pb-8">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {pagesService.map((page) => (
               <Link
                 key={page.to}

@@ -19,6 +19,7 @@ import NotFound from "./pages/NotFound";
 import VideasteEvenementielLyon from "./pages/VideasteEvenementielLyon";
 import AftermovieLyon from "./pages/AftermovieLyon";
 import VideasteSoireePriveeLyon from "./pages/VideasteSoireePriveeLyon";
+import AftermovieSoireeClubLyon from "./pages/AftermovieSoireeClubLyon";
 export { articlesPublies } from "@/lib/articles";
 
 const pages: Pages = {
@@ -34,6 +35,7 @@ const pages: Pages = {
   VideasteEvenementielLyon,
   AftermovieLyon,
   VideasteSoireePriveeLyon,
+  AftermovieSoireeClubLyon,
 };
 
 export const render = (url: string) => {

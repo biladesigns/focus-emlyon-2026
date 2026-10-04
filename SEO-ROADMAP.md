@@ -109,6 +109,10 @@ son canonical et son texte.
   Google, l'accord de diffusion des mariés et celui du lieu.
 - [ ] **D4, délai de livraison tenable** (teaser sous 72 h ?). À n'afficher
   que s'il est tenu à chaque fois.
+- [ ] **D6, une fiche par film du portfolio** : lieu, date, client ou
+  organisateur, nombre de cadreurs, durée du tournage, ce qui était difficile,
+  et l'accord du client pour être cité. Cinq lignes par film suffisent.
+- [ ] **D7, des galas filmés** à ajouter au portfolio, s'il y en a.
 - [ ] **D5, drone.** Page ou mention uniquement avec un télépilote déclaré.
 
 ## Phase 2, pages piliers (semaines 2 à 6)
@@ -131,12 +135,15 @@ piliers.
 ## Phase 3, longue traîne peu disputée (semaines 6 à 12)
 
 - [ ] Une page par film du portfolio, `/realisations/<slug>` : contexte,
-  lieu, déroulé, film intégré, données VideoObject. Contenu unique et vrai,
-  et chaque partenaire filmé peut y faire un lien. Non bloqué.
-- [ ] `/aftermovie-soiree-club-lyon` (boîtes, bars, péniches comme Le Sonic
+  lieu, déroulé, film intégré, données VideoObject. **Bloqué par D6** : le
+  portfolio ne donne qu'une ligne par film, écrire ces pages maintenant
+  obligerait à inventer le lieu, le client ou le dispositif.
+- [x] (04/10) `/aftermovie-soiree-club-lyon` (boîtes, bars, péniches comme Le Sonic
   ou La Marquise) : aucune page dédiée chez les concurrents, et un client
   qui revient chaque mois.
-- [ ] `/videaste-gala-lyon`.
+- [ ] `/videaste-gala-lyon`. **Bloqué par D7** : tant qu'aucun gala ne figure
+  au portfolio, cette page doublonnerait `/videaste-evenementiel-lyon` (qui
+  couvre déjà les galas) et les deux se feraient concurrence.
 - [ ] Mariage, après D1 et D3 : mairie seule (`/video-mariage-civil-mairie-lyon`),
   teaser rapide (si D4), ouest lyonnais (Écully, Tassin, Dardilly, Monts
   d'Or : proximité réelle, SERP faible).

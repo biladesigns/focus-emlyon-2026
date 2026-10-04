@@ -25,6 +25,7 @@ const ROUTES = [
   "/videaste-evenementiel-lyon",
   "/aftermovie-lyon",
   "/videaste-soiree-privee-lyon",
+  "/aftermovie-soiree-club-lyon",
   "/articles",
   "/mentions-legales",
   "/politique-confidentialite",

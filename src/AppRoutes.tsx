@@ -15,6 +15,7 @@ export interface Pages {
   VideasteEvenementielLyon: ComponentType;
   AftermovieLyon: ComponentType;
   VideasteSoireePriveeLyon: ComponentType;
+  AftermovieSoireeClubLyon: ComponentType;
 }
 
 // Partage entre le navigateur (pages chargees a la demande) et le
@@ -33,6 +34,7 @@ const AppRoutes = ({ pages: p }: { pages: Pages }) => (
         <Route path="/videaste-evenementiel-lyon" element={<p.VideasteEvenementielLyon />} />
         <Route path="/aftermovie-lyon" element={<p.AftermovieLyon />} />
         <Route path="/videaste-soiree-privee-lyon" element={<p.VideasteSoireePriveeLyon />} />
+        <Route path="/aftermovie-soiree-club-lyon" element={<p.AftermovieSoireeClubLyon />} />
         <Route path="/mentions-legales" element={<p.MentionsLegales />} />
         <Route path="/politique-confidentialite" element={<p.PolitiqueConfidentialite />} />
         <Route path="*" element={<p.NotFound />} />

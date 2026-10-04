@@ -17,6 +17,7 @@ const ROUTES = [
   { path: '/videaste-evenementiel-lyon', changefreq: 'monthly', priority: '0.9', sources: ['src/pages/VideasteEvenementielLyon.tsx', 'src/components/PagePilier.tsx'] },
   { path: '/aftermovie-lyon', changefreq: 'monthly', priority: '0.9', sources: ['src/pages/AftermovieLyon.tsx', 'src/components/PagePilier.tsx'] },
   { path: '/videaste-soiree-privee-lyon', changefreq: 'monthly', priority: '0.9', sources: ['src/pages/VideasteSoireePriveeLyon.tsx', 'src/components/PagePilier.tsx'] },
+  { path: '/aftermovie-soiree-club-lyon', changefreq: 'monthly', priority: '0.8', sources: ['src/pages/AftermovieSoireeClubLyon.tsx', 'src/components/PagePilier.tsx'] },
   { path: '/portfolio',                 changefreq: 'weekly',  priority: '0.8', sources: ['src/pages/Portfolio.tsx'] },
   { path: '/contact',                   changefreq: 'monthly', priority: '0.8', sources: ['src/pages/Contact.tsx', 'src/components/Contact.tsx'] },
   { path: '/articles',                  changefreq: 'weekly',  priority: '0.7', sources: ['src/pages/Articles.tsx', 'src/content/articles'] },

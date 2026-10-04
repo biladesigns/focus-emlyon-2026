@@ -102,7 +102,8 @@ const AftermovieLyon = () => (
       </ul>
       <p>
         Vous organisez une soirée d'entreprise ou un gala plutôt qu'un événement sur plusieurs jours ? Voir aussi
-        notre page <Link to="/videaste-evenementiel-lyon">vidéaste événementiel à Lyon</Link>.
+        notre page <Link to="/videaste-evenementiel-lyon">vidéaste événementiel à Lyon</Link>. Pour un club, un bar ou une
+        péniche, voir nos <Link to="/aftermovie-soiree-club-lyon">aftermovies de soirée</Link>.
       </p>
     </Section>
   </PagePilier>

@@ -21,6 +21,7 @@ const pages: Pages = {
   VideasteEvenementielLyon: lazy(() => import("./pages/VideasteEvenementielLyon")),
   AftermovieLyon: lazy(() => import("./pages/AftermovieLyon")),
   VideasteSoireePriveeLyon: lazy(() => import("./pages/VideasteSoireePriveeLyon")),
+  AftermovieSoireeClubLyon: lazy(() => import("./pages/AftermovieSoireeClubLyon")),
 };
 
 const queryClient = new QueryClient();
