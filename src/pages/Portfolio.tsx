@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Link } from "react-router-dom";
 import { Play, ArrowRight, X } from "lucide-react";
 
 import { featuredProjects, projects } from "@/lib/realisations";
@@ -181,6 +182,26 @@ const Portfolio = () => {
       </section>
 
 
+
+      <section className="pb-24">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-display text-3xl md:text-4xl tracking-wide mb-6">Un événement à filmer à Lyon ?</h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                ["/videaste-evenementiel-lyon", "Vidéaste événementiel"],
+                ["/aftermovie-lyon", "Aftermovie"],
+                ["/videaste-soiree-privee-lyon", "Soirée privée et anniversaire"],
+                ["/aftermovie-soiree-club-lyon", "Club, bar, péniche"],
+              ].map(([to, label]) => (
+                <Link key={to} to={to} className="px-5 py-2 rounded-full border border-border/60 text-sm font-bold hover:border-primary/60 hover:text-primary transition-colors">
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Video Player Dialog */}
       <Dialog open={playerOpen} onOpenChange={setPlayerOpen}>

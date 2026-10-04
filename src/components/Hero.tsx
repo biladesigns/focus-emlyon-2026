@@ -64,8 +64,9 @@ const Hero = () => {
             {/* Title with cinematic typography */}
             <div className="space-y-4">
               
+              <p className="text-sm tracking-[0.3em] text-primary font-bold uppercase">Association audiovisuelle</p>
               <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-display leading-none tracking-wider">
-                <span className="gradient-text">association audiovisuelle</span>
+                <span className="gradient-text">vidéastes à Lyon</span>
               </h1>
               
               
