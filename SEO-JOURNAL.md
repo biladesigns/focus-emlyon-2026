@@ -1041,6 +1041,37 @@ cahier des charges publiés depuis) :
 Rappel transmis une nouvelle fois dans le message final, décision laissée
 à Mathieu.
 
+### 04/10/2026, PIVOT : fin de la cible étudiante, cap sur le marché lyonnais des indépendants
+
+Décision de Mathieu, prise le 04/10/2026 après relecture des neuf articles.
+**Elle annule toute la stratégie éditoriale antérieure.** Les étudiants
+passent par leur association pour faire filmer un événement, ils ne
+cherchent pas un prestataire sur Google. La cible est le marché tenu à Lyon
+par les vidéastes indépendants : mariages, soirées privées, anniversaires,
+galas, soirées d'entreprise, bars et clubs, aftermovies d'événements.
+
+Conséquences, à ne pas défaire sans nouvelle décision écrite :
+- les 9 articles étudiants sont supprimés, leurs URLs répondent 410 ;
+- ne plus jamais proposer de requête contenant étudiant, BDE, WEI, gala
+  étudiant, association étudiante ;
+- le plan d'action est `SEO-ROADMAP.md`, les routines l'exécutent dans
+  l'ordre ;
+- la publication quotidienne d'articles est arrêtée : sur des requêtes
+  locales commerciales, une page de service bat un article.
+
+Même jour, correctif technique sur la cause principale de l'indexation à une
+seule page : le site était une application React dont chaque URL renvoyait
+le même HTML vide, avec le titre et la description de l'accueil. Le build
+pré-rend désormais chaque page (`scripts/prerender.mjs`, dossier `dist/_p/`),
+vérifié dans Chromium : titres, canonicals et textes propres à chaque page,
+aucune erreur d'hydratation, vrai 404 sur les URLs inconnues. **Rien n'est
+effectif tant que Mathieu n'a pas redéployé.**
+
+Point de vigilance remonté à Mathieu, non tranché ici : facturer des
+mariages en concurrence directe avec des professionnels expose l'association
+à la règle fiscale des 4P, et la section « Benefits » de l'accueil affirme
+que des subventions permettent des prix plus bas qu'une agence.
+
 ---
 
 ## Partie B, journal daté
@@ -1089,6 +1120,9 @@ Rappel transmis une nouvelle fois dans le message final, décision laissée
 | 03/10/2026 | Article cahier des charges amélioré : section cession de droits ajoutée, lien réciproque ajouté vers l'article business game | `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
 | 04/10/2026 | SERP examinée sur soirée d'intégration (5 requêtes) puis associations/clubs (6 requêtes) | Soirée d'intégration : composante du WEI, pas un format distinct, cannibalisation évitée. Associations/clubs : mur générique ou signal trop faible partout, aucune requête retenue. |
 | 04/10/2026 | Article recrutement amélioré : section budget ajoutée (sans chiffre FOCUS), liens réciproques ajoutés avec sponsoring et cahier des charges | `npm ci`, `npm run build` et `tsc --noEmit` vérifiés avant push. |
+| 04/10/2026 | Pivot décidé par Mathieu : 9 articles étudiants supprimés (410), cible marché lyonnais des indépendants | Voir partie A et `SEO-ROADMAP.md`. |
+| 04/10/2026 | Pré-rendu de chaque page au build, `.htaccess` adapté (pages `_p/`, 404 réel, 410, slash final) | Testé dans Chromium sur 7 routes : titres et canonicals propres, pas d'erreur d'hydratation. **En attente de redéploiement.** |
+| 04/10/2026 | Étude concurrentielle Lyon (mariage, événementiel, SEO local), environ 95 recherches | Prix concurrents et failles de SERP consignés dans `SEO-ROADMAP.md`. |
 
 ---
 
