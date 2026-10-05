@@ -1072,6 +1072,50 @@ mariages en concurrence directe avec des professionnels expose l'association
 à la règle fiscale des 4P, et la section « Benefits » de l'accueil affirme
 que des subventions permettent des prix plus bas qu'une agence.
 
+### 05/10/2026, revue hebdomadaire : le pivot est prêt dans le code, rien ne prouve qu'il est en ligne
+
+Deuxième semaine d'affilée où l'accès réseau sortant de cette session est
+refusé par la politique de l'environnement cloud, vérifié à nouveau sur
+`focus-emlyon.com` ET sur `example.com` (témoin neutre, même refus) : ce
+n'est pas un blocage spécifique au site, c'est la politique réseau de cet
+environnement. Impossible donc de relever un seul code HTTP en production
+ni de lire `sitemap.xml` en direct. Tant que Mathieu n'ouvre pas l'accès
+réseau (menu de l'environnement cloud, Modifier, accès réseau), cette
+routine ne pourra jamais vérifier elle-même si le pivot du 04/10 est en
+ligne.
+
+Ce qui est vérifié en local, sans dépendance réseau : `npm ci` et
+`npm run build` passent sans erreur, le pré-rendu produit 11 pages + 404,
+`dist/sitemap.xml` liste bien les 10 URLs cibles (accueil, prestations, les
+4 pages piliers, portfolio, contact, mentions légales, politique de
+confidentialité) et plus aucune trace des 9 articles étudiants. `public/.htaccess`
+contient la règle `[G,L]` qui renvoie 410 sur les 9 anciennes URLs
+d'articles, copié dans `dist/.htaccess`. `src/content/articles/` n'existe
+plus, confirmant la suppression. La cadence de publication quotidienne est
+bien arrêtée : le déclencheur `trig_01TC3KHLCeBxyZMSJWruchNT` (article SEO
+quotidien) est désactivé depuis le 04/10, pas seulement décidé dans ce
+journal.
+
+Donc le travail du 04/10 est solide dans le dépôt. Mais la décision du
+04/10 disait elle-même : « Rien n'est effectif tant que Mathieu n'a pas
+redéployé. » Aucun export Search Console ni confirmation de déploiement
+n'est arrivé depuis. Sans accès réseau et sans confirmation de Mathieu, on
+ne sait pas si le site que voit Google aujourd'hui est encore l'ancienne
+version (une seule page indexable, articles étudiants en ligne) ou la
+nouvelle (pages piliers, 410 sur les articles, pré-rendu).
+
+**Ne pas conclure** que le pivot a un effet quelconque sur l'indexation ou
+le trafic avant confirmation explicite du déploiement.
+
+### 05/10/2026, aucun export Search Console reçu depuis le 23/09
+
+Aucun fichier d'export dans le dépôt. Demande renvoyée à Mathieu dans le
+message final, formulée précisément (rapport Performances 3 mois,
+indexation). Décisions des 23/09 au 04/10 toujours non vérifiées sur
+données réelles : impressions et position de chaque article (désormais sans
+objet puisqu'ils sont supprimés), et surtout l'état d'indexation des
+nouvelles pages piliers une fois déployées.
+
 ---
 
 ## Partie B, journal daté
@@ -1126,6 +1170,10 @@ que des subventions permettent des prix plus bas qu'une agence.
 | 04/10/2026 | Page `/aftermovie-soiree-club-lyon` créée (clubs, bars, péniches, organisateurs), reliée depuis /prestations, /aftermovie-lyon et le pied de page | SERP du 04/10 : une seule page dédiée chez un concurrent (lesasfrenchies.com), le reste en annuaires de bars et vidéos TikTok. Aucun établissement cité comme client, aucun au portfolio. Pages réalisation et gala marquées bloquées (D6, D7) pour ne rien inventer. |
 | 04/10/2026 | H1 de l'accueil : « association audiovisuelle » devient « vidéastes à Lyon », l'ancien texte passe en surtitre. Bloc de liens vers les 4 pages de service ajouté en bas du portfolio | Le H1 ne contenait ni le métier ni la ville. Rendu vérifié en capture desktop et mobile. |
 | 04/10/2026 | Étude concurrentielle Lyon (mariage, événementiel, SEO local), environ 95 recherches | Prix concurrents et failles de SERP consignés dans `SEO-ROADMAP.md`. |
+| 05/10/2026 | Point hebdomadaire : `npm ci`, `npm run build` et pré-rendu relancés en local | Build propre, 11 pages + 404 pré-rendues, sitemap et `.htaccess` (règles 410) conformes au pivot du 04/10. Accès réseau sortant refusé pour la deuxième semaine d'affilée (testé sur focus-emlyon.com et example.com), aucune vérification live possible. |
+| 05/10/2026 | Vérifié que le déclencheur cloud d'article quotidien est bien désactivé | `trig_01TC3KHLCeBxyZMSJWruchNT` désactivé depuis le 04/10, cohérent avec l'arrêt de cadence décidé ce jour-là. |
+| 05/10/2026 | Demande d'export Search Console renvoyée à Mathieu | Aucun export reçu depuis le 23/09. En attente. |
+| 05/10/2026 | Vérifié le Website ID Umami dans `src/lib/analytics.ts` | Toujours la valeur par défaut, 14 jours après la décision du 21/09. Signalé à nouveau à Mathieu. |
 
 ---
 
@@ -1133,10 +1181,10 @@ que des subventions permettent des prix plus bas qu'une agence.
 
 - [x] ~~Confirmer que le `.htaccess` est déployé~~ : fait le 21/09, toutes les routes en 200.
 - [x] ~~Soumettre le sitemap~~ : resoumis le 23/09/2026.
-- [ ] **Vérifier que « Dernière lecture » du sitemap a dépassé le 20/01/2026.** Tant que cette date ne bouge pas, Google n'est pas repassé et rien ne s'indexera.
-- [ ] **Refaire les demandes d'indexation manuelles** (quota dépassé le 23/09) : /portfolio, /prestations, /contact, /articles, /articles/aftermovie-gala-etudiant-budget-delais.
+- [x] ~~Décider si on ralentit la cadence de publication automatique~~ : tranché par le pivot du 04/10, cadence arrêtée, déclencheur désactivé.
+- [ ] **Déployer le pivot du 04/10 sur Hostinger** (`npm run build`, upload complet de `dist/` dont `_p/` et `.htaccess`) et confirmer : code source de /prestations propre, /contact/ redirige, une URL inventée fait 404, un ancien article fait 410. Tant que ce n'est pas confirmé, aucune des pages piliers n'est atteignable par Google.
+- [ ] Après déploiement confirmé : inspection d'URL et demandes d'indexation sur /, /prestations, /portfolio, /videaste-evenementiel-lyon, /aftermovie-lyon (quota d'environ 10/jour).
 - [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit.
-- [ ] Seulement ensuite : première vraie revue mensuelle, sur des données valides.
-- [ ] **Fournir l'export Search Console demandé le 28/09** (Performances 3 mois + Indexation) pour la revue du 05/10.
-- [ ] **Décider si on ralentit la cadence de publication automatique** le temps d'obtenir la première lecture d'indexation des 5 articles publiés du 23 au 27/09.
-- [ ] Si l'accès réseau reste bloqué à la prochaine revue hebdomadaire, ouvrir l'accès réseau de l'environnement cloud (menu de l'environnement, Modifier).
+- [ ] **Fournir l'export Search Console demandé le 28/09, redemandé le 05/10** (Performances 3 mois + Indexation).
+- [ ] Si l'accès réseau de cette session reste bloqué à la prochaine revue hebdomadaire (deux semaines consécutives au 05/10), ouvrir l'accès réseau de l'environnement cloud (menu de l'environnement, Modifier).
+- [ ] Créer la fiche Google Business Profile (roadmap Phase 0), indépendant du déploiement.
