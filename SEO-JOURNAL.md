@@ -1116,6 +1116,40 @@ données réelles : impressions et position de chaque article (désormais sans
 objet puisqu'ils sont supprimés), et surtout l'état d'indexation des
 nouvelles pages piliers une fois déployées.
 
+### 19/10/2026, blocage réseau confirmé troisième semaine de suite : ce n'est pas le site, c'est la politique de l'environnement
+
+Accès réseau sortant refusé pour la troisième semaine d'affilée (28/09,
+05/10, 19/10), testé à nouveau sur `focus-emlyon.com` ET sur `example.com`
+(témoin neutre). Le journal du proxy de l'environnement donne la preuve
+directe cette fois : `gateway answered 403 to CONNECT (policy denial or
+upstream failure)` sur les deux domaines, identique. Ce n'est donc pas un
+problème de `focus-emlyon.com`, c'est la politique réseau de cet
+environnement cloud qui refuse toute connexion sortante, quel que soit le
+domaine. Aucun code HTTP ni `sitemap.xml` ne peut être relevé en direct
+depuis cette session tant que ce n'est pas changé.
+
+Consequence directe : le déploiement du pivot du 04/10 (pages piliers,
+410 sur les 9 anciens articles, pré-rendu) est annoncé prêt depuis 15
+jours, mais aucune confirmation de Mathieu n'est arrivée et cette session
+ne peut pas le vérifier elle-même. On ne sait donc toujours pas si Google
+voit aujourd'hui l'ancien site (1 page indexable, 9 articles étudiants en
+ligne) ou le nouveau (pages piliers Lyon, 410 sur les articles). Aucune
+conclusion sur l'indexation ou le trafic n'est possible dans cet état, pour
+la troisième semaine consécutive.
+
+Vérifié en local, sans dépendance réseau, à l'identique du 05/10 : `npm ci`
+et `npm run build` passent sans erreur, pré-rendu de 11 pages + 404,
+`dist/sitemap.xml` liste les 10 mêmes URLs cibles (aucun article), `src/content/articles/`
+reste absent, `dist/.htaccess` identique à `public/.htaccess` avec la règle
+`[G,L]` sur les 9 anciennes URLs d'articles. Aucun commit git depuis celui
+du 05/10 : le dépôt n'a pas bougé en deux semaines, ce qui est cohérent
+avec l'arrêt de la cadence de publication, mais confirme aussi qu'aucun
+travail de vérification post-déploiement n'a pu être journalisé depuis.
+
+Le Website ID Umami est toujours la valeur par défaut
+(`REMPLACER_PAR_VOTRE_WEBSITE_ID`) dans `src/lib/analytics.ts`, 28 jours
+après la décision du 21/09 de l'installer.
+
 ---
 
 ## Partie B, journal daté
@@ -1174,6 +1208,11 @@ nouvelles pages piliers une fois déployées.
 | 05/10/2026 | Vérifié que le déclencheur cloud d'article quotidien est bien désactivé | `trig_01TC3KHLCeBxyZMSJWruchNT` désactivé depuis le 04/10, cohérent avec l'arrêt de cadence décidé ce jour-là. |
 | 05/10/2026 | Demande d'export Search Console renvoyée à Mathieu | Aucun export reçu depuis le 23/09. En attente. |
 | 05/10/2026 | Vérifié le Website ID Umami dans `src/lib/analytics.ts` | Toujours la valeur par défaut, 14 jours après la décision du 21/09. Signalé à nouveau à Mathieu. |
+| 19/10/2026 | Point hebdomadaire : `npm ci`, `npm run build` et pré-rendu relancés en local | Build propre, 11 pages + 404 pré-rendues, sitemap et `.htaccess` identiques à l'état du 05/10. Aucun commit depuis le 05/10. |
+| 19/10/2026 | Accès réseau sortant testé sur `focus-emlyon.com` et `example.com`, journal du proxy consulté | 403 sur les deux domaines, cause confirmée par le proxy : policy denial au niveau de la gateway, troisième semaine consécutive. |
+| 19/10/2026 | Demande d'export Search Console renvoyée à Mathieu | Aucun export reçu depuis le 23/09, 26 jours. En attente. |
+| 19/10/2026 | Vérifié le Website ID Umami dans `src/lib/analytics.ts` | Toujours la valeur par défaut, 28 jours après la décision du 21/09. Signalé à nouveau à Mathieu. |
+| 19/10/2026 | État du déploiement du pivot du 04/10 vérifié indirectement (git log, build local) | Aucune confirmation de déploiement reçue depuis 15 jours, aucune vérification live possible. Statut toujours inconnu. |
 
 ---
 
@@ -1182,9 +1221,9 @@ nouvelles pages piliers une fois déployées.
 - [x] ~~Confirmer que le `.htaccess` est déployé~~ : fait le 21/09, toutes les routes en 200.
 - [x] ~~Soumettre le sitemap~~ : resoumis le 23/09/2026.
 - [x] ~~Décider si on ralentit la cadence de publication automatique~~ : tranché par le pivot du 04/10, cadence arrêtée, déclencheur désactivé.
-- [ ] **Déployer le pivot du 04/10 sur Hostinger** (`npm run build`, upload complet de `dist/` dont `_p/` et `.htaccess`) et confirmer : code source de /prestations propre, /contact/ redirige, une URL inventée fait 404, un ancien article fait 410. Tant que ce n'est pas confirmé, aucune des pages piliers n'est atteignable par Google.
+- [ ] **Déployer le pivot du 04/10 sur Hostinger** (`npm run build`, upload complet de `dist/` dont `_p/` et `.htaccess`) et confirmer : code source de /prestations propre, /contact/ redirige, une URL inventée fait 404, un ancien article fait 410. 15 jours sans confirmation au 19/10. Tant que ce n'est pas confirmé, aucune des pages piliers n'est atteignable par Google.
 - [ ] Après déploiement confirmé : inspection d'URL et demandes d'indexation sur /, /prestations, /portfolio, /videaste-evenementiel-lyon, /aftermovie-lyon (quota d'environ 10/jour).
-- [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit.
-- [ ] **Fournir l'export Search Console demandé le 28/09, redemandé le 05/10** (Performances 3 mois + Indexation).
-- [ ] Si l'accès réseau de cette session reste bloqué à la prochaine revue hebdomadaire (deux semaines consécutives au 05/10), ouvrir l'accès réseau de l'environnement cloud (menu de l'environnement, Modifier).
+- [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit. 28 jours d'écart au 19/10.
+- [ ] **Fournir l'export Search Console demandé le 28/09, redemandé le 05/10 et le 19/10** (Performances 3 mois + Indexation). 26 jours sans export reçu.
+- [ ] **Ouvrir l'accès réseau sortant de l'environnement cloud** (menu de l'environnement, Modifier, accès réseau) : bloqué trois semaines de suite au 19/10 (28/09, 05/10, 19/10), confirmé par le journal du proxy comme une politique de l'environnement, pas un problème du site.
 - [ ] Créer la fiche Google Business Profile (roadmap Phase 0), indépendant du déploiement.
