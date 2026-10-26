@@ -1150,6 +1150,26 @@ Le Website ID Umami est toujours la valeur par défaut
 (`REMPLACER_PAR_VOTRE_WEBSITE_ID`) dans `src/lib/analytics.ts`, 28 jours
 après la décision du 21/09 de l'installer.
 
+### 26/10/2026, quatrième semaine d'affilée dans le même état : rien ne bouge côté Mathieu
+
+Réseau sortant refusé pour la quatrième semaine consécutive (28/09, 05/10,
+19/10, 26/10), identique sur `focus-emlyon.com` et `example.com` (403,
+policy denial confirmé par le journal du proxy). Aucun commit sur le dépôt
+depuis le 19/10. Aucun export Search Console reçu depuis le 23/09, soit 33
+jours. Le déploiement du pivot du 04/10 (pages piliers Lyon, 410 sur les
+9 articles étudiants, pré-rendu) n'est toujours pas confirmé, soit 22 jours
+sans nouvelle : cette session ne peut toujours pas savoir ce que Google
+voit en ce moment sur focus-emlyon.com.
+
+**Rien de neuf à journaliser sur le fond** : le code local est identique à
+celui vérifié le 19/10 (build propre, 11 pages + 404, sitemap et
+`.htaccess` conformes au pivot). Les trois blocages signalés chaque semaine
+depuis le 28/09 (réseau, export GSC, confirmation de déploiement) n'ont
+reçu aucune réponse. Ce n'est plus seulement une attente, c'est un mois
+sans la moindre donnée réelle sur l'effet du pivot le plus important décidé
+depuis la création du site. Point remonté à Mathieu avec insistance dans le
+message final.
+
 ---
 
 ## Partie B, journal daté
@@ -1213,6 +1233,11 @@ après la décision du 21/09 de l'installer.
 | 19/10/2026 | Demande d'export Search Console renvoyée à Mathieu | Aucun export reçu depuis le 23/09, 26 jours. En attente. |
 | 19/10/2026 | Vérifié le Website ID Umami dans `src/lib/analytics.ts` | Toujours la valeur par défaut, 28 jours après la décision du 21/09. Signalé à nouveau à Mathieu. |
 | 19/10/2026 | État du déploiement du pivot du 04/10 vérifié indirectement (git log, build local) | Aucune confirmation de déploiement reçue depuis 15 jours, aucune vérification live possible. Statut toujours inconnu. |
+| 26/10/2026 | Point hebdomadaire : `npm ci`, `npm run build` et pré-rendu relancés en local | Build propre, 11 pages + 404, sitemap et `.htaccess` identiques à l'état du 19/10. Aucun commit depuis le 19/10. |
+| 26/10/2026 | Accès réseau sortant testé sur `focus-emlyon.com` et `example.com`, journal du proxy consulté | 403 sur les deux domaines, policy denial confirmée par le proxy, quatrième semaine consécutive (28/09, 05/10, 19/10, 26/10). |
+| 26/10/2026 | Demande d'export Search Console renvoyée à Mathieu | Aucun export reçu depuis le 23/09, 33 jours. En attente. |
+| 26/10/2026 | Vérifié le Website ID Umami dans `src/lib/analytics.ts` | Toujours la valeur par défaut, 35 jours après la décision du 21/09. Signalé à nouveau à Mathieu. |
+| 26/10/2026 | État du déploiement du pivot du 04/10 vérifié indirectement (git log, build local) | Aucune confirmation reçue depuis 22 jours, aucune vérification live possible. Statut toujours inconnu. |
 
 ---
 
@@ -1221,9 +1246,9 @@ après la décision du 21/09 de l'installer.
 - [x] ~~Confirmer que le `.htaccess` est déployé~~ : fait le 21/09, toutes les routes en 200.
 - [x] ~~Soumettre le sitemap~~ : resoumis le 23/09/2026.
 - [x] ~~Décider si on ralentit la cadence de publication automatique~~ : tranché par le pivot du 04/10, cadence arrêtée, déclencheur désactivé.
-- [ ] **Déployer le pivot du 04/10 sur Hostinger** (`npm run build`, upload complet de `dist/` dont `_p/` et `.htaccess`) et confirmer : code source de /prestations propre, /contact/ redirige, une URL inventée fait 404, un ancien article fait 410. 15 jours sans confirmation au 19/10. Tant que ce n'est pas confirmé, aucune des pages piliers n'est atteignable par Google.
+- [ ] **Déployer le pivot du 04/10 sur Hostinger** (`npm run build`, upload complet de `dist/` dont `_p/` et `.htaccess`) et confirmer : code source de /prestations propre, /contact/ redirige, une URL inventée fait 404, un ancien article fait 410. 22 jours sans confirmation au 26/10. Tant que ce n'est pas confirmé, aucune des pages piliers n'est atteignable par Google.
 - [ ] Après déploiement confirmé : inspection d'URL et demandes d'indexation sur /, /prestations, /portfolio, /videaste-evenementiel-lyon, /aftermovie-lyon (quota d'environ 10/jour).
-- [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit. 28 jours d'écart au 19/10.
-- [ ] **Fournir l'export Search Console demandé le 28/09, redemandé le 05/10 et le 19/10** (Performances 3 mois + Indexation). 26 jours sans export reçu.
-- [ ] **Ouvrir l'accès réseau sortant de l'environnement cloud** (menu de l'environnement, Modifier, accès réseau) : bloqué trois semaines de suite au 19/10 (28/09, 05/10, 19/10), confirmé par le journal du proxy comme une politique de l'environnement, pas un problème du site.
+- [ ] Renseigner le Website ID Umami dans `src/lib/analytics.ts`, puis attendre 30 jours de données avant de conclure quoi que ce soit. 35 jours d'écart au 26/10.
+- [ ] **Fournir l'export Search Console demandé le 28/09, redemandé le 05/10, le 19/10 et le 26/10** (Performances 3 mois + Indexation). 33 jours sans export reçu.
+- [ ] **Ouvrir l'accès réseau sortant de l'environnement cloud** (menu de l'environnement, Modifier, accès réseau) : bloqué quatre semaines de suite au 26/10 (28/09, 05/10, 19/10, 26/10), confirmé par le journal du proxy comme une politique de l'environnement, pas un problème du site.
 - [ ] Créer la fiche Google Business Profile (roadmap Phase 0), indépendant du déploiement.
